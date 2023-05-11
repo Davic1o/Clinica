@@ -52,6 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClinica.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DatosPaciente.cs" />
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

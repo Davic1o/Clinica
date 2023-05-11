@@ -43,7 +43,6 @@ namespace PresentacionClinica
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.pnlPadre.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,13 +61,14 @@ namespace PresentacionClinica
             // 
             // btnSalir
             // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.BackColor = System.Drawing.Color.Red;
             this.btnSalir.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(1436, 18);
+            this.btnSalir.Location = new System.Drawing.Point(1821, 13);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(204, 43);
+            this.btnSalir.Size = new System.Drawing.Size(80, 43);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -79,6 +79,8 @@ namespace PresentacionClinica
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lblHora);
+            this.groupBox1.Controls.Add(this.btnCerrarSesion);
+            this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.lblFecha);
             this.groupBox1.Controls.Add(this.lblUsuer);
             this.groupBox1.Location = new System.Drawing.Point(17, 10);
@@ -89,11 +91,13 @@ namespace PresentacionClinica
             // 
             // lblHora
             // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
             this.lblHora.BackColor = System.Drawing.Color.Transparent;
             this.lblHora.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.Black;
-            this.lblHora.Location = new System.Drawing.Point(1803, 18);
+            this.lblHora.Location = new System.Drawing.Point(1482, 19);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(83, 29);
             this.lblHora.TabIndex = 6;
@@ -116,13 +120,14 @@ namespace PresentacionClinica
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrarSesion.BackColor = System.Drawing.Color.CadetBlue;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1437, 110);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1624, 14);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(204, 43);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(191, 43);
             this.btnCerrarSesion.TabIndex = 6;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -154,8 +159,6 @@ namespace PresentacionClinica
             this.pnlPadre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlPadre.Controls.Add(this.btnCerrarSesion);
-            this.pnlPadre.Controls.Add(this.btnSalir);
             this.pnlPadre.Location = new System.Drawing.Point(6, 21);
             this.pnlPadre.Name = "pnlPadre";
             this.pnlPadre.Size = new System.Drawing.Size(1628, 874);
@@ -198,7 +201,6 @@ namespace PresentacionClinica
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.pnlPadre.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 

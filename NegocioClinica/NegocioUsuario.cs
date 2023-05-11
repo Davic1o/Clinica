@@ -9,8 +9,6 @@ namespace NegocioClinica
 {
     public class NegocioUsuario
     {
-    string N;
-        int i;
     DatosUsuario usuario = new DatosUsuario();
 
         public bool ValidarLogin(string Nombre,string Clave)

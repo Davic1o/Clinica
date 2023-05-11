@@ -36,7 +36,6 @@ namespace PresentacionClinica
             
             if (Nuser.ValidarLogin(Username, Password))
             {
-                MessageBox.Show("Logrado");
                 PresentacionPrincipal Principal = new PresentacionPrincipal(Username);
                 Principal.ShowDialog();
                 this.Hide();
@@ -56,6 +55,34 @@ namespace PresentacionClinica
             this.Close();
         }
 
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Username = txtUserName.Text;
+                Password = txtPassword.Text;
+                NegocioUsuario Nuser = new NegocioUsuario();
 
+                if (Nuser.ValidarLogin(Username, Password))
+                {
+
+                    PresentacionPrincipal Principal = new PresentacionPrincipal(Username);
+                    Principal.ShowDialog();
+                    this.Hide();
+
+                }
+                else
+                {
+                    lblError.Text = "Usuario o clave Incorrecta";
+                    txtPassword.Text = "";
+                    txtUserName.Text = "";
+                }
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
