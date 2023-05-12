@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClinicaDataSet.cs">
+      <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClinicaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

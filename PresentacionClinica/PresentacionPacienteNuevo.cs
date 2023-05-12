@@ -38,8 +38,11 @@ namespace PresentacionClinica
             btnAlergias.Enabled = false;
             btnEnfermedades.Enabled = false;
             txtNombre.Text = "";
-            dgBuscar.DataSource = 
-                Paciente.verPacientes();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = Paciente.verPacientes();
+            lbBuscar.DataSource = bs;
+            lbBuscar.DisplayMember = "Correo";
+            
             
         }
 
@@ -127,7 +130,8 @@ namespace PresentacionClinica
 
         private void btnHistoria_Click(object sender, EventArgs e)
         {
-                txtNombre.Text = "";
+
+            txtNombre.Text = "";
                 txtApellido.Text = "";
                 txtApellido.Text = "";
                 mtxtDoc.Text = "";
@@ -161,5 +165,7 @@ namespace PresentacionClinica
         {
 
         }
+
+
     }
 }

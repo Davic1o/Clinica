@@ -22,7 +22,7 @@ namespace DatosClinica
         }
         public List<Paciente> VerPacientes()
         {
-            
+           
             List <Paciente> Pac = (from x in Db.Paciente select x).ToList();
             return Pac;
         }
