@@ -14,9 +14,12 @@ namespace PresentacionClinica
 {
     public partial class PresentacionPacienteNuevo : Form
     {
+        NegocioPaciente Paciente = new NegocioPaciente();
+        NegocioAlergias alergia = new NegocioAlergias();
+        Paciente pc = new Paciente();
+        Alergias al = new Alergias();
         public PresentacionPacienteNuevo()
         {
-            
             InitializeComponent();
             mtxtDoc.Enabled = false;
             txtFechaIngreso.Enabled = false;
@@ -35,6 +38,9 @@ namespace PresentacionClinica
             btnAlergias.Enabled = false;
             btnEnfermedades.Enabled = false;
             txtNombre.Text = "";
+            dgBuscar.DataSource = 
+                Paciente.verPacientes();
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -61,6 +67,14 @@ namespace PresentacionClinica
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtApellido.Text = "";
+            mtxtDoc.Text = "";
+            txtDireccion.Text = "";
+            mtxtTelefono.Text = "";
+            mtxtTelefono2.Text = "";
+            mtxtCorreo.Text = "";
             txtFechaIngreso.Text = DateTime.Now.ToString("d");
             txtNombre.Enabled = true;
             txtApellido.Enabled = true;
@@ -70,19 +84,15 @@ namespace PresentacionClinica
             mtxtTelefono2.Enabled = true;
             mtxtCorreo.Enabled = true;
             btnPaciente.Enabled = true;
-
-
         }
 
         private void PresentacionPacienteNuevo_Load(object sender, EventArgs e)
         {
         }
-
-
-
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            Paciente pc = new Paciente();
+            if (txtNombre.Text != ""&&txtApellido.Text != ""&&txtApellido.Text != ""&& mtxtDoc.Text != ""&& txtDireccion.Text != "" && mtxtTelefono.Text != ""&&mtxtTelefono2.Text != ""&&mtxtCorreo.Text != "")
+            {
             pc.FechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
             pc.Nombre = txtNombre.Text;
             pc.Apellido = txtApellido.Text;
@@ -91,8 +101,6 @@ namespace PresentacionClinica
             pc.Telefono1 = Convert.ToInt32(mtxtTelefono.Text);
             pc.Telefono2 = Convert.ToInt32(mtxtTelefono2.Text);
             pc.Correo = mtxtCorreo.Text;
-            
-            NegocioPaciente Paciente = new NegocioPaciente();
             txtAlergias.Enabled = true;
             txtEnfermedades.Enabled = true;
             btnEnfermedades.Enabled = true;
@@ -108,6 +116,13 @@ namespace PresentacionClinica
             mtxtTelefono.Enabled = false;
             mtxtTelefono2.Enabled = false;
             mtxtCorreo.Enabled = false;
+            btnHistoria.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("HAY CAMPOS VACIOS");
+            }
+           
         }
 
         private void btnHistoria_Click(object sender, EventArgs e)
@@ -120,6 +135,31 @@ namespace PresentacionClinica
                 mtxtTelefono.Text = "";
                 mtxtTelefono2.Text = "";
                 mtxtCorreo.Text = "";            
+        }
+
+        private void btnAlergias_Click(object sender, EventArgs e)
+        {
+            string Nombre = txtNombre.Text;
+            string Apellido = txtApellido.Text;
+            int ID = Paciente.IdDePaciente(Nombre, Apellido);
+            al.IdPaciente = ID;
+            al.Alergia = txtAlergias.Text;
+            alergia.AgregarAlergias(al);
+            lbAlergias.Items.Add(txtAlergias.Text);
+            txtAlergias.Text = "";
+ 
+        }
+
+        private void btnEnfermedades_Click(object sender, EventArgs e)
+        {
+            lbEnfermedades.Items.Add(txtEnfermedades.Text);
+            txtEnfermedades.Text = "";
+
+        }
+
+        private void dgBuscar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

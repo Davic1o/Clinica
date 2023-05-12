@@ -16,6 +16,15 @@ namespace NegocioClinica
             Paciente.InsertarPaciente(pc);
 
         }
-        
+     public int IdDePaciente(string Nombre, string Apellido)
+        {
+            return Paciente.BuscarPaciente(Nombre,Apellido).IdPaciente;
+        }
+     public List<Paciente> verPacientes()
+        {
+            return Paciente.VerPacientes();
+        }
+
+
     }
 }

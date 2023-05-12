@@ -167,9 +167,9 @@ namespace PresentacionClinica
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgBuscar = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.grbAlergias = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -268,7 +268,7 @@ namespace PresentacionClinica
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox42.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
             this.groupBox41.SuspendLayout();
             this.grbAlergias.SuspendLayout();
             this.SuspendLayout();
@@ -346,6 +346,7 @@ namespace PresentacionClinica
             this.btnEnfermedades.TabIndex = 6;
             this.btnEnfermedades.Text = "Agregar";
             this.btnEnfermedades.UseVisualStyleBackColor = false;
+            this.btnEnfermedades.Click += new System.EventHandler(this.btnEnfermedades_Click);
             // 
             // lbEnfermedades
             // 
@@ -400,6 +401,7 @@ namespace PresentacionClinica
             this.btnAlergias.TabIndex = 6;
             this.btnAlergias.Text = "Agregar";
             this.btnAlergias.UseVisualStyleBackColor = false;
+            this.btnAlergias.Click += new System.EventHandler(this.btnAlergias_Click);
             // 
             // lbAlergias
             // 
@@ -1719,24 +1721,25 @@ namespace PresentacionClinica
             // 
             // groupBox42
             // 
-            this.groupBox42.Controls.Add(this.dataGridView1);
+            this.groupBox42.Controls.Add(this.dgBuscar);
             this.groupBox42.Controls.Add(this.label12);
-            this.groupBox42.Controls.Add(this.textBox4);
+            this.groupBox42.Controls.Add(this.txtBuscar);
             this.groupBox42.Location = new System.Drawing.Point(8, 13);
             this.groupBox42.Name = "groupBox42";
             this.groupBox42.Size = new System.Drawing.Size(538, 546);
             this.groupBox42.TabIndex = 32;
             this.groupBox42.TabStop = false;
             // 
-            // dataGridView1
+            // dgBuscar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(496, 242);
-            this.dataGridView1.TabIndex = 19;
+            this.dgBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBuscar.Location = new System.Drawing.Point(21, 85);
+            this.dgBuscar.Name = "dgBuscar";
+            this.dgBuscar.RowHeadersWidth = 51;
+            this.dgBuscar.RowTemplate.Height = 24;
+            this.dgBuscar.Size = new System.Drawing.Size(496, 242);
+            this.dgBuscar.TabIndex = 19;
+            this.dgBuscar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBuscar_CellContentClick);
             // 
             // label12
             // 
@@ -1746,17 +1749,17 @@ namespace PresentacionClinica
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(16, 28);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 29);
+            this.label12.Size = new System.Drawing.Size(94, 29);
             this.label12.TabIndex = 9;
-            this.label12.Text = "Nombre";
+            this.label12.Text = "Buscar";
             // 
-            // textBox4
+            // txtBuscar
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(130, 31);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(387, 28);
-            this.textBox4.TabIndex = 18;
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(130, 31);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(387, 28);
+            this.txtBuscar.TabIndex = 18;
             // 
             // groupBox41
             // 
@@ -2121,7 +2124,7 @@ namespace PresentacionClinica
             this.tabPage1.ResumeLayout(false);
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
             this.groupBox41.ResumeLayout(false);
             this.groupBox41.PerformLayout();
             this.grbAlergias.ResumeLayout(false);
@@ -2285,7 +2288,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox42;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.GroupBox grbAlergias;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
@@ -2293,7 +2296,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox cmbDocumento;
         private System.Windows.Forms.MaskedTextBox mtxtDoc;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgBuscar;
         private System.Windows.Forms.Button btnPaciente;
     }
 }
