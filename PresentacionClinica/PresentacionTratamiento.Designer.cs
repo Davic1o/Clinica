@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionClinica
 {
-    partial class Tratamiento
+    partial class PresentacionTratamiento
     {
         /// <summary>
         /// Required designer variable.
@@ -131,6 +131,13 @@ namespace PresentacionClinica
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.chk18 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.dgBuscar = new System.Windows.Forms.DataGridView();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tcPaciente.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox32.SuspendLayout();
@@ -201,16 +208,17 @@ namespace PresentacionClinica
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // tcPaciente
             // 
             this.tcPaciente.Controls.Add(this.tabPage2);
             this.tcPaciente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcPaciente.Location = new System.Drawing.Point(-5, 2);
+            this.tcPaciente.Location = new System.Drawing.Point(12, 302);
             this.tcPaciente.Name = "tcPaciente";
             this.tcPaciente.SelectedIndex = 0;
-            this.tcPaciente.Size = new System.Drawing.Size(1718, 821);
+            this.tcPaciente.Size = new System.Drawing.Size(1701, 552);
             this.tcPaciente.TabIndex = 1;
             // 
             // tabPage2
@@ -222,7 +230,7 @@ namespace PresentacionClinica
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1710, 783);
+            this.tabPage2.Size = new System.Drawing.Size(1693, 514);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "  Odontograma  ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -237,7 +245,7 @@ namespace PresentacionClinica
             this.groupBox32.Controls.Add(this.groupBox38);
             this.groupBox32.Controls.Add(this.groupBox39);
             this.groupBox32.Controls.Add(this.groupBox40);
-            this.groupBox32.Location = new System.Drawing.Point(851, 45);
+            this.groupBox32.Location = new System.Drawing.Point(842, 6);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Size = new System.Drawing.Size(835, 263);
             this.groupBox32.TabIndex = 25;
@@ -493,7 +501,7 @@ namespace PresentacionClinica
             this.groupBox23.Controls.Add(this.groupBox29);
             this.groupBox23.Controls.Add(this.groupBox30);
             this.groupBox23.Controls.Add(this.groupBox31);
-            this.groupBox23.Location = new System.Drawing.Point(851, 328);
+            this.groupBox23.Location = new System.Drawing.Point(846, 272);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(835, 263);
             this.groupBox23.TabIndex = 25;
@@ -749,7 +757,7 @@ namespace PresentacionClinica
             this.groupBox12.Controls.Add(this.groupBox20);
             this.groupBox12.Controls.Add(this.groupBox21);
             this.groupBox12.Controls.Add(this.groupBox22);
-            this.groupBox12.Location = new System.Drawing.Point(10, 328);
+            this.groupBox12.Location = new System.Drawing.Point(6, 272);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(835, 263);
             this.groupBox12.TabIndex = 25;
@@ -1005,7 +1013,7 @@ namespace PresentacionClinica
             this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Controls.Add(this.groupBox11);
             this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Location = new System.Drawing.Point(10, 45);
+            this.groupBox5.Location = new System.Drawing.Point(3, 6);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(835, 263);
             this.groupBox5.TabIndex = 16;
@@ -1251,14 +1259,106 @@ namespace PresentacionClinica
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Tratamiento
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.Red;
+            this.btnCerrar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(1547, 15);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(161, 43);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(423, 27);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(110, 50);
+            this.btnBuscar.TabIndex = 42;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(33, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(94, 29);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(135, 39);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(254, 28);
+            this.txtBuscar.TabIndex = 41;
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
+            // 
+            // dgBuscar
+            // 
+            this.dgBuscar.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBuscar.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgBuscar.Location = new System.Drawing.Point(41, 83);
+            this.dgBuscar.Name = "dgBuscar";
+            this.dgBuscar.RowHeadersWidth = 51;
+            this.dgBuscar.RowTemplate.Height = 24;
+            this.dgBuscar.Size = new System.Drawing.Size(492, 197);
+            this.dgBuscar.TabIndex = 43;
+            this.dgBuscar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBuscar_CellContentClick);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuario.Location = new System.Drawing.Point(1103, 151);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 40);
+            this.lblUsuario.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(686, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(368, 40);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Nombre de Paciente:";
+            // 
+            // PresentacionTratamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1725, 835);
+            this.ClientSize = new System.Drawing.Size(1725, 857);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tcPaciente);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.dgBuscar);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Tratamiento";
+            this.Name = "PresentacionTratamiento";
             this.Text = "Tratamiento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tcPaciente.ResumeLayout(false);
@@ -1363,7 +1463,9 @@ namespace PresentacionClinica
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1471,5 +1573,12 @@ namespace PresentacionClinica
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox chk18;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridView dgBuscar;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label label1;
     }
 }

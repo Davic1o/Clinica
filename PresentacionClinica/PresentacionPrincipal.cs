@@ -14,7 +14,8 @@ namespace PresentacionClinica
     public partial class PresentacionPrincipal : Form
     {
         PresentacionLogin frLogin = new PresentacionLogin();
-        mtxtCorreoB PA = new mtxtCorreoB();
+        PresentacionPaciente PA = new PresentacionPaciente();
+        PresentacionTratamiento PT = new PresentacionTratamiento();
         public PresentacionPrincipal(string Username)
         {
             InitializeComponent();
@@ -80,6 +81,18 @@ namespace PresentacionClinica
         private void timer_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTratamiento_Click(object sender, EventArgs e)
+        {
+            PT.TopLevel = false;
+            pnlPadre.Controls.Add(PT);
+            PT.Show();
         }
     }
 }

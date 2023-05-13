@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionClinica
 {
-    partial class mtxtCorreoB
+    partial class PresentacionPaciente
     {
         /// <summary>
         /// Required designer variable.
@@ -66,9 +66,13 @@ namespace PresentacionClinica
             this.txtId = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dgBuscar = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txtApellidoB = new System.Windows.Forms.TextBox();
             this.grbAlergias = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -88,10 +92,6 @@ namespace PresentacionClinica
             this.label19 = new System.Windows.Forms.Label();
             this.lblPacientes = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.dgBuscar = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.lbl = new System.Windows.Forms.Label();
-            this.txtApellidoB = new System.Windows.Forms.TextBox();
             this.tcPaciente.SuspendLayout();
             this.Nuevo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,9 +100,9 @@ namespace PresentacionClinica
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox42.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
             this.groupBox41.SuspendLayout();
             this.grbAlergias.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // tcPaciente
@@ -524,6 +524,32 @@ namespace PresentacionClinica
             this.groupBox42.TabIndex = 32;
             this.groupBox42.TabStop = false;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(395, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(110, 50);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // dgBuscar
+            // 
+            this.dgBuscar.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBuscar.Location = new System.Drawing.Point(21, 85);
+            this.dgBuscar.Name = "dgBuscar";
+            this.dgBuscar.RowHeadersWidth = 51;
+            this.dgBuscar.RowTemplate.Height = 24;
+            this.dgBuscar.Size = new System.Drawing.Size(496, 451);
+            this.dgBuscar.TabIndex = 20;
+            this.dgBuscar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBuscar_CellContentClick_1);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -568,6 +594,26 @@ namespace PresentacionClinica
             this.groupBox41.Size = new System.Drawing.Size(1122, 669);
             this.groupBox41.TabIndex = 26;
             this.groupBox41.TabStop = false;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.Black;
+            this.lbl.Location = new System.Drawing.Point(7, 85);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(106, 29);
+            this.lbl.TabIndex = 38;
+            this.lbl.Text = "Apellido";
+            // 
+            // txtApellidoB
+            // 
+            this.txtApellidoB.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoB.Location = new System.Drawing.Point(298, 88);
+            this.txtApellidoB.Name = "txtApellidoB";
+            this.txtApellidoB.Size = new System.Drawing.Size(341, 28);
+            this.txtApellidoB.TabIndex = 39;
             // 
             // grbAlergias
             // 
@@ -772,52 +818,7 @@ namespace PresentacionClinica
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // dgBuscar
-            // 
-            this.dgBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBuscar.Location = new System.Drawing.Point(21, 85);
-            this.dgBuscar.Name = "dgBuscar";
-            this.dgBuscar.RowHeadersWidth = 51;
-            this.dgBuscar.RowTemplate.Height = 24;
-            this.dgBuscar.Size = new System.Drawing.Size(496, 451);
-            this.dgBuscar.TabIndex = 20;
-            this.dgBuscar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBuscar_CellContentClick_1);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(395, 19);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(110, 50);
-            this.btnBuscar.TabIndex = 39;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.BackColor = System.Drawing.Color.Transparent;
-            this.lbl.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.Black;
-            this.lbl.Location = new System.Drawing.Point(7, 85);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(106, 29);
-            this.lbl.TabIndex = 38;
-            this.lbl.Text = "Apellido";
-            // 
-            // txtApellidoB
-            // 
-            this.txtApellidoB.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoB.Location = new System.Drawing.Point(298, 88);
-            this.txtApellidoB.Name = "txtApellidoB";
-            this.txtApellidoB.Size = new System.Drawing.Size(341, 28);
-            this.txtApellidoB.TabIndex = 39;
-            // 
-            // mtxtCorreoB
+            // PresentacionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -826,7 +827,7 @@ namespace PresentacionClinica
             this.Controls.Add(this.lblPacientes);
             this.Controls.Add(this.tcPaciente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "mtxtCorreoB";
+            this.Name = "PresentacionPaciente";
             this.Text = "PresentacionPaciente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PresentacionPacienteNuevo_Load);
@@ -842,11 +843,11 @@ namespace PresentacionClinica
             this.tabPage1.ResumeLayout(false);
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
             this.groupBox41.ResumeLayout(false);
             this.groupBox41.PerformLayout();
             this.grbAlergias.ResumeLayout(false);
             this.grbAlergias.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

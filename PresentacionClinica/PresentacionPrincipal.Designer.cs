@@ -34,13 +34,15 @@ namespace PresentacionClinica
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.pnlPadre = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnTratamiento = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -103,21 +105,6 @@ namespace PresentacionClinica
             this.lblHora.TabIndex = 6;
             this.lblHora.Text = "label1";
             // 
-            // lblFecha
-            // 
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblFecha.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(6, 18);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(83, 29);
-            this.lblFecha.TabIndex = 5;
-            this.lblFecha.Text = "label1";
-            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -133,8 +120,25 @@ namespace PresentacionClinica
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.Black;
+            this.lblFecha.Location = new System.Drawing.Point(6, 18);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(83, 29);
+            this.lblFecha.TabIndex = 5;
+            this.lblFecha.Text = "label1";
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnTratamiento);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnPacientes);
             this.groupBox2.Location = new System.Drawing.Point(17, 90);
             this.groupBox2.Name = "groupBox2";
@@ -146,7 +150,7 @@ namespace PresentacionClinica
             // 
             this.btnPacientes.BackColor = System.Drawing.Color.White;
             this.btnPacientes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.Location = new System.Drawing.Point(31, 35);
+            this.btnPacientes.Location = new System.Drawing.Point(30, 44);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.Size = new System.Drawing.Size(187, 46);
             this.btnPacientes.TabIndex = 0;
@@ -180,6 +184,30 @@ namespace PresentacionClinica
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(30, 427);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 46);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Pacientes";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnTratamiento
+            // 
+            this.btnTratamiento.BackColor = System.Drawing.Color.White;
+            this.btnTratamiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTratamiento.Location = new System.Drawing.Point(30, 519);
+            this.btnTratamiento.Name = "btnTratamiento";
+            this.btnTratamiento.Size = new System.Drawing.Size(187, 46);
+            this.btnTratamiento.TabIndex = 2;
+            this.btnTratamiento.Text = "Tratamiento";
+            this.btnTratamiento.UseVisualStyleBackColor = false;
+            this.btnTratamiento.Click += new System.EventHandler(this.btnTratamiento_Click);
             // 
             // PresentacionPrincipal
             // 
@@ -218,5 +246,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button btnTratamiento;
+        private System.Windows.Forms.Button button1;
     }
 }

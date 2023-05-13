@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace PresentacionClinica
 {
-    public partial class mtxtCorreoB : Form
+    public partial class PresentacionPaciente : Form
     {
         NegocioPaciente Paciente = new NegocioPaciente();
         NegocioAlergias alergia = new NegocioAlergias();
         Paciente pc = new Paciente();
         Alergias al = new Alergias();
-        public mtxtCorreoB()
+        public PresentacionPaciente()
         {
             InitializeComponent();
             mtxtDoc.Enabled = false;
