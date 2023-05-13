@@ -92,6 +92,8 @@ namespace PresentacionClinica
             this.label19 = new System.Windows.Forms.Label();
             this.lblPacientes = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
             this.tcPaciente.SuspendLayout();
             this.Nuevo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -574,6 +576,8 @@ namespace PresentacionClinica
             // 
             // groupBox41
             // 
+            this.groupBox41.Controls.Add(this.lblId);
+            this.groupBox41.Controls.Add(this.btnActualizar);
             this.groupBox41.Controls.Add(this.lbl);
             this.groupBox41.Controls.Add(this.txtApellidoB);
             this.groupBox41.Controls.Add(this.grbAlergias);
@@ -818,10 +822,36 @@ namespace PresentacionClinica
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnActualizar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(785, 534);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(257, 75);
+            this.btnActualizar.TabIndex = 39;
+            this.btnActualizar.Text = "Guardar Cambios";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.BackColor = System.Drawing.Color.Transparent;
+            this.lblId.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.ForeColor = System.Drawing.Color.Black;
+            this.lblId.Location = new System.Drawing.Point(237, 31);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 29);
+            this.lblId.TabIndex = 40;
+            // 
             // PresentacionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1743, 882);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblPacientes);
@@ -918,5 +948,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtApellidoB;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Label lblId;
     }
 }

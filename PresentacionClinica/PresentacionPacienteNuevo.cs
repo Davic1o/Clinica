@@ -193,6 +193,7 @@ namespace PresentacionClinica
                 DataGridViewRow row = dgBuscar.Rows[e.RowIndex];
                 // Carga los datos de la fila en el TextBox
                 int Id = (int)row.Cells[0].Value;
+                lblId.Text = Convert.ToString(Id);
                 Paciente Pac= Paciente.CargarPaciente(Id);
                 txtNombreB.Text=Pac.Nombre;
                 txtApellidoB.Text = Pac.Apellido;
@@ -207,6 +208,27 @@ namespace PresentacionClinica
 
 
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            pc.IdPaciente = Convert.ToInt32(lblId.Text);
+            pc.Nombre = txtNombreB.Text;
+            pc.Apellido = txtApellidoB.Text;
+            pc.Cedula = Convert.ToInt32(mtxtDocB.Text);
+            pc.Direccion = txtDireccionB.Text;
+            pc.Telefono1 = Convert.ToInt32(mtxtTelefono1B.Text);
+            pc.Telefono2 = Convert.ToInt32(mtxtTelefono2B.Text);
+            pc.Correo = txtCorreoB.Text;
+            Paciente.Actualizarpaciente(pc);
+            MessageBox.Show("Datos Actualizados");
+            txtNombreB.Text = "";
+            txtApellidoB.Text = "";
+            mtxtDocB.Text = "";
+            txtDireccionB.Text = "";
+            mtxtTelefono1B.Text = "";
+            mtxtTelefono2B.Text = "";
+            txtCorreoB.Text = "";
         }
     }
 }

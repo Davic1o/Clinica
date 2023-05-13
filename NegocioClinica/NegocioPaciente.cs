@@ -35,6 +35,10 @@ namespace NegocioClinica
             return Paciente.CargarPaciente(Id);
             
         }
+        public void Actualizarpaciente(Paciente Pac)
+        {
+            Paciente.ActualizarPaciente(Pac);
+        }
 
     }
 }

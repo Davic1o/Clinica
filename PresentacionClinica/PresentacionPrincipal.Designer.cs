@@ -37,12 +37,15 @@ namespace PresentacionClinica
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTratamiento = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.pnlPadre = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnTratamiento = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,6 +140,9 @@ namespace PresentacionClinica
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.btnTratamiento);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnPacientes);
@@ -146,13 +152,37 @@ namespace PresentacionClinica
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
+            // btnTratamiento
+            // 
+            this.btnTratamiento.BackColor = System.Drawing.Color.White;
+            this.btnTratamiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTratamiento.Location = new System.Drawing.Point(30, 192);
+            this.btnTratamiento.Name = "btnTratamiento";
+            this.btnTratamiento.Size = new System.Drawing.Size(187, 82);
+            this.btnTratamiento.TabIndex = 2;
+            this.btnTratamiento.Text = "Tratamiento";
+            this.btnTratamiento.UseVisualStyleBackColor = false;
+            this.btnTratamiento.Click += new System.EventHandler(this.btnTratamiento_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(30, 330);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 82);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Recetario";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnPacientes
             // 
             this.btnPacientes.BackColor = System.Drawing.Color.White;
             this.btnPacientes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.Location = new System.Drawing.Point(30, 44);
+            this.btnPacientes.Location = new System.Drawing.Point(30, 51);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(187, 46);
+            this.btnPacientes.Size = new System.Drawing.Size(187, 82);
             this.btnPacientes.TabIndex = 0;
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.UseVisualStyleBackColor = false;
@@ -185,29 +215,38 @@ namespace PresentacionClinica
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(30, 427);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 46);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Pacientes";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(30, 470);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 82);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Gastos";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnTratamiento
+            // button3
             // 
-            this.btnTratamiento.BackColor = System.Drawing.Color.White;
-            this.btnTratamiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTratamiento.Location = new System.Drawing.Point(30, 519);
-            this.btnTratamiento.Name = "btnTratamiento";
-            this.btnTratamiento.Size = new System.Drawing.Size(187, 46);
-            this.btnTratamiento.TabIndex = 2;
-            this.btnTratamiento.Text = "Tratamiento";
-            this.btnTratamiento.UseVisualStyleBackColor = false;
-            this.btnTratamiento.Click += new System.EventHandler(this.btnTratamiento_Click);
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(30, 614);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(187, 82);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Facturacion";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(30, 761);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(187, 82);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Administracion";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // PresentacionPrincipal
             // 
@@ -248,5 +287,8 @@ namespace PresentacionClinica
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button btnTratamiento;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
     }
 }

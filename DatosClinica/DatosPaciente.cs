@@ -38,6 +38,20 @@ namespace DatosClinica
             Paciente Pac = Db.Paciente.Single(r=>r.IdPaciente==Id);
             return Pac;
         }
+
+        public void ActualizarPaciente(Paciente PacNuevo)
+        {
+            Paciente PacActualiza = Db.Paciente.Single(r=>r.IdPaciente==PacNuevo.IdPaciente);
+            PacActualiza.Nombre = PacNuevo.Nombre;
+            PacActualiza.Apellido = PacNuevo.Apellido;
+            PacActualiza.Cedula = PacNuevo.Cedula;
+            PacActualiza.Telefono1 = PacNuevo.Telefono1;
+            PacActualiza.Telefono2 = PacNuevo.Telefono2;
+            PacActualiza.Direccion = PacNuevo.Direccion;
+            PacActualiza.Correo = PacNuevo.Correo;
+            Db.SubmitChanges();
+
+        }
     }
 }
     
