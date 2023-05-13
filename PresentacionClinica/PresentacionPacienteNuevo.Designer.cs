@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionClinica
 {
-    partial class PresentacionPacienteNuevo
+    partial class mtxtCorreoB
     {
         /// <summary>
         /// Required designer variable.
@@ -66,7 +66,6 @@ namespace PresentacionClinica
             this.txtId = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
-            this.lbBuscar = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
@@ -75,21 +74,24 @@ namespace PresentacionClinica
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtCorreoB = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefono2B = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefono1B = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtDocB = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDireccionB = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNombreB = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lblPacientes = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.dgBuscar = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txtApellidoB = new System.Windows.Forms.TextBox();
             this.tcPaciente.SuspendLayout();
             this.Nuevo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,6 +102,7 @@ namespace PresentacionClinica
             this.groupBox42.SuspendLayout();
             this.groupBox41.SuspendLayout();
             this.grbAlergias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // tcPaciente
@@ -511,23 +514,15 @@ namespace PresentacionClinica
             // 
             // groupBox42
             // 
-            this.groupBox42.Controls.Add(this.lbBuscar);
+            this.groupBox42.Controls.Add(this.btnBuscar);
+            this.groupBox42.Controls.Add(this.dgBuscar);
             this.groupBox42.Controls.Add(this.label12);
             this.groupBox42.Controls.Add(this.txtBuscar);
             this.groupBox42.Location = new System.Drawing.Point(8, 13);
             this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Size = new System.Drawing.Size(538, 546);
+            this.groupBox42.Size = new System.Drawing.Size(538, 562);
             this.groupBox42.TabIndex = 32;
             this.groupBox42.TabStop = false;
-            // 
-            // lbBuscar
-            // 
-            this.lbBuscar.FormattingEnabled = true;
-            this.lbBuscar.ItemHeight = 25;
-            this.lbBuscar.Location = new System.Drawing.Point(21, 100);
-            this.lbBuscar.Name = "lbBuscar";
-            this.lbBuscar.Size = new System.Drawing.Size(496, 304);
-            this.lbBuscar.TabIndex = 19;
             // 
             // label12
             // 
@@ -546,28 +541,31 @@ namespace PresentacionClinica
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(130, 31);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(387, 28);
+            this.txtBuscar.Size = new System.Drawing.Size(254, 28);
             this.txtBuscar.TabIndex = 18;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // groupBox41
             // 
+            this.groupBox41.Controls.Add(this.lbl);
+            this.groupBox41.Controls.Add(this.txtApellidoB);
             this.groupBox41.Controls.Add(this.grbAlergias);
-            this.groupBox41.Controls.Add(this.maskedTextBox1);
-            this.groupBox41.Controls.Add(this.maskedTextBox2);
-            this.groupBox41.Controls.Add(this.maskedTextBox3);
-            this.groupBox41.Controls.Add(this.label5);
+            this.groupBox41.Controls.Add(this.txtCorreoB);
+            this.groupBox41.Controls.Add(this.mtxtTelefono2B);
+            this.groupBox41.Controls.Add(this.mtxtTelefono1B);
             this.groupBox41.Controls.Add(this.comboBox1);
-            this.groupBox41.Controls.Add(this.maskedTextBox4);
+            this.groupBox41.Controls.Add(this.mtxtDocB);
             this.groupBox41.Controls.Add(this.label13);
-            this.groupBox41.Controls.Add(this.textBox1);
+            this.groupBox41.Controls.Add(this.txtDireccionB);
             this.groupBox41.Controls.Add(this.label16);
             this.groupBox41.Controls.Add(this.label17);
-            this.groupBox41.Controls.Add(this.textBox3);
+            this.groupBox41.Controls.Add(this.txtNombreB);
             this.groupBox41.Controls.Add(this.label18);
             this.groupBox41.Controls.Add(this.label19);
             this.groupBox41.Location = new System.Drawing.Point(564, 13);
             this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Size = new System.Drawing.Size(1122, 562);
+            this.groupBox41.Size = new System.Drawing.Size(1122, 669);
             this.groupBox41.TabIndex = 26;
             this.groupBox41.TabStop = false;
             // 
@@ -625,42 +623,30 @@ namespace PresentacionClinica
             this.comboBox2.Size = new System.Drawing.Size(299, 36);
             this.comboBox2.TabIndex = 35;
             // 
-            // maskedTextBox1
+            // txtCorreoB
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(296, 493);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(341, 32);
-            this.maskedTextBox1.TabIndex = 31;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.txtCorreoB.Location = new System.Drawing.Point(297, 555);
+            this.txtCorreoB.Name = "txtCorreoB";
+            this.txtCorreoB.Size = new System.Drawing.Size(341, 32);
+            this.txtCorreoB.TabIndex = 31;
+            this.txtCorreoB.ValidatingType = typeof(int);
             // 
-            // maskedTextBox2
+            // mtxtTelefono2B
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(296, 426);
-            this.maskedTextBox2.Mask = "0000000000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(211, 32);
-            this.maskedTextBox2.TabIndex = 30;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.mtxtTelefono2B.Location = new System.Drawing.Point(297, 488);
+            this.mtxtTelefono2B.Mask = "0000000000";
+            this.mtxtTelefono2B.Name = "mtxtTelefono2B";
+            this.mtxtTelefono2B.Size = new System.Drawing.Size(211, 32);
+            this.mtxtTelefono2B.TabIndex = 30;
+            this.mtxtTelefono2B.ValidatingType = typeof(int);
             // 
-            // maskedTextBox3
+            // mtxtTelefono1B
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(296, 360);
-            this.maskedTextBox3.Mask = "0900000000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(211, 32);
-            this.maskedTextBox3.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(455, 315);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 29);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "001";
+            this.mtxtTelefono1B.Location = new System.Drawing.Point(297, 422);
+            this.mtxtTelefono1B.Mask = "0900000000";
+            this.mtxtTelefono1B.Name = "mtxtTelefono1B";
+            this.mtxtTelefono1B.Size = new System.Drawing.Size(211, 32);
+            this.mtxtTelefono1B.TabIndex = 29;
             // 
             // comboBox1
             // 
@@ -669,19 +655,19 @@ namespace PresentacionClinica
             this.comboBox1.Items.AddRange(new object[] {
             "Cedula",
             "Ruc"});
-            this.comboBox1.Location = new System.Drawing.Point(11, 85);
+            this.comboBox1.Location = new System.Drawing.Point(12, 147);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(181, 36);
             this.comboBox1.TabIndex = 27;
             // 
-            // maskedTextBox4
+            // mtxtDocB
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(296, 85);
-            this.maskedTextBox4.Mask = "0000000000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(137, 32);
-            this.maskedTextBox4.TabIndex = 26;
-            this.maskedTextBox4.ValidatingType = typeof(int);
+            this.mtxtDocB.Location = new System.Drawing.Point(297, 147);
+            this.mtxtDocB.Mask = "0000000000";
+            this.mtxtDocB.Name = "mtxtDocB";
+            this.mtxtDocB.Size = new System.Drawing.Size(137, 32);
+            this.mtxtDocB.TabIndex = 26;
+            this.mtxtDocB.ValidatingType = typeof(int);
             // 
             // label13
             // 
@@ -695,14 +681,14 @@ namespace PresentacionClinica
             this.label13.TabIndex = 9;
             this.label13.Text = "Nombre";
             // 
-            // textBox1
+            // txtDireccionB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(296, 159);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(341, 168);
-            this.textBox1.TabIndex = 21;
+            this.txtDireccionB.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionB.Location = new System.Drawing.Point(297, 221);
+            this.txtDireccionB.Multiline = true;
+            this.txtDireccionB.Name = "txtDireccionB";
+            this.txtDireccionB.Size = new System.Drawing.Size(341, 168);
+            this.txtDireccionB.TabIndex = 21;
             // 
             // label16
             // 
@@ -710,7 +696,7 @@ namespace PresentacionClinica
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(5, 217);
+            this.label16.Location = new System.Drawing.Point(6, 279);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(124, 29);
             this.label16.TabIndex = 12;
@@ -722,19 +708,19 @@ namespace PresentacionClinica
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(5, 361);
+            this.label17.Location = new System.Drawing.Point(6, 423);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(112, 29);
             this.label17.TabIndex = 13;
             this.label17.Text = "Telefono";
             // 
-            // textBox3
+            // txtNombreB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(297, 31);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(341, 28);
-            this.textBox3.TabIndex = 18;
+            this.txtNombreB.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreB.Location = new System.Drawing.Point(297, 31);
+            this.txtNombreB.Name = "txtNombreB";
+            this.txtNombreB.Size = new System.Drawing.Size(341, 28);
+            this.txtNombreB.TabIndex = 18;
             // 
             // label18
             // 
@@ -742,7 +728,7 @@ namespace PresentacionClinica
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(6, 429);
+            this.label18.Location = new System.Drawing.Point(7, 491);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(95, 29);
             this.label18.TabIndex = 14;
@@ -754,7 +740,7 @@ namespace PresentacionClinica
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(6, 493);
+            this.label19.Location = new System.Drawing.Point(7, 555);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(94, 29);
             this.label19.TabIndex = 15;
@@ -786,7 +772,52 @@ namespace PresentacionClinica
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // PresentacionPacienteNuevo
+            // dgBuscar
+            // 
+            this.dgBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBuscar.Location = new System.Drawing.Point(21, 85);
+            this.dgBuscar.Name = "dgBuscar";
+            this.dgBuscar.RowHeadersWidth = 51;
+            this.dgBuscar.RowTemplate.Height = 24;
+            this.dgBuscar.Size = new System.Drawing.Size(496, 451);
+            this.dgBuscar.TabIndex = 20;
+            this.dgBuscar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBuscar_CellContentClick_1);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(395, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(110, 50);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.Black;
+            this.lbl.Location = new System.Drawing.Point(7, 85);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(106, 29);
+            this.lbl.TabIndex = 38;
+            this.lbl.Text = "Apellido";
+            // 
+            // txtApellidoB
+            // 
+            this.txtApellidoB.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoB.Location = new System.Drawing.Point(298, 88);
+            this.txtApellidoB.Name = "txtApellidoB";
+            this.txtApellidoB.Size = new System.Drawing.Size(341, 28);
+            this.txtApellidoB.TabIndex = 39;
+            // 
+            // mtxtCorreoB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -795,7 +826,7 @@ namespace PresentacionClinica
             this.Controls.Add(this.lblPacientes);
             this.Controls.Add(this.tcPaciente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PresentacionPacienteNuevo";
+            this.Name = "mtxtCorreoB";
             this.Text = "PresentacionPaciente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PresentacionPacienteNuevo_Load);
@@ -815,6 +846,7 @@ namespace PresentacionClinica
             this.groupBox41.PerformLayout();
             this.grbAlergias.ResumeLayout(false);
             this.grbAlergias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -858,17 +890,16 @@ namespace PresentacionClinica
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox41;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MaskedTextBox txtCorreoB;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefono2B;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefono1B;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox mtxtDocB;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDireccionB;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNombreB;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox42;
@@ -882,6 +913,9 @@ namespace PresentacionClinica
         private System.Windows.Forms.ComboBox cmbDocumento;
         private System.Windows.Forms.MaskedTextBox mtxtDoc;
         private System.Windows.Forms.Button btnPaciente;
-        private System.Windows.Forms.ListBox lbBuscar;
+        private System.Windows.Forms.DataGridView dgBuscar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txtApellidoB;
     }
 }

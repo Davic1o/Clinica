@@ -22,9 +22,19 @@ namespace NegocioClinica
         }
      public List<Paciente> verPacientes()
         {
+            
             return Paciente.VerPacientes();
         }
+        public List<Paciente> BuscarPacientes(string Nombre)
+        {
 
+            return Paciente.BuscarPacientesNombre(Nombre);
+        }
+        public Paciente CargarPaciente(int Id)
+        {
+            return Paciente.CargarPaciente(Id);
+            
+        }
 
     }
 }

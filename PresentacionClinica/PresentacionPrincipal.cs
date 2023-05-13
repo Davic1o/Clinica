@@ -14,7 +14,7 @@ namespace PresentacionClinica
     public partial class PresentacionPrincipal : Form
     {
         PresentacionLogin frLogin = new PresentacionLogin();
-        PresentacionPacienteNuevo PA = new PresentacionPacienteNuevo();
+        mtxtCorreoB PA = new mtxtCorreoB();
         public PresentacionPrincipal(string Username)
         {
             InitializeComponent();

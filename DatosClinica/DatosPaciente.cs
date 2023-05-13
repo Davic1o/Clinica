@@ -22,8 +22,20 @@ namespace DatosClinica
         }
         public List<Paciente> VerPacientes()
         {
+             List <Paciente> Pac = (from x in Db.Paciente  select x).ToList();
            
-            List <Paciente> Pac = (from x in Db.Paciente select x).ToList();
+            return Pac;
+        }
+
+        public List<Paciente> BuscarPacientesNombre(string Nombre)
+        {
+            List<Paciente> Pac = (from x in Db.Paciente where x.Nombre == Nombre || x.Apellido == Nombre select x).ToList();
+
+            return Pac;
+        }
+        public Paciente CargarPaciente(int Id)
+        {
+            Paciente Pac = Db.Paciente.Single(r=>r.IdPaciente==Id);
             return Pac;
         }
     }
