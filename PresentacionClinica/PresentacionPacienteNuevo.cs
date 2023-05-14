@@ -24,12 +24,9 @@ namespace PresentacionClinica
             mtxtTelefono.Enabled = false;
             mtxtTelefono2.Enabled = false;
             mtxtCorreo.Enabled = false;
-            txtAlergias.Enabled = false;
-            txtEnfermedades.Enabled = false;
-            btnHistoria.Enabled = false;
+          
             btnPaciente.Enabled = false;
-            btnAlergias.Enabled = false;
-            btnEnfermedades.Enabled = false;
+          
             cmbGenero.Enabled = false;
             dTNacimiento.Enabled = false;
             btnCargar.Enabled = false;
@@ -95,10 +92,10 @@ namespace PresentacionClinica
                 pc.Telefono1 = Convert.ToInt32(mtxtTelefono.Text);
                 pc.Telefono2 = Convert.ToInt32(mtxtTelefono2.Text);
                 pc.Correo = mtxtCorreo.Text;
-                txtAlergias.Enabled = true;
-                txtEnfermedades.Enabled = true;
-                btnEnfermedades.Enabled = true;
-                btnAlergias.Enabled = true;
+               // txtAlergias.Enabled = true;
+                //txtEnfermedades.Enabled = true;
+                //btnEnfermedades.Enabled = true;
+                //btnAlergias.Enabled = true;
                 Paciente.Insertar(pc);
                 mtxtDoc.Enabled = false;
                 txtFechaIngreso.Enabled = false;
@@ -110,7 +107,7 @@ namespace PresentacionClinica
                 mtxtTelefono.Enabled = false;
                 mtxtTelefono2.Enabled = false;
                 mtxtCorreo.Enabled = false;
-                btnHistoria.Enabled = true;
+             
                 tcPaciente.SelectTab(1);
 
             }
@@ -130,22 +127,8 @@ namespace PresentacionClinica
             mtxtTelefono2.Text = "";
             mtxtCorreo.Text = "";
         }
-        private void btnAlergias_Click(object sender, EventArgs e)
-        {
-            string Nombre = txtNombre.Text;
-            string Apellido = txtApellido.Text;
-            int ID = Paciente.IdDePaciente(Nombre, Apellido);
-            al.IdPaciente = ID;
-            al.Alergia = txtAlergias.Text;
-            alergia.AgregarAlergias(al);
-            lbAlergias.Items.Add(txtAlergias.Text);
-            txtAlergias.Text = "";
-        }
-        private void btnEnfermedades_Click(object sender, EventArgs e)
-        {
-            lbEnfermedades.Items.Add(txtEnfermedades.Text);
-            txtEnfermedades.Text = "";
-        }
+     
+
         private void dgBuscar_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }

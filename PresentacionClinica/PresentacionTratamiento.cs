@@ -11,6 +11,11 @@ namespace PresentacionClinica
         public PresentacionTratamiento()
         {
             InitializeComponent();
+            txtAlergias.Enabled = false;
+            txtEnfermedades.Enabled = false;
+            btnHistoria.Enabled = false;
+            btnAlergias.Enabled = false;
+            btnEnfermedades.Enabled = false;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -70,5 +75,25 @@ namespace PresentacionClinica
                 lblUsuario.Text = Nombre + " " + Apellido;
             }
             }
+
+        private void btnHistoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnfermedades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlergias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PresentacionTratamiento_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
