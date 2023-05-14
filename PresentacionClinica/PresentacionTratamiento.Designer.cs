@@ -34,103 +34,71 @@ namespace PresentacionClinica
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.chk28 = new System.Windows.Forms.CheckBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.chk27 = new System.Windows.Forms.CheckBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.chk26 = new System.Windows.Forms.CheckBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
             this.chk23 = new System.Windows.Forms.CheckBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.chk25 = new System.Windows.Forms.CheckBox();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.groupBox38 = new System.Windows.Forms.GroupBox();
             this.chk22 = new System.Windows.Forms.CheckBox();
-            this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.groupBox39 = new System.Windows.Forms.GroupBox();
             this.chk24 = new System.Windows.Forms.CheckBox();
-            this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.chk21 = new System.Windows.Forms.CheckBox();
-            this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.chk38 = new System.Windows.Forms.CheckBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.chk37 = new System.Windows.Forms.CheckBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.chk36 = new System.Windows.Forms.CheckBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.chk33 = new System.Windows.Forms.CheckBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.chk35 = new System.Windows.Forms.CheckBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
             this.chk32 = new System.Windows.Forms.CheckBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.chk34 = new System.Windows.Forms.CheckBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
             this.chk31 = new System.Windows.Forms.CheckBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.chk41 = new System.Windows.Forms.CheckBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.chk42 = new System.Windows.Forms.CheckBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.chk43 = new System.Windows.Forms.CheckBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.chk46 = new System.Windows.Forms.CheckBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.chk44 = new System.Windows.Forms.CheckBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.chk47 = new System.Windows.Forms.CheckBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.chk45 = new System.Windows.Forms.CheckBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.chk48 = new System.Windows.Forms.CheckBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.chk11 = new System.Windows.Forms.CheckBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.chk12 = new System.Windows.Forms.CheckBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.chk13 = new System.Windows.Forms.CheckBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.chk16 = new System.Windows.Forms.CheckBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.chk14 = new System.Windows.Forms.CheckBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.chk17 = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.chk15 = new System.Windows.Forms.CheckBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.chk18 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -138,84 +106,118 @@ namespace PresentacionClinica
             this.dgBuscar = new System.Windows.Forms.DataGridView();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tcPaciente.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox32.SuspendLayout();
             this.groupBox33.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             this.groupBox34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.groupBox35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             this.groupBox36.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             this.groupBox37.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.groupBox38.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             this.groupBox39.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             this.groupBox40.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.groupBox23.SuspendLayout();
             this.groupBox24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.groupBox25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.groupBox26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             this.groupBox27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.groupBox28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.groupBox29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.groupBox30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.groupBox31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             this.groupBox12.SuspendLayout();
             this.groupBox15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.groupBox18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.groupBox19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.groupBox20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.groupBox21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.groupBox22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tcPaciente
             // 
             this.tcPaciente.Controls.Add(this.tabPage2);
+            this.tcPaciente.Controls.Add(this.tabPage1);
             this.tcPaciente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcPaciente.Location = new System.Drawing.Point(12, 302);
+            this.tcPaciente.Location = new System.Drawing.Point(38, 304);
             this.tcPaciente.Name = "tcPaciente";
             this.tcPaciente.SelectedIndex = 0;
             this.tcPaciente.Size = new System.Drawing.Size(1701, 552);
@@ -271,16 +273,6 @@ namespace PresentacionClinica
             this.chk28.TabIndex = 8;
             this.chk28.UseVisualStyleBackColor = true;
             // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::PresentacionClinica.Properties.Resources._28;
-            this.pictureBox25.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 0;
-            this.pictureBox25.TabStop = false;
-            // 
             // groupBox34
             // 
             this.groupBox34.Controls.Add(this.chk27);
@@ -300,16 +292,6 @@ namespace PresentacionClinica
             this.chk27.Size = new System.Drawing.Size(18, 17);
             this.chk27.TabIndex = 8;
             this.chk27.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = global::PresentacionClinica.Properties.Resources._27;
-            this.pictureBox26.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox26.TabIndex = 0;
-            this.pictureBox26.TabStop = false;
             // 
             // groupBox35
             // 
@@ -331,16 +313,6 @@ namespace PresentacionClinica
             this.chk26.TabIndex = 8;
             this.chk26.UseVisualStyleBackColor = true;
             // 
-            // pictureBox27
-            // 
-            this.pictureBox27.Image = global::PresentacionClinica.Properties.Resources._26;
-            this.pictureBox27.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox27.TabIndex = 0;
-            this.pictureBox27.TabStop = false;
-            // 
             // groupBox36
             // 
             this.groupBox36.Controls.Add(this.chk23);
@@ -360,16 +332,6 @@ namespace PresentacionClinica
             this.chk23.Size = new System.Drawing.Size(18, 17);
             this.chk23.TabIndex = 8;
             this.chk23.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.Image = global::PresentacionClinica.Properties.Resources._23;
-            this.pictureBox28.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox28.TabIndex = 0;
-            this.pictureBox28.TabStop = false;
             // 
             // groupBox37
             // 
@@ -391,16 +353,6 @@ namespace PresentacionClinica
             this.chk25.TabIndex = 8;
             this.chk25.UseVisualStyleBackColor = true;
             // 
-            // pictureBox29
-            // 
-            this.pictureBox29.Image = global::PresentacionClinica.Properties.Resources._25;
-            this.pictureBox29.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox29.TabIndex = 0;
-            this.pictureBox29.TabStop = false;
-            // 
             // groupBox38
             // 
             this.groupBox38.Controls.Add(this.chk22);
@@ -420,16 +372,6 @@ namespace PresentacionClinica
             this.chk22.Size = new System.Drawing.Size(18, 17);
             this.chk22.TabIndex = 8;
             this.chk22.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox30
-            // 
-            this.pictureBox30.Image = global::PresentacionClinica.Properties.Resources._22;
-            this.pictureBox30.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox30.TabIndex = 0;
-            this.pictureBox30.TabStop = false;
             // 
             // groupBox39
             // 
@@ -451,16 +393,6 @@ namespace PresentacionClinica
             this.chk24.TabIndex = 8;
             this.chk24.UseVisualStyleBackColor = true;
             // 
-            // pictureBox31
-            // 
-            this.pictureBox31.Image = global::PresentacionClinica.Properties.Resources._24;
-            this.pictureBox31.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox31.TabIndex = 0;
-            this.pictureBox31.TabStop = false;
-            // 
             // groupBox40
             // 
             this.groupBox40.Controls.Add(this.chk21);
@@ -480,16 +412,6 @@ namespace PresentacionClinica
             this.chk21.Size = new System.Drawing.Size(18, 17);
             this.chk21.TabIndex = 8;
             this.chk21.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.Image = global::PresentacionClinica.Properties.Resources._21;
-            this.pictureBox32.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox32.TabIndex = 0;
-            this.pictureBox32.TabStop = false;
             // 
             // groupBox23
             // 
@@ -527,16 +449,6 @@ namespace PresentacionClinica
             this.chk38.TabIndex = 8;
             this.chk38.UseVisualStyleBackColor = true;
             // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::PresentacionClinica.Properties.Resources._38;
-            this.pictureBox17.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 0;
-            this.pictureBox17.TabStop = false;
-            // 
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.chk37);
@@ -556,16 +468,6 @@ namespace PresentacionClinica
             this.chk37.Size = new System.Drawing.Size(18, 17);
             this.chk37.TabIndex = 8;
             this.chk37.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::PresentacionClinica.Properties.Resources._37;
-            this.pictureBox18.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 0;
-            this.pictureBox18.TabStop = false;
             // 
             // groupBox26
             // 
@@ -587,16 +489,6 @@ namespace PresentacionClinica
             this.chk36.TabIndex = 8;
             this.chk36.UseVisualStyleBackColor = true;
             // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::PresentacionClinica.Properties.Resources._36;
-            this.pictureBox19.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 0;
-            this.pictureBox19.TabStop = false;
-            // 
             // groupBox27
             // 
             this.groupBox27.Controls.Add(this.chk33);
@@ -616,16 +508,6 @@ namespace PresentacionClinica
             this.chk33.Size = new System.Drawing.Size(18, 17);
             this.chk33.TabIndex = 8;
             this.chk33.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::PresentacionClinica.Properties.Resources._33;
-            this.pictureBox20.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 0;
-            this.pictureBox20.TabStop = false;
             // 
             // groupBox28
             // 
@@ -647,16 +529,6 @@ namespace PresentacionClinica
             this.chk35.TabIndex = 8;
             this.chk35.UseVisualStyleBackColor = true;
             // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = global::PresentacionClinica.Properties.Resources._35;
-            this.pictureBox21.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 0;
-            this.pictureBox21.TabStop = false;
-            // 
             // groupBox29
             // 
             this.groupBox29.Controls.Add(this.chk32);
@@ -676,16 +548,6 @@ namespace PresentacionClinica
             this.chk32.Size = new System.Drawing.Size(18, 17);
             this.chk32.TabIndex = 8;
             this.chk32.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = global::PresentacionClinica.Properties.Resources._32;
-            this.pictureBox22.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 0;
-            this.pictureBox22.TabStop = false;
             // 
             // groupBox30
             // 
@@ -707,16 +569,6 @@ namespace PresentacionClinica
             this.chk34.TabIndex = 8;
             this.chk34.UseVisualStyleBackColor = true;
             // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = global::PresentacionClinica.Properties.Resources._34;
-            this.pictureBox23.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox23.TabIndex = 0;
-            this.pictureBox23.TabStop = false;
-            // 
             // groupBox31
             // 
             this.groupBox31.Controls.Add(this.chk31);
@@ -736,16 +588,6 @@ namespace PresentacionClinica
             this.chk31.Size = new System.Drawing.Size(18, 17);
             this.chk31.TabIndex = 8;
             this.chk31.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Image = global::PresentacionClinica.Properties.Resources._31;
-            this.pictureBox24.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 0;
-            this.pictureBox24.TabStop = false;
             // 
             // groupBox12
             // 
@@ -783,16 +625,6 @@ namespace PresentacionClinica
             this.chk41.TabIndex = 8;
             this.chk41.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::PresentacionClinica.Properties.Resources._41;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.chk42);
@@ -812,16 +644,6 @@ namespace PresentacionClinica
             this.chk42.Size = new System.Drawing.Size(18, 17);
             this.chk42.TabIndex = 8;
             this.chk42.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::PresentacionClinica.Properties.Resources._42;
-            this.pictureBox10.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 0;
-            this.pictureBox10.TabStop = false;
             // 
             // groupBox17
             // 
@@ -843,16 +665,6 @@ namespace PresentacionClinica
             this.chk43.TabIndex = 8;
             this.chk43.UseVisualStyleBackColor = true;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::PresentacionClinica.Properties.Resources._43;
-            this.pictureBox11.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 0;
-            this.pictureBox11.TabStop = false;
-            // 
             // groupBox18
             // 
             this.groupBox18.Controls.Add(this.chk46);
@@ -872,16 +684,6 @@ namespace PresentacionClinica
             this.chk46.Size = new System.Drawing.Size(18, 17);
             this.chk46.TabIndex = 8;
             this.chk46.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::PresentacionClinica.Properties.Resources._46;
-            this.pictureBox12.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 0;
-            this.pictureBox12.TabStop = false;
             // 
             // groupBox19
             // 
@@ -903,16 +705,6 @@ namespace PresentacionClinica
             this.chk44.TabIndex = 8;
             this.chk44.UseVisualStyleBackColor = true;
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::PresentacionClinica.Properties.Resources._44;
-            this.pictureBox13.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 0;
-            this.pictureBox13.TabStop = false;
-            // 
             // groupBox20
             // 
             this.groupBox20.Controls.Add(this.chk47);
@@ -932,16 +724,6 @@ namespace PresentacionClinica
             this.chk47.Size = new System.Drawing.Size(18, 17);
             this.chk47.TabIndex = 8;
             this.chk47.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::PresentacionClinica.Properties.Resources._47;
-            this.pictureBox14.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 0;
-            this.pictureBox14.TabStop = false;
             // 
             // groupBox21
             // 
@@ -963,16 +745,6 @@ namespace PresentacionClinica
             this.chk45.TabIndex = 8;
             this.chk45.UseVisualStyleBackColor = true;
             // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::PresentacionClinica.Properties.Resources._45;
-            this.pictureBox15.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 0;
-            this.pictureBox15.TabStop = false;
-            // 
             // groupBox22
             // 
             this.groupBox22.Controls.Add(this.chk48);
@@ -992,16 +764,6 @@ namespace PresentacionClinica
             this.chk48.Size = new System.Drawing.Size(18, 17);
             this.chk48.TabIndex = 8;
             this.chk48.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::PresentacionClinica.Properties.Resources._48;
-            this.pictureBox16.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 0;
-            this.pictureBox16.TabStop = false;
             // 
             // groupBox5
             // 
@@ -1039,16 +801,6 @@ namespace PresentacionClinica
             this.chk11.TabIndex = 8;
             this.chk11.UseVisualStyleBackColor = true;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::PresentacionClinica.Properties.Resources._11;
-            this.pictureBox8.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
             // groupBox14
             // 
             this.groupBox14.Controls.Add(this.chk12);
@@ -1068,16 +820,6 @@ namespace PresentacionClinica
             this.chk12.Size = new System.Drawing.Size(18, 17);
             this.chk12.TabIndex = 8;
             this.chk12.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::PresentacionClinica.Properties.Resources._12;
-            this.pictureBox9.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
             // 
             // groupBox9
             // 
@@ -1099,16 +841,6 @@ namespace PresentacionClinica
             this.chk13.TabIndex = 8;
             this.chk13.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::PresentacionClinica.Properties.Resources._13;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.chk16);
@@ -1128,16 +860,6 @@ namespace PresentacionClinica
             this.chk16.Size = new System.Drawing.Size(18, 17);
             this.chk16.TabIndex = 8;
             this.chk16.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::PresentacionClinica.Properties.Resources._16;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // groupBox10
             // 
@@ -1159,16 +881,6 @@ namespace PresentacionClinica
             this.chk14.TabIndex = 8;
             this.chk14.UseVisualStyleBackColor = true;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::PresentacionClinica.Properties.Resources._14;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.chk17);
@@ -1188,16 +900,6 @@ namespace PresentacionClinica
             this.chk17.Size = new System.Drawing.Size(18, 17);
             this.chk17.TabIndex = 8;
             this.chk17.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PresentacionClinica.Properties.Resources._17;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // groupBox11
             // 
@@ -1219,16 +921,6 @@ namespace PresentacionClinica
             this.chk15.TabIndex = 8;
             this.chk15.UseVisualStyleBackColor = true;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::PresentacionClinica.Properties.Resources._15;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.chk18);
@@ -1248,16 +940,6 @@ namespace PresentacionClinica
             this.chk18.Size = new System.Drawing.Size(18, 17);
             this.chk18.TabIndex = 8;
             this.chk18.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PresentacionClinica.Properties.Resources._18;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCerrar
             // 
@@ -1344,6 +1026,335 @@ namespace PresentacionClinica
             this.label1.TabIndex = 45;
             this.label1.Text = "Nombre de Paciente:";
             // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::PresentacionClinica.Properties.Resources._28;
+            this.pictureBox25.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 0;
+            this.pictureBox25.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::PresentacionClinica.Properties.Resources._27;
+            this.pictureBox26.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 0;
+            this.pictureBox26.TabStop = false;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.Image = global::PresentacionClinica.Properties.Resources._26;
+            this.pictureBox27.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox27.TabIndex = 0;
+            this.pictureBox27.TabStop = false;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Image = global::PresentacionClinica.Properties.Resources._23;
+            this.pictureBox28.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox28.TabIndex = 0;
+            this.pictureBox28.TabStop = false;
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = global::PresentacionClinica.Properties.Resources._25;
+            this.pictureBox29.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox29.TabIndex = 0;
+            this.pictureBox29.TabStop = false;
+            // 
+            // pictureBox30
+            // 
+            this.pictureBox30.Image = global::PresentacionClinica.Properties.Resources._22;
+            this.pictureBox30.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox30.TabIndex = 0;
+            this.pictureBox30.TabStop = false;
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.Image = global::PresentacionClinica.Properties.Resources._24;
+            this.pictureBox31.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox31.TabIndex = 0;
+            this.pictureBox31.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = global::PresentacionClinica.Properties.Resources._21;
+            this.pictureBox32.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox32.TabIndex = 0;
+            this.pictureBox32.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::PresentacionClinica.Properties.Resources._38;
+            this.pictureBox17.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 0;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::PresentacionClinica.Properties.Resources._37;
+            this.pictureBox18.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 0;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::PresentacionClinica.Properties.Resources._36;
+            this.pictureBox19.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 0;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::PresentacionClinica.Properties.Resources._33;
+            this.pictureBox20.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 0;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::PresentacionClinica.Properties.Resources._35;
+            this.pictureBox21.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 0;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::PresentacionClinica.Properties.Resources._32;
+            this.pictureBox22.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 0;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::PresentacionClinica.Properties.Resources._34;
+            this.pictureBox23.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox23.TabIndex = 0;
+            this.pictureBox23.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = global::PresentacionClinica.Properties.Resources._31;
+            this.pictureBox24.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 0;
+            this.pictureBox24.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::PresentacionClinica.Properties.Resources._41;
+            this.pictureBox7.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::PresentacionClinica.Properties.Resources._42;
+            this.pictureBox10.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::PresentacionClinica.Properties.Resources._43;
+            this.pictureBox11.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 0;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::PresentacionClinica.Properties.Resources._46;
+            this.pictureBox12.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 0;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::PresentacionClinica.Properties.Resources._44;
+            this.pictureBox13.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 0;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::PresentacionClinica.Properties.Resources._47;
+            this.pictureBox14.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 0;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::PresentacionClinica.Properties.Resources._45;
+            this.pictureBox15.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 0;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::PresentacionClinica.Properties.Resources._48;
+            this.pictureBox16.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 0;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::PresentacionClinica.Properties.Resources._11;
+            this.pictureBox8.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::PresentacionClinica.Properties.Resources._12;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::PresentacionClinica.Properties.Resources._13;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::PresentacionClinica.Properties.Resources._16;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::PresentacionClinica.Properties.Resources._14;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PresentacionClinica.Properties.Resources._17;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::PresentacionClinica.Properties.Resources._15;
+            this.pictureBox6.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PresentacionClinica.Properties.Resources._18;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1693, 514);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Danios";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // PresentacionTratamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1366,104 +1377,104 @@ namespace PresentacionClinica
             this.groupBox32.ResumeLayout(false);
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.groupBox34.ResumeLayout(false);
             this.groupBox34.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.groupBox35.ResumeLayout(false);
             this.groupBox35.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             this.groupBox36.ResumeLayout(false);
             this.groupBox36.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             this.groupBox37.ResumeLayout(false);
             this.groupBox37.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.groupBox38.ResumeLayout(false);
             this.groupBox38.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             this.groupBox39.ResumeLayout(false);
             this.groupBox39.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             this.groupBox40.ResumeLayout(false);
             this.groupBox40.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.groupBox23.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             this.groupBox27.ResumeLayout(false);
             this.groupBox27.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.groupBox29.ResumeLayout(false);
             this.groupBox29.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.groupBox30.ResumeLayout(false);
             this.groupBox30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.groupBox31.ResumeLayout(false);
             this.groupBox31.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.groupBox22.ResumeLayout(false);
             this.groupBox22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1580,5 +1591,6 @@ namespace PresentacionClinica
         private System.Windows.Forms.DataGridView dgBuscar;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
