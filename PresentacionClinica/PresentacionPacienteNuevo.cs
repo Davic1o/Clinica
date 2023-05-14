@@ -30,6 +30,9 @@ namespace PresentacionClinica
             btnPaciente.Enabled = false;
             btnAlergias.Enabled = false;
             btnEnfermedades.Enabled = false;
+            cmbGenero.Enabled = false;
+            dTNacimiento.Enabled = false;
+            btnCargar.Enabled = false;
             txtNombre.Text = "";
 
             //dgBuscar.DataSource = Paciente.verPacientes();
@@ -73,6 +76,9 @@ namespace PresentacionClinica
             mtxtTelefono2.Enabled = true;
             mtxtCorreo.Enabled = true;
             btnPaciente.Enabled = true;
+            cmbGenero.Enabled = true;
+            dTNacimiento.Enabled = true;
+            btnCargar.Enabled = true;
         }
         private void PresentacionPacienteNuevo_Load(object sender, EventArgs e)
         {
