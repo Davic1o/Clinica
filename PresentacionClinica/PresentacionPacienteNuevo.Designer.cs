@@ -30,7 +30,7 @@ namespace PresentacionClinica
         private void InitializeComponent()
         {
             this.tcPaciente = new System.Windows.Forms.TabControl();
-            this.Nuevo = new System.Windows.Forms.TabPage();
+            this.tpNuevo = new System.Windows.Forms.TabPage();
             this.btnHistoria = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -64,13 +64,15 @@ namespace PresentacionClinica
             this.txtFechaIngreso = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tpEditar = new System.Windows.Forms.TabPage();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgBuscar = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.txtApellidoB = new System.Windows.Forms.TextBox();
             this.grbAlergias = new System.Windows.Forms.GroupBox();
@@ -92,44 +94,46 @@ namespace PresentacionClinica
             this.label19 = new System.Windows.Forms.Label();
             this.lblPacientes = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.lblId = new System.Windows.Forms.Label();
+            this.tpHistoria = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tcPaciente.SuspendLayout();
-            this.Nuevo.SuspendLayout();
+            this.tpNuevo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tpEditar.SuspendLayout();
             this.groupBox42.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
             this.groupBox41.SuspendLayout();
             this.grbAlergias.SuspendLayout();
+            this.tpHistoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tcPaciente
             // 
-            this.tcPaciente.Controls.Add(this.Nuevo);
-            this.tcPaciente.Controls.Add(this.tabPage1);
+            this.tcPaciente.Controls.Add(this.tpNuevo);
+            this.tcPaciente.Controls.Add(this.tpHistoria);
+            this.tcPaciente.Controls.Add(this.tpEditar);
             this.tcPaciente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcPaciente.Location = new System.Drawing.Point(13, 58);
+            this.tcPaciente.Location = new System.Drawing.Point(13, 65);
             this.tcPaciente.Name = "tcPaciente";
             this.tcPaciente.SelectedIndex = 0;
             this.tcPaciente.Size = new System.Drawing.Size(1718, 821);
             this.tcPaciente.TabIndex = 0;
             // 
-            // Nuevo
+            // tpNuevo
             // 
-            this.Nuevo.Controls.Add(this.btnHistoria);
-            this.Nuevo.Controls.Add(this.groupBox2);
-            this.Nuevo.Controls.Add(this.groupBox1);
-            this.Nuevo.Location = new System.Drawing.Point(4, 34);
-            this.Nuevo.Name = "Nuevo";
-            this.Nuevo.Padding = new System.Windows.Forms.Padding(3);
-            this.Nuevo.Size = new System.Drawing.Size(1710, 783);
-            this.Nuevo.TabIndex = 0;
-            this.Nuevo.Text = "   Nuevo   ";
-            this.Nuevo.UseVisualStyleBackColor = true;
+            this.tpNuevo.Controls.Add(this.groupBox1);
+            this.tpNuevo.Location = new System.Drawing.Point(4, 34);
+            this.tpNuevo.Name = "tpNuevo";
+            this.tpNuevo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpNuevo.Size = new System.Drawing.Size(1710, 783);
+            this.tpNuevo.TabIndex = 0;
+            this.tpNuevo.Text = "   Nuevo   ";
+            this.tpNuevo.UseVisualStyleBackColor = true;
             // 
             // btnHistoria
             // 
@@ -137,7 +141,7 @@ namespace PresentacionClinica
             this.btnHistoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnHistoria.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistoria.ForeColor = System.Drawing.Color.White;
-            this.btnHistoria.Location = new System.Drawing.Point(1479, 387);
+            this.btnHistoria.Location = new System.Drawing.Point(676, 207);
             this.btnHistoria.Name = "btnHistoria";
             this.btnHistoria.Size = new System.Drawing.Size(190, 85);
             this.btnHistoria.TabIndex = 33;
@@ -147,11 +151,12 @@ namespace PresentacionClinica
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnHistoria);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Location = new System.Drawing.Point(728, -1);
+            this.groupBox2.Location = new System.Drawing.Point(290, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(683, 774);
+            this.groupBox2.Size = new System.Drawing.Size(877, 774);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             // 
@@ -267,6 +272,8 @@ namespace PresentacionClinica
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnPaciente);
             this.groupBox1.Controls.Add(this.mtxtDoc);
             this.groupBox1.Controls.Add(this.btnNuevo);
@@ -287,9 +294,9 @@ namespace PresentacionClinica
             this.groupBox1.Controls.Add(this.txtFechaIngreso);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Location = new System.Drawing.Point(8, -2);
+            this.groupBox1.Location = new System.Drawing.Point(290, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(683, 774);
+            this.groupBox1.Size = new System.Drawing.Size(1116, 774);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             // 
@@ -299,7 +306,7 @@ namespace PresentacionClinica
             this.btnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnPaciente.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnPaciente.Location = new System.Drawing.Point(233, 686);
+            this.btnPaciente.Location = new System.Drawing.Point(381, 683);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Size = new System.Drawing.Size(172, 72);
             this.btnPaciente.TabIndex = 36;
@@ -312,7 +319,7 @@ namespace PresentacionClinica
             this.mtxtDoc.Location = new System.Drawing.Point(312, 265);
             this.mtxtDoc.Name = "mtxtDoc";
             this.mtxtDoc.Size = new System.Drawing.Size(197, 32);
-            this.mtxtDoc.TabIndex = 35;
+            this.mtxtDoc.TabIndex = 5;
             // 
             // btnNuevo
             // 
@@ -333,7 +340,7 @@ namespace PresentacionClinica
             this.mtxtCorreo.Location = new System.Drawing.Point(312, 632);
             this.mtxtCorreo.Name = "mtxtCorreo";
             this.mtxtCorreo.Size = new System.Drawing.Size(341, 32);
-            this.mtxtCorreo.TabIndex = 31;
+            this.mtxtCorreo.TabIndex = 9;
             this.mtxtCorreo.ValidatingType = typeof(int);
             // 
             // mtxtTelefono2
@@ -342,7 +349,7 @@ namespace PresentacionClinica
             this.mtxtTelefono2.Mask = "0000000000";
             this.mtxtTelefono2.Name = "mtxtTelefono2";
             this.mtxtTelefono2.Size = new System.Drawing.Size(211, 32);
-            this.mtxtTelefono2.TabIndex = 30;
+            this.mtxtTelefono2.TabIndex = 8;
             this.mtxtTelefono2.ValidatingType = typeof(int);
             // 
             // mtxtTelefono
@@ -351,7 +358,7 @@ namespace PresentacionClinica
             this.mtxtTelefono.Mask = "0900000000";
             this.mtxtTelefono.Name = "mtxtTelefono";
             this.mtxtTelefono.Size = new System.Drawing.Size(211, 32);
-            this.mtxtTelefono.TabIndex = 29;
+            this.mtxtTelefono.TabIndex = 7;
             // 
             // cmbDocumento
             // 
@@ -421,7 +428,7 @@ namespace PresentacionClinica
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(341, 128);
-            this.txtDireccion.TabIndex = 21;
+            this.txtDireccion.TabIndex = 5;
             // 
             // label8
             // 
@@ -441,7 +448,7 @@ namespace PresentacionClinica
             this.txtApellido.Location = new System.Drawing.Point(312, 208);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(341, 28);
-            this.txtApellido.TabIndex = 19;
+            this.txtApellido.TabIndex = 4;
             // 
             // label7
             // 
@@ -461,7 +468,7 @@ namespace PresentacionClinica
             this.txtNombre.Location = new System.Drawing.Point(312, 150);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(341, 28);
-            this.txtNombre.TabIndex = 18;
+            this.txtNombre.TabIndex = 3;
             // 
             // label10
             // 
@@ -481,7 +488,7 @@ namespace PresentacionClinica
             this.txtFechaIngreso.Location = new System.Drawing.Point(312, 89);
             this.txtFechaIngreso.Name = "txtFechaIngreso";
             this.txtFechaIngreso.Size = new System.Drawing.Size(341, 28);
-            this.txtFechaIngreso.TabIndex = 17;
+            this.txtFechaIngreso.TabIndex = 2;
             // 
             // label9
             // 
@@ -501,18 +508,18 @@ namespace PresentacionClinica
             this.txtId.Location = new System.Drawing.Point(312, 31);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(160, 28);
-            this.txtId.TabIndex = 16;
+            this.txtId.TabIndex = 1;
             // 
-            // tabPage1
+            // tpEditar
             // 
-            this.tabPage1.Controls.Add(this.groupBox42);
-            this.tabPage1.Controls.Add(this.groupBox41);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1710, 783);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Editar";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpEditar.Controls.Add(this.groupBox42);
+            this.tpEditar.Controls.Add(this.groupBox41);
+            this.tpEditar.Location = new System.Drawing.Point(4, 34);
+            this.tpEditar.Name = "tpEditar";
+            this.tpEditar.Size = new System.Drawing.Size(1710, 783);
+            this.tpEditar.TabIndex = 2;
+            this.tpEditar.Text = "Editar";
+            this.tpEditar.UseVisualStyleBackColor = true;
             // 
             // groupBox42
             // 
@@ -598,6 +605,31 @@ namespace PresentacionClinica
             this.groupBox41.Size = new System.Drawing.Size(1122, 669);
             this.groupBox41.TabIndex = 26;
             this.groupBox41.TabStop = false;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.BackColor = System.Drawing.Color.Transparent;
+            this.lblId.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.ForeColor = System.Drawing.Color.Black;
+            this.lblId.Location = new System.Drawing.Point(237, 31);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 29);
+            this.lblId.TabIndex = 40;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnActualizar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(785, 534);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(257, 75);
+            this.btnActualizar.TabIndex = 39;
+            this.btnActualizar.Text = "Guardar Cambios";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // lbl
             // 
@@ -822,30 +854,39 @@ namespace PresentacionClinica
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnActualizar
+            // tpHistoria
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnActualizar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(785, 534);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(257, 75);
-            this.btnActualizar.TabIndex = 39;
-            this.btnActualizar.Text = "Guardar Cambios";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.tpHistoria.Controls.Add(this.groupBox2);
+            this.tpHistoria.Location = new System.Drawing.Point(4, 34);
+            this.tpHistoria.Name = "tpHistoria";
+            this.tpHistoria.Size = new System.Drawing.Size(1710, 783);
+            this.tpHistoria.TabIndex = 3;
+            this.tpHistoria.Text = "  Historia Clinica  ";
+            this.tpHistoria.UseVisualStyleBackColor = true;
             // 
-            // lblId
+            // pictureBox1
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.BackColor = System.Drawing.Color.Transparent;
-            this.lblId.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.Color.Black;
-            this.lblId.Location = new System.Drawing.Point(237, 31);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(0, 29);
-            this.lblId.TabIndex = 40;
+            this.pictureBox1.Image = global::PresentacionClinica.Properties.Resources.SinFoto;
+            this.pictureBox1.Location = new System.Drawing.Point(774, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(262, 339);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(774, 389);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(161, 50);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Prueba";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PresentacionPaciente
             // 
@@ -862,7 +903,7 @@ namespace PresentacionClinica
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PresentacionPacienteNuevo_Load);
             this.tcPaciente.ResumeLayout(false);
-            this.Nuevo.ResumeLayout(false);
+            this.tpNuevo.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -870,7 +911,7 @@ namespace PresentacionClinica
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.tpEditar.ResumeLayout(false);
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
@@ -878,6 +919,8 @@ namespace PresentacionClinica
             this.groupBox41.PerformLayout();
             this.grbAlergias.ResumeLayout(false);
             this.grbAlergias.PerformLayout();
+            this.tpHistoria.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -886,7 +929,7 @@ namespace PresentacionClinica
         #endregion
 
         private System.Windows.Forms.TabControl tcPaciente;
-        private System.Windows.Forms.TabPage Nuevo;
+        private System.Windows.Forms.TabPage tpNuevo;
         private System.Windows.Forms.Label lblPacientes;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label9;
@@ -919,7 +962,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tpEditar;
         private System.Windows.Forms.GroupBox groupBox41;
         private System.Windows.Forms.MaskedTextBox txtCorreoB;
         private System.Windows.Forms.MaskedTextBox mtxtTelefono2B;
@@ -950,5 +993,8 @@ namespace PresentacionClinica
         private System.Windows.Forms.TextBox txtApellidoB;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TabPage tpHistoria;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -105,6 +105,8 @@ namespace PresentacionClinica
                 mtxtTelefono2.Enabled = false;
                 mtxtCorreo.Enabled = false;
                 btnHistoria.Enabled = true;
+                tcPaciente.SelectTab(1);
+
             }
             else
             {
@@ -229,6 +231,11 @@ namespace PresentacionClinica
             mtxtTelefono1B.Text = "";
             mtxtTelefono2B.Text = "";
             txtCorreoB.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
