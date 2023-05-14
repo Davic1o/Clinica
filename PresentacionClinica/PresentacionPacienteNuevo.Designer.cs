@@ -63,7 +63,6 @@ namespace PresentacionClinica
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tpHistoria = new System.Windows.Forms.TabPage();
             this.tpNuevo = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -495,15 +494,6 @@ namespace PresentacionClinica
             this.dateTimePicker1.Size = new System.Drawing.Size(197, 32);
             this.dateTimePicker1.TabIndex = 8;
             // 
-            // tpHistoria
-            // 
-            this.tpHistoria.Location = new System.Drawing.Point(4, 34);
-            this.tpHistoria.Name = "tpHistoria";
-            this.tpHistoria.Size = new System.Drawing.Size(1710, 783);
-            this.tpHistoria.TabIndex = 3;
-            this.tpHistoria.Text = "  Historia Clinica  ";
-            this.tpHistoria.UseVisualStyleBackColor = true;
-            // 
             // tpNuevo
             // 
             this.tpNuevo.Controls.Add(this.groupBox1);
@@ -830,7 +820,6 @@ namespace PresentacionClinica
             // tcPaciente
             // 
             this.tcPaciente.Controls.Add(this.tpNuevo);
-            this.tcPaciente.Controls.Add(this.tpHistoria);
             this.tcPaciente.Controls.Add(this.tpEditar);
             this.tcPaciente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcPaciente.Location = new System.Drawing.Point(13, 65);
@@ -905,7 +894,6 @@ namespace PresentacionClinica
         private System.Windows.Forms.DataGridView dgBuscar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.TabPage tpHistoria;
         private System.Windows.Forms.TabPage tpNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dTNacimiento;
