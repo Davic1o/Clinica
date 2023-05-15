@@ -56,6 +56,7 @@
       <DependentUpon>DataClinica.dbml</DependentUpon>
     </Compile>
     <Compile Include="DatosAlergias.cs" />
+    <Compile Include="DatosEnfermedad.cs" />
     <Compile Include="DatosPaciente.cs" />
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
