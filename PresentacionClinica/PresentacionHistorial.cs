@@ -60,6 +60,8 @@ namespace PresentacionClinica
                 btnHistoria.Enabled = true;
                 btnAlergias.Enabled = true;
                 btnEnfermedades.Enabled = true;
+                lbAlergias.DataSource = alerg.listarAlergias(Dato);
+                lbAlergias.DisplayMember = "Alergia";
             }
             }
 
@@ -96,9 +98,10 @@ namespace PresentacionClinica
             Alergias alergias = new Alergias();
             alergias.IdPaciente = Dato;
             alergias.Alergia= txtAlergias.Text;
-            alerg.AgregarAlergias(alergias);
-            lbAlergias.Items.Add(txtAlergias.Text);
                 txtAlergias.Text = "";
+            alerg.AgregarAlergias(alergias);
+            lbAlergias.DataSource = alerg.listarAlergias(Dato);
+            lbAlergias.Refresh();
             }
             else
             {
