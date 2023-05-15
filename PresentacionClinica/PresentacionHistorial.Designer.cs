@@ -1912,6 +1912,7 @@ namespace PresentacionClinica
             this.btnEnfermedades.TabIndex = 6;
             this.btnEnfermedades.Text = "Agregar";
             this.btnEnfermedades.UseVisualStyleBackColor = false;
+            this.btnEnfermedades.Click += new System.EventHandler(this.btnEnfermedades_Click_1);
             // 
             // lbEnfermedades
             // 

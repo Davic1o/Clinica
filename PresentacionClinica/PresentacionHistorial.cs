@@ -110,6 +110,18 @@ namespace PresentacionClinica
 
         }
 
+        private void btnEnfermedades_Click_1(object sender, EventArgs e)
+        {
+            if (txtEnfermedades.Text != "")
+            {
+                Enfermedades enfermedades = new Enfermedades();
+                enfermedades.IdPaciente = Dato;
+                enfermedades.Enfermedad = txtEnfermedades.Text;
+                txtEnfermedades.Text = "";
+                
 
+             
+            }
+        }
     }
 }
