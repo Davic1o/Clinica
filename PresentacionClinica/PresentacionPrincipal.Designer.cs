@@ -37,15 +37,15 @@ namespace PresentacionClinica
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnTratamiento = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.pnlPadre = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -152,6 +152,39 @@ namespace PresentacionClinica
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(30, 761);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(187, 82);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Administracion";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(30, 614);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(187, 82);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Facturacion";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(30, 470);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 82);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Gastos";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // btnTratamiento
             // 
             this.btnTratamiento.BackColor = System.Drawing.Color.White;
@@ -160,7 +193,7 @@ namespace PresentacionClinica
             this.btnTratamiento.Name = "btnTratamiento";
             this.btnTratamiento.Size = new System.Drawing.Size(187, 82);
             this.btnTratamiento.TabIndex = 2;
-            this.btnTratamiento.Text = "Tratamiento";
+            this.btnTratamiento.Text = "Historial Clinica";
             this.btnTratamiento.UseVisualStyleBackColor = false;
             this.btnTratamiento.Click += new System.EventHandler(this.btnTratamiento_Click);
             // 
@@ -214,39 +247,6 @@ namespace PresentacionClinica
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(30, 470);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 82);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Gastos";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(30, 614);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 82);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Facturacion";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(30, 761);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(187, 82);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Administracion";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // PresentacionPrincipal
             // 
