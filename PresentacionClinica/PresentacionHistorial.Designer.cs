@@ -1966,6 +1966,7 @@ namespace PresentacionClinica
             this.btnAlergias.TabIndex = 6;
             this.btnAlergias.Text = "Agregar";
             this.btnAlergias.UseVisualStyleBackColor = false;
+            this.btnAlergias.Click += new System.EventHandler(this.btnAlergias_Click_1);
             // 
             // lbAlergias
             // 

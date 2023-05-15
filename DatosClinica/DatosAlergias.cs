@@ -14,5 +14,11 @@ namespace DatosClinica
             Db.Alergias.InsertOnSubmit(al);
             Db.SubmitChanges();
         }
+
+        public List<Alergias> ListarAlergias(int ID)
+        {
+            List<Alergias> lista = (from x in Db.Alergias where x.IdPaciente == ID select x).ToList();
+            return lista;
+        }
     }
 }

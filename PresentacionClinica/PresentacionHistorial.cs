@@ -8,6 +8,8 @@ namespace PresentacionClinica
     public partial class PresentacionHistorial : Form
     {
         NegocioPaciente Paciente = new NegocioPaciente();
+        NegocioAlergias alerg = new NegocioAlergias();
+        int Dato = 0;
         public PresentacionHistorial()
         {
             InitializeComponent();
@@ -48,10 +50,16 @@ namespace PresentacionClinica
                 DataGridViewRow row = dgBuscar.Rows[e.RowIndex];
                 // Carga los datos de la fila en el TextBox
                 int Id = (int)row.Cells[0].Value;
+                Dato = Id;
                 Paciente Pac = Paciente.CargarPaciente(Id);
                 string Nombre = Pac.Nombre;
                 string Apellido = Pac.Apellido;
                 lblUsuario.Text = Nombre + " " + Apellido;
+                txtAlergias.Enabled = true;
+                txtEnfermedades.Enabled = true;
+                btnHistoria.Enabled = true;
+                btnAlergias.Enabled = true;
+                btnEnfermedades.Enabled = true;
             }
             }
 
@@ -79,5 +87,26 @@ namespace PresentacionClinica
         {
 
         }
+
+        private void btnAlergias_Click_1(object sender, EventArgs e)
+        {
+
+            if (txtAlergias.Text != "")
+            {
+            Alergias alergias = new Alergias();
+            alergias.IdPaciente = Dato;
+            alergias.Alergia= txtAlergias.Text;
+            alerg.AgregarAlergias(alergias);
+            lbAlergias.Items.Add(txtAlergias.Text);
+                txtAlergias.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("No has agregado Alergia");
+            }
+
+        }
+
+
     }
 }

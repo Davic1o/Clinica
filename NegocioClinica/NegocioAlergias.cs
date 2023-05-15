@@ -14,6 +14,10 @@ namespace NegocioClinica
         public void AgregarAlergias(Alergias aler)
         {
             al.AgregarAlergias(aler);
-        } 
+        }
+        public List<Alergias> listarAlergias(int ID)
+        {
+            return al.ListarAlergias(ID);
+        }
     }
 }
