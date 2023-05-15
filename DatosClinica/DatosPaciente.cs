@@ -29,7 +29,7 @@ namespace DatosClinica
 
         public List<Paciente> BuscarPacientesNombre(string Nombre)
         {
-            List<Paciente> Pac = (from x in Db.Paciente where x.Nombre == Nombre || x.Apellido == Nombre select x).ToList();
+            List<Paciente> Pac = (from x in Db.Paciente where x.Nombre.Contains(Nombre) || x.Apellido.Contains(Nombre) select x).ToList();
 
             return Pac;
         }

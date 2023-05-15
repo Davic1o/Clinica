@@ -16,6 +16,7 @@ namespace PresentacionClinica
             btnHistoria.Enabled = false;
             btnAlergias.Enabled = false;
             btnEnfermedades.Enabled = false;
+            lblUsuario.Text = "SIN USUARIO";
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -26,18 +27,6 @@ namespace PresentacionClinica
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dgBuscar.DataSource = Paciente.BuscarPacientes(txtBuscar.Text);
-
-            foreach (DataGridViewColumn col in dgBuscar.Columns)
-            {
-                if (col.DataPropertyName != "Nombre" && col.DataPropertyName != "Apellido" && col.DataPropertyName != "Cedula")
-                {
-                    col.Visible = false;
-                }
-                else
-                {
-                    col.Visible = true;
-                }
-            }
         }
 
         private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
@@ -46,17 +35,8 @@ namespace PresentacionClinica
             {
                 dgBuscar.DataSource = Paciente.BuscarPacientes(txtBuscar.Text);
 
-                foreach (DataGridViewColumn col in dgBuscar.Columns)
-                {
-                    if (col.DataPropertyName != "Nombre" && col.DataPropertyName != "Apellido" && col.DataPropertyName != "Cedula")
-                    {
-                        col.Visible = false;
-                    }
-                    else
-                    {
-                        col.Visible = true;
-                    }
-                }
+
+            
 
             }
         }
@@ -91,6 +71,11 @@ namespace PresentacionClinica
         }
 
         private void PresentacionTratamiento_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
 
         }
