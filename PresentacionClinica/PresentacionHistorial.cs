@@ -5,10 +5,10 @@ using DatosClinica;
 
 namespace PresentacionClinica
 {
-    public partial class PresentacionTratamiento : Form
+    public partial class PresentacionHistorial : Form
     {
         NegocioPaciente Paciente = new NegocioPaciente();
-        public PresentacionTratamiento()
+        public PresentacionHistorial()
         {
             InitializeComponent();
             txtAlergias.Enabled = false;

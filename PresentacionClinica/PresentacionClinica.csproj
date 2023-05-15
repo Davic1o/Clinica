@@ -66,11 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PresentacionTratamiento.cs">
+    <Compile Include="PresentacionHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentacionTratamiento.Designer.cs">
-      <DependentUpon>PresentacionTratamiento.cs</DependentUpon>
+    <Compile Include="PresentacionHistorial.Designer.cs">
+      <DependentUpon>PresentacionHistorial.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="PresentacionLogin.resx">
       <DependentUpon>PresentacionLogin.cs</DependentUpon>
@@ -91,8 +91,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="PresentacionTratamiento.resx">
-      <DependentUpon>PresentacionTratamiento.cs</DependentUpon>
+    <EmbeddedResource Include="PresentacionHistorial.resx">
+      <DependentUpon>PresentacionHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

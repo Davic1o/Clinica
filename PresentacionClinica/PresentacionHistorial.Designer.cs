@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionClinica
 {
-    partial class PresentacionTratamiento
+    partial class PresentacionHistorial
     {
         /// <summary>
         /// Required designer variable.

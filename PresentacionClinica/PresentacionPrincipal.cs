@@ -15,7 +15,7 @@ namespace PresentacionClinica
     {
         PresentacionLogin frLogin = new PresentacionLogin();
         PresentacionPaciente PA = new PresentacionPaciente();
-        PresentacionTratamiento PT = new PresentacionTratamiento();
+        PresentacionHistorial PT = new PresentacionHistorial();
         public PresentacionPrincipal(string Username)
         {
             InitializeComponent();
