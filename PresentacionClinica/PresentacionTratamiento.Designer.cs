@@ -141,7 +141,6 @@ namespace PresentacionClinica
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
@@ -193,6 +192,8 @@ namespace PresentacionClinica
             this.lbAlergias = new System.Windows.Forms.ListBox();
             this.txtAlergias = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tcPaciente.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox32.SuspendLayout();
@@ -273,6 +274,7 @@ namespace PresentacionClinica
             this.groupBox41.SuspendLayout();
             this.groupBox42.SuspendLayout();
             this.groupBox43.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             this.SuspendLayout();
             // 
             // tcPaciente
@@ -280,7 +282,6 @@ namespace PresentacionClinica
             this.tcPaciente.Controls.Add(this.tabPage1);
             this.tcPaciente.Controls.Add(this.tabPage2);
             this.tcPaciente.Controls.Add(this.tabPage3);
-            this.tcPaciente.Controls.Add(this.tabPage4);
             this.tcPaciente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcPaciente.Location = new System.Drawing.Point(12, 70);
             this.tcPaciente.Name = "tcPaciente";
@@ -290,6 +291,7 @@ namespace PresentacionClinica
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.groupBox32);
             this.tabPage2.Controls.Add(this.groupBox23);
             this.tabPage2.Controls.Add(this.groupBox12);
@@ -1074,7 +1076,7 @@ namespace PresentacionClinica
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(950, 27);
+            this.lblUsuario.Location = new System.Drawing.Point(1085, 15);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(149, 40);
             this.lblUsuario.TabIndex = 44;
@@ -1086,7 +1088,7 @@ namespace PresentacionClinica
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(576, 27);
+            this.label1.Location = new System.Drawing.Point(700, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 40);
             this.label1.TabIndex = 45;
@@ -1419,7 +1421,7 @@ namespace PresentacionClinica
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1693, 746);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "HIstorial";
+            this.tabPage1.Text = "Paciente";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -1442,17 +1444,8 @@ namespace PresentacionClinica
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1693, 746);
             this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Historial";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1693, 746);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -2027,11 +2020,35 @@ namespace PresentacionClinica
             this.label14.TabIndex = 12;
             this.label14.Text = "Alergias";
             // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Image = global::PresentacionClinica.Properties.Resources.SinFoto;
+            this.pictureBox33.Location = new System.Drawing.Point(614, 12);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(80, 75);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox33.TabIndex = 46;
+            this.pictureBox33.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(728, 589);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(221, 86);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Guardar Odontograma";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // PresentacionTratamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1725, 857);
+            this.Controls.Add(this.pictureBox33);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
@@ -2159,6 +2176,7 @@ namespace PresentacionClinica
             this.groupBox42.PerformLayout();
             this.groupBox43.ResumeLayout(false);
             this.groupBox43.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2278,7 +2296,6 @@ namespace PresentacionClinica
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox checkBox13;
@@ -2330,5 +2347,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.ListBox lbAlergias;
         private System.Windows.Forms.TextBox txtAlergias;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox33;
+        private System.Windows.Forms.Button button1;
     }
 }

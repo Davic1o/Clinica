@@ -71,7 +71,6 @@ namespace PresentacionClinica
                 Paciente Pac = Paciente.CargarPaciente(Id);
                 string Nombre = Pac.Nombre;
                 string Apellido = Pac.Apellido;
-
                 lblUsuario.Text = Nombre + " " + Apellido;
             }
             }
