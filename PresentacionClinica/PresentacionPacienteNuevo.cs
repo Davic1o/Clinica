@@ -24,9 +24,8 @@ namespace PresentacionClinica
             mtxtTelefono.Enabled = false;
             mtxtTelefono2.Enabled = false;
             mtxtCorreo.Enabled = false;
-          
             btnPaciente.Enabled = false;
-          
+            txtIdact.Enabled = false; 
             cmbGenero.Enabled = false;
             dTNacimiento.Enabled = false;
             btnCargar.Enabled = false;
@@ -92,10 +91,6 @@ namespace PresentacionClinica
                 pc.Telefono1 = Convert.ToInt32(mtxtTelefono.Text);
                 pc.Telefono2 = Convert.ToInt32(mtxtTelefono2.Text);
                 pc.Correo = mtxtCorreo.Text;
-               // txtAlergias.Enabled = true;
-                //txtEnfermedades.Enabled = true;
-                //btnEnfermedades.Enabled = true;
-                //btnAlergias.Enabled = true;
                 Paciente.Insertar(pc);
                 mtxtDoc.Enabled = false;
                 txtFechaIngreso.Enabled = false;
@@ -184,7 +179,7 @@ namespace PresentacionClinica
                 DataGridViewRow row = dgBuscar.Rows[e.RowIndex];
                 // Carga los datos de la fila en el TextBox
                 int Id = (int)row.Cells[0].Value;
-                lblId.Text = Convert.ToString(Id);
+                txtIdact.Text = Convert.ToString(Id);
                 Paciente Pac= Paciente.CargarPaciente(Id);
                 txtNombreB.Text=Pac.Nombre;
                 txtApellidoB.Text = Pac.Apellido;
@@ -193,17 +188,12 @@ namespace PresentacionClinica
                 mtxtTelefono1B.Text = Convert.ToString(Pac.Telefono1);
                 mtxtTelefono2B.Text = Convert.ToString(Pac.Telefono2);
                 txtCorreoB.Text = Pac.Correo;
-
-
-                
-
-
             }
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            pc.IdPaciente = Convert.ToInt32(lblId.Text);
+            pc.IdPaciente = Convert.ToInt32(txtIdact.Text);
             pc.Nombre = txtNombreB.Text;
             pc.Apellido = txtApellidoB.Text;
             pc.Cedula = Convert.ToInt32(mtxtDocB.Text);
@@ -211,7 +201,7 @@ namespace PresentacionClinica
             pc.Telefono1 = Convert.ToInt32(mtxtTelefono1B.Text);
             pc.Telefono2 = Convert.ToInt32(mtxtTelefono2B.Text);
             pc.Correo = txtCorreoB.Text;
-            Paciente.Actualizarpaciente(pc);
+            Paciente.ActualizarPaciente(pc);
             MessageBox.Show("Datos Actualizados");
             txtNombreB.Text = "";
             txtApellidoB.Text = "";
@@ -220,11 +210,6 @@ namespace PresentacionClinica
             mtxtTelefono1B.Text = "";
             mtxtTelefono2B.Text = "";
             txtCorreoB.Text = "";
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
