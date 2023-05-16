@@ -9,6 +9,7 @@ namespace PresentacionClinica
     {
         NegocioPaciente Paciente = new NegocioPaciente();
         NegocioAlergias alerg = new NegocioAlergias();
+        NegocioEnfermedad enf = new NegocioEnfermedad();
         int Dato = 0;
         public PresentacionHistorial()
         {
@@ -62,6 +63,8 @@ namespace PresentacionClinica
                 btnEnfermedades.Enabled = true;
                 lbAlergias.DataSource = alerg.listarAlergias(Dato);
                 lbAlergias.DisplayMember = "Alergia";
+                lbEnfermedades.DataSource = enf.ListarEnferemdades(Dato);
+                lbEnfermedades.DisplayMember = "Enfermedad";
             }
             }
 
@@ -118,9 +121,13 @@ namespace PresentacionClinica
                 enfermedades.IdPaciente = Dato;
                 enfermedades.Enfermedad = txtEnfermedades.Text;
                 txtEnfermedades.Text = "";
-                
-
-             
+                enf.AgregarEnferemdad(enfermedades);
+                lbEnfermedades.DataSource = enf.ListarEnferemdades(Dato);
+                lbEnfermedades.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("No has agregado Enfermedad");
             }
         }
     }
