@@ -9,7 +9,7 @@ namespace DatosClinica
 {
     public class DatosUsuario
     {
-        DataClasses1DataContext Db = new DataClasses1DataContext();
+        DatosClinicaDataContext Db = new DatosClinicaDataContext();
         bool R = false;
 
         public bool ValidacionContrasenia(string Usuario, string Clave)

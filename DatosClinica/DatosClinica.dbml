@@ -1,5 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Clinica" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Clinica" Class="DatosClinicaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-FF2K8GA\BDDEPN;Initial Catalog=Clinica;Integrated Security=True" SettingsObjectName="DatosClinica.Properties.Settings" SettingsPropertyName="ClinicaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Alergias" Member="Alergias">
+    <Type Name="Alergias">
+      <Column Name="IdAlergias" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Alergia" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Paciente_Alergias" Member="Paciente" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Paciente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Enfermedades" Member="Enfermedades">
+    <Type Name="Enfermedades">
+      <Column Name="IdAlergias" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Enfermedad" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Paciente_Enfermedades" Member="Paciente" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Paciente" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Factura" Member="Factura">
     <Type Name="Factura">
       <Column Name="IdFactura" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -46,12 +62,14 @@
       <Column Name="Telefono2" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="FechaCita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Genero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FotoDePerfil" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Paciente_Alergias" Member="Alergias" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Alergias" />
+      <Association Name="Paciente_Enfermedades" Member="Enfermedades" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Enfermedades" />
       <Association Name="Paciente_Factura" Member="Factura" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Factura" />
       <Association Name="Paciente_OdontogramaPieza" Member="OdontogramaPieza" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="OdontogramaPieza" />
       <Association Name="Paciente_Receta" Member="Receta" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Receta" />
       <Association Name="Paciente_TratamientoPaciente" Member="TratamientoPaciente" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="TratamientoPaciente" />
-      <Association Name="Paciente_Alergias" Member="Alergias" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Alergias" />
-      <Association Name="Paciente_Enfermedades" Member="Enfermedades" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Enfermedades" />
     </Type>
   </Table>
   <Table Name="dbo.Receta" Member="Receta">
@@ -104,22 +122,6 @@
       <Column Name="Apellido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Clave" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Alergias" Member="Alergias">
-    <Type Name="Alergias">
-      <Column Name="IdAlergias" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IdPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Alergia" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="Paciente_Alergias" Member="Paciente" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Paciente" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Enfermedades" Member="Enfermedades">
-    <Type Name="Enfermedades">
-      <Column Name="IdAlergias" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IdPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Enfermedad" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="Paciente_Enfermedades" Member="Paciente" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Paciente" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

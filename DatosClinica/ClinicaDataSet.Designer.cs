@@ -24,6 +24,10 @@ namespace DatosClinica {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class ClinicaDataSet : global::System.Data.DataSet {
         
+        private AlergiasDataTable tableAlergias;
+        
+        private EnfermedadesDataTable tableEnfermedades;
+        
         private FacturaDataTable tableFactura;
         
         private MedicamentoDataTable tableMedicamento;
@@ -43,6 +47,10 @@ namespace DatosClinica {
         private TratamientoPacienteDataTable tableTratamientoPaciente;
         
         private UsuarioDataTable tableUsuario;
+        
+        private global::System.Data.DataRelation relationFK__Alergias__IdPaci__4222D4EF;
+        
+        private global::System.Data.DataRelation relationFK__Enfermeda__IdPac__44FF419A;
         
         private global::System.Data.DataRelation relationFK__Factura__IdPacie__3A81B327;
         
@@ -90,6 +98,12 @@ namespace DatosClinica {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                if ((ds.Tables["Alergias"] != null)) {
+                    base.Tables.Add(new AlergiasDataTable(ds.Tables["Alergias"]));
+                }
+                if ((ds.Tables["Enfermedades"] != null)) {
+                    base.Tables.Add(new EnfermedadesDataTable(ds.Tables["Enfermedades"]));
+                }
                 if ((ds.Tables["Factura"] != null)) {
                     base.Tables.Add(new FacturaDataTable(ds.Tables["Factura"]));
                 }
@@ -136,6 +150,26 @@ namespace DatosClinica {
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public AlergiasDataTable Alergias {
+            get {
+                return this.tableAlergias;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public EnfermedadesDataTable Enfermedades {
+            get {
+                return this.tableEnfermedades;
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -305,6 +339,12 @@ namespace DatosClinica {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
+                if ((ds.Tables["Alergias"] != null)) {
+                    base.Tables.Add(new AlergiasDataTable(ds.Tables["Alergias"]));
+                }
+                if ((ds.Tables["Enfermedades"] != null)) {
+                    base.Tables.Add(new EnfermedadesDataTable(ds.Tables["Enfermedades"]));
+                }
                 if ((ds.Tables["Factura"] != null)) {
                     base.Tables.Add(new FacturaDataTable(ds.Tables["Factura"]));
                 }
@@ -368,6 +408,18 @@ namespace DatosClinica {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
+            this.tableAlergias = ((AlergiasDataTable)(base.Tables["Alergias"]));
+            if ((initTable == true)) {
+                if ((this.tableAlergias != null)) {
+                    this.tableAlergias.InitVars();
+                }
+            }
+            this.tableEnfermedades = ((EnfermedadesDataTable)(base.Tables["Enfermedades"]));
+            if ((initTable == true)) {
+                if ((this.tableEnfermedades != null)) {
+                    this.tableEnfermedades.InitVars();
+                }
+            }
             this.tableFactura = ((FacturaDataTable)(base.Tables["Factura"]));
             if ((initTable == true)) {
                 if ((this.tableFactura != null)) {
@@ -428,6 +480,8 @@ namespace DatosClinica {
                     this.tableUsuario.InitVars();
                 }
             }
+            this.relationFK__Alergias__IdPaci__4222D4EF = this.Relations["FK__Alergias__IdPaci__4222D4EF"];
+            this.relationFK__Enfermeda__IdPac__44FF419A = this.Relations["FK__Enfermeda__IdPac__44FF419A"];
             this.relationFK__Factura__IdPacie__3A81B327 = this.Relations["FK__Factura__IdPacie__3A81B327"];
             this.relationFK__Odontogra__IdPac__2F10007B = this.Relations["FK__Odontogra__IdPac__2F10007B"];
             this.relationFK__Receta__IdPacien__33D4B598 = this.Relations["FK__Receta__IdPacien__33D4B598"];
@@ -447,6 +501,10 @@ namespace DatosClinica {
             this.Namespace = "http://tempuri.org/ClinicaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tableAlergias = new AlergiasDataTable();
+            base.Tables.Add(this.tableAlergias);
+            this.tableEnfermedades = new EnfermedadesDataTable();
+            base.Tables.Add(this.tableEnfermedades);
             this.tableFactura = new FacturaDataTable();
             base.Tables.Add(this.tableFactura);
             this.tableMedicamento = new MedicamentoDataTable();
@@ -467,6 +525,14 @@ namespace DatosClinica {
             base.Tables.Add(this.tableTratamientoPaciente);
             this.tableUsuario = new UsuarioDataTable();
             base.Tables.Add(this.tableUsuario);
+            this.relationFK__Alergias__IdPaci__4222D4EF = new global::System.Data.DataRelation("FK__Alergias__IdPaci__4222D4EF", new global::System.Data.DataColumn[] {
+                        this.tablePaciente.IdPacienteColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAlergias.IdPacienteColumn}, false);
+            this.Relations.Add(this.relationFK__Alergias__IdPaci__4222D4EF);
+            this.relationFK__Enfermeda__IdPac__44FF419A = new global::System.Data.DataRelation("FK__Enfermeda__IdPac__44FF419A", new global::System.Data.DataColumn[] {
+                        this.tablePaciente.IdPacienteColumn}, new global::System.Data.DataColumn[] {
+                        this.tableEnfermedades.IdPacienteColumn}, false);
+            this.Relations.Add(this.relationFK__Enfermeda__IdPac__44FF419A);
             this.relationFK__Factura__IdPacie__3A81B327 = new global::System.Data.DataRelation("FK__Factura__IdPacie__3A81B327", new global::System.Data.DataColumn[] {
                         this.tablePaciente.IdPacienteColumn}, new global::System.Data.DataColumn[] {
                         this.tableFactura.IdPacienteColumn}, false);
@@ -503,6 +569,18 @@ namespace DatosClinica {
                         this.tableTratamiento.IdTratamientoColumn}, new global::System.Data.DataColumn[] {
                         this.tableTratamientoPaciente.IdTratamientoColumn}, false);
             this.Relations.Add(this.relationFK__Tratamien__IdTra__2C3393D0);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeAlergias() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeEnfermedades() {
+            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -621,6 +699,12 @@ namespace DatosClinica {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void AlergiasRowChangeEventHandler(object sender, AlergiasRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void EnfermedadesRowChangeEventHandler(object sender, EnfermedadesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void FacturaRowChangeEventHandler(object sender, FacturaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -649,6 +733,596 @@ namespace DatosClinica {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void UsuarioRowChangeEventHandler(object sender, UsuarioRowChangeEvent e);
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class AlergiasDataTable : global::System.Data.TypedTableBase<AlergiasRow> {
+            
+            private global::System.Data.DataColumn columnIdAlergias;
+            
+            private global::System.Data.DataColumn columnIdPaciente;
+            
+            private global::System.Data.DataColumn columnAlergia;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasDataTable() {
+                this.TableName = "Alergias";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal AlergiasDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected AlergiasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdAlergiasColumn {
+                get {
+                    return this.columnIdAlergias;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdPacienteColumn {
+                get {
+                    return this.columnIdPaciente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AlergiaColumn {
+                get {
+                    return this.columnAlergia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasRow this[int index] {
+                get {
+                    return ((AlergiasRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event AlergiasRowChangeEventHandler AlergiasRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event AlergiasRowChangeEventHandler AlergiasRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event AlergiasRowChangeEventHandler AlergiasRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event AlergiasRowChangeEventHandler AlergiasRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddAlergiasRow(AlergiasRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasRow AddAlergiasRow(PacienteRow parentPacienteRowByFK__Alergias__IdPaci__4222D4EF, string Alergia) {
+                AlergiasRow rowAlergiasRow = ((AlergiasRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        Alergia};
+                if ((parentPacienteRowByFK__Alergias__IdPaci__4222D4EF != null)) {
+                    columnValuesArray[1] = parentPacienteRowByFK__Alergias__IdPaci__4222D4EF[0];
+                }
+                rowAlergiasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAlergiasRow);
+                return rowAlergiasRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasRow FindByIdAlergias(int IdAlergias) {
+                return ((AlergiasRow)(this.Rows.Find(new object[] {
+                            IdAlergias})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                AlergiasDataTable cln = ((AlergiasDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new AlergiasDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnIdAlergias = base.Columns["IdAlergias"];
+                this.columnIdPaciente = base.Columns["IdPaciente"];
+                this.columnAlergia = base.Columns["Alergia"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnIdAlergias = new global::System.Data.DataColumn("IdAlergias", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdAlergias);
+                this.columnIdPaciente = new global::System.Data.DataColumn("IdPaciente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdPaciente);
+                this.columnAlergia = new global::System.Data.DataColumn("Alergia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAlergia);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnIdAlergias}, true));
+                this.columnIdAlergias.AutoIncrement = true;
+                this.columnIdAlergias.AutoIncrementSeed = -1;
+                this.columnIdAlergias.AutoIncrementStep = -1;
+                this.columnIdAlergias.AllowDBNull = false;
+                this.columnIdAlergias.ReadOnly = true;
+                this.columnIdAlergias.Unique = true;
+                this.columnIdPaciente.AllowDBNull = false;
+                this.columnAlergia.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasRow NewAlergiasRow() {
+                return ((AlergiasRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new AlergiasRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(AlergiasRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.AlergiasRowChanged != null)) {
+                    this.AlergiasRowChanged(this, new AlergiasRowChangeEvent(((AlergiasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.AlergiasRowChanging != null)) {
+                    this.AlergiasRowChanging(this, new AlergiasRowChangeEvent(((AlergiasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.AlergiasRowDeleted != null)) {
+                    this.AlergiasRowDeleted(this, new AlergiasRowChangeEvent(((AlergiasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.AlergiasRowDeleting != null)) {
+                    this.AlergiasRowDeleting(this, new AlergiasRowChangeEvent(((AlergiasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveAlergiasRow(AlergiasRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ClinicaDataSet ds = new ClinicaDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "AlergiasDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class EnfermedadesDataTable : global::System.Data.TypedTableBase<EnfermedadesRow> {
+            
+            private global::System.Data.DataColumn columnIdAlergias;
+            
+            private global::System.Data.DataColumn columnIdPaciente;
+            
+            private global::System.Data.DataColumn columnEnfermedad;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesDataTable() {
+                this.TableName = "Enfermedades";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal EnfermedadesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected EnfermedadesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdAlergiasColumn {
+                get {
+                    return this.columnIdAlergias;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdPacienteColumn {
+                get {
+                    return this.columnIdPaciente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EnfermedadColumn {
+                get {
+                    return this.columnEnfermedad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesRow this[int index] {
+                get {
+                    return ((EnfermedadesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event EnfermedadesRowChangeEventHandler EnfermedadesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event EnfermedadesRowChangeEventHandler EnfermedadesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event EnfermedadesRowChangeEventHandler EnfermedadesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event EnfermedadesRowChangeEventHandler EnfermedadesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddEnfermedadesRow(EnfermedadesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesRow AddEnfermedadesRow(PacienteRow parentPacienteRowByFK__Enfermeda__IdPac__44FF419A, string Enfermedad) {
+                EnfermedadesRow rowEnfermedadesRow = ((EnfermedadesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        Enfermedad};
+                if ((parentPacienteRowByFK__Enfermeda__IdPac__44FF419A != null)) {
+                    columnValuesArray[1] = parentPacienteRowByFK__Enfermeda__IdPac__44FF419A[0];
+                }
+                rowEnfermedadesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowEnfermedadesRow);
+                return rowEnfermedadesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesRow FindByIdAlergias(int IdAlergias) {
+                return ((EnfermedadesRow)(this.Rows.Find(new object[] {
+                            IdAlergias})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                EnfermedadesDataTable cln = ((EnfermedadesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new EnfermedadesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnIdAlergias = base.Columns["IdAlergias"];
+                this.columnIdPaciente = base.Columns["IdPaciente"];
+                this.columnEnfermedad = base.Columns["Enfermedad"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnIdAlergias = new global::System.Data.DataColumn("IdAlergias", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdAlergias);
+                this.columnIdPaciente = new global::System.Data.DataColumn("IdPaciente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdPaciente);
+                this.columnEnfermedad = new global::System.Data.DataColumn("Enfermedad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnfermedad);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnIdAlergias}, true));
+                this.columnIdAlergias.AutoIncrement = true;
+                this.columnIdAlergias.AutoIncrementSeed = -1;
+                this.columnIdAlergias.AutoIncrementStep = -1;
+                this.columnIdAlergias.AllowDBNull = false;
+                this.columnIdAlergias.ReadOnly = true;
+                this.columnIdAlergias.Unique = true;
+                this.columnIdPaciente.AllowDBNull = false;
+                this.columnEnfermedad.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesRow NewEnfermedadesRow() {
+                return ((EnfermedadesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new EnfermedadesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(EnfermedadesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.EnfermedadesRowChanged != null)) {
+                    this.EnfermedadesRowChanged(this, new EnfermedadesRowChangeEvent(((EnfermedadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.EnfermedadesRowChanging != null)) {
+                    this.EnfermedadesRowChanging(this, new EnfermedadesRowChangeEvent(((EnfermedadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.EnfermedadesRowDeleted != null)) {
+                    this.EnfermedadesRowDeleted(this, new EnfermedadesRowChangeEvent(((EnfermedadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.EnfermedadesRowDeleting != null)) {
+                    this.EnfermedadesRowDeleting(this, new EnfermedadesRowChangeEvent(((EnfermedadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveEnfermedadesRow(EnfermedadesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ClinicaDataSet ds = new ClinicaDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "EnfermedadesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1684,6 +2358,10 @@ namespace DatosClinica {
             
             private global::System.Data.DataColumn columnFechaCita;
             
+            private global::System.Data.DataColumn columnGenero;
+            
+            private global::System.Data.DataColumn columnFotoDePerfil;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PacienteDataTable() {
@@ -1799,6 +2477,22 @@ namespace DatosClinica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GeneroColumn {
+                get {
+                    return this.columnGenero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FotoDePerfilColumn {
+                get {
+                    return this.columnFotoDePerfil;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1834,7 +2528,7 @@ namespace DatosClinica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PacienteRow AddPacienteRow(System.DateTime FechaIngreso, string Nombre, string Apellido, int Cedula, string Direccion, int Telefono1, int Telefono2, string Correo, System.DateTime FechaCita) {
+            public PacienteRow AddPacienteRow(System.DateTime FechaIngreso, string Nombre, string Apellido, int Cedula, string Direccion, int Telefono1, int Telefono2, string Correo, System.DateTime FechaCita, string Genero, byte[] FotoDePerfil) {
                 PacienteRow rowPacienteRow = ((PacienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1846,7 +2540,9 @@ namespace DatosClinica {
                         Telefono1,
                         Telefono2,
                         Correo,
-                        FechaCita};
+                        FechaCita,
+                        Genero,
+                        FotoDePerfil};
                 rowPacienteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPacienteRow);
                 return rowPacienteRow;
@@ -1886,6 +2582,8 @@ namespace DatosClinica {
                 this.columnTelefono2 = base.Columns["Telefono2"];
                 this.columnCorreo = base.Columns["Correo"];
                 this.columnFechaCita = base.Columns["FechaCita"];
+                this.columnGenero = base.Columns["Genero"];
+                this.columnFotoDePerfil = base.Columns["FotoDePerfil"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1911,6 +2609,10 @@ namespace DatosClinica {
                 base.Columns.Add(this.columnCorreo);
                 this.columnFechaCita = new global::System.Data.DataColumn("FechaCita", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaCita);
+                this.columnGenero = new global::System.Data.DataColumn("Genero", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGenero);
+                this.columnFotoDePerfil = new global::System.Data.DataColumn("FotoDePerfil", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFotoDePerfil);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdPaciente}, true));
                 this.columnIdPaciente.AutoIncrement = true;
@@ -1923,6 +2625,7 @@ namespace DatosClinica {
                 this.columnApellido.MaxLength = 50;
                 this.columnDireccion.MaxLength = 150;
                 this.columnCorreo.MaxLength = 50;
+                this.columnGenero.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3825,6 +4528,158 @@ namespace DatosClinica {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class AlergiasRow : global::System.Data.DataRow {
+            
+            private AlergiasDataTable tableAlergias;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal AlergiasRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableAlergias = ((AlergiasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IdAlergias {
+                get {
+                    return ((int)(this[this.tableAlergias.IdAlergiasColumn]));
+                }
+                set {
+                    this[this.tableAlergias.IdAlergiasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IdPaciente {
+                get {
+                    return ((int)(this[this.tableAlergias.IdPacienteColumn]));
+                }
+                set {
+                    this[this.tableAlergias.IdPacienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Alergia {
+                get {
+                    try {
+                        return ((string)(this[this.tableAlergias.AlergiaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Alergia\' de la tabla \'Alergias\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAlergias.AlergiaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PacienteRow PacienteRow {
+                get {
+                    return ((PacienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__Alergias__IdPaci__4222D4EF"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Alergias__IdPaci__4222D4EF"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAlergiaNull() {
+                return this.IsNull(this.tableAlergias.AlergiaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAlergiaNull() {
+                this[this.tableAlergias.AlergiaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class EnfermedadesRow : global::System.Data.DataRow {
+            
+            private EnfermedadesDataTable tableEnfermedades;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal EnfermedadesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableEnfermedades = ((EnfermedadesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IdAlergias {
+                get {
+                    return ((int)(this[this.tableEnfermedades.IdAlergiasColumn]));
+                }
+                set {
+                    this[this.tableEnfermedades.IdAlergiasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IdPaciente {
+                get {
+                    return ((int)(this[this.tableEnfermedades.IdPacienteColumn]));
+                }
+                set {
+                    this[this.tableEnfermedades.IdPacienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Enfermedad {
+                get {
+                    try {
+                        return ((string)(this[this.tableEnfermedades.EnfermedadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Enfermedad\' de la tabla \'Enfermedades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEnfermedades.EnfermedadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PacienteRow PacienteRow {
+                get {
+                    return ((PacienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__Enfermeda__IdPac__44FF419A"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Enfermeda__IdPac__44FF419A"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEnfermedadNull() {
+                return this.IsNull(this.tableEnfermedades.EnfermedadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEnfermedadNull() {
+                this[this.tableEnfermedades.EnfermedadColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class FacturaRow : global::System.Data.DataRow {
             
             private FacturaDataTable tableFactura;
@@ -4501,6 +5356,38 @@ namespace DatosClinica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Genero {
+                get {
+                    try {
+                        return ((string)(this[this.tablePaciente.GeneroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Genero\' de la tabla \'Paciente\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePaciente.GeneroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] FotoDePerfil {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablePaciente.FotoDePerfilColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FotoDePerfil\' de la tabla \'Paciente\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePaciente.FotoDePerfilColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsFechaIngresoNull() {
                 return this.IsNull(this.tablePaciente.FechaIngresoColumn);
             }
@@ -4605,6 +5492,52 @@ namespace DatosClinica {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFechaCitaNull() {
                 this[this.tablePaciente.FechaCitaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGeneroNull() {
+                return this.IsNull(this.tablePaciente.GeneroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGeneroNull() {
+                this[this.tablePaciente.GeneroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFotoDePerfilNull() {
+                return this.IsNull(this.tablePaciente.FotoDePerfilColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFotoDePerfilNull() {
+                this[this.tablePaciente.FotoDePerfilColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasRow[] GetAlergiasRows() {
+                if ((this.Table.ChildRelations["FK__Alergias__IdPaci__4222D4EF"] == null)) {
+                    return new AlergiasRow[0];
+                }
+                else {
+                    return ((AlergiasRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Alergias__IdPaci__4222D4EF"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesRow[] GetEnfermedadesRows() {
+                if ((this.Table.ChildRelations["FK__Enfermeda__IdPac__44FF419A"] == null)) {
+                    return new EnfermedadesRow[0];
+                }
+                else {
+                    return ((EnfermedadesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Enfermeda__IdPac__44FF419A"])));
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5139,6 +6072,74 @@ namespace DatosClinica {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class AlergiasRowChangeEvent : global::System.EventArgs {
+            
+            private AlergiasRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasRowChangeEvent(AlergiasRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AlergiasRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class EnfermedadesRowChangeEvent : global::System.EventArgs {
+            
+            private EnfermedadesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesRowChangeEvent(EnfermedadesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public EnfermedadesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class FacturaRowChangeEvent : global::System.EventArgs {
             
             private FacturaRow eventRow;
@@ -5478,6 +6479,674 @@ namespace DatosClinica {
 }
 namespace DatosClinica.ClinicaDataSetTableAdapters {
     
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class AlergiasTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public AlergiasTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Alergias";
+            tableMapping.ColumnMappings.Add("IdAlergias", "IdAlergias");
+            tableMapping.ColumnMappings.Add("IdPaciente", "IdPaciente");
+            tableMapping.ColumnMappings.Add("Alergia", "Alergia");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Alergias] WHERE (([IdAlergias] = @Original_IdAlergias) AND ([I" +
+                "dPaciente] = @Original_IdPaciente) AND ((@IsNull_Alergia = 1 AND [Alergia] IS NU" +
+                "LL) OR ([Alergia] = @Original_Alergia)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdAlergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAlergias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alergia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alergia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Alergias] ([IdPaciente], [Alergia]) VALUES (@IdPaciente, @Aler" +
+                "gia);\r\nSELECT IdAlergias, IdPaciente, Alergia FROM Alergias WHERE (IdAlergias = " +
+                "SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alergia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Alergias] SET [IdPaciente] = @IdPaciente, [Alergia] = @Alergia WHERE (([IdAlergias] = @Original_IdAlergias) AND ([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_Alergia = 1 AND [Alergia] IS NULL) OR ([Alergia] = @Original_Alergia)));
+SELECT IdAlergias, IdPaciente, Alergia FROM Alergias WHERE (IdAlergias = @IdAlergias)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alergia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdAlergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAlergias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alergia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alergia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAlergias", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdAlergias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::DatosClinica.Properties.Settings.Default.ClinicaConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT IdAlergias, IdPaciente, Alergia FROM dbo.Alergias";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ClinicaDataSet.AlergiasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ClinicaDataSet.AlergiasDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ClinicaDataSet.AlergiasDataTable dataTable = new ClinicaDataSet.AlergiasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ClinicaDataSet.AlergiasDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ClinicaDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Alergias");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_IdAlergias, int Original_IdPaciente, string Original_Alergia) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdAlergias));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_IdPaciente));
+            if ((Original_Alergia == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Alergia));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int IdPaciente, string Alergia) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IdPaciente));
+            if ((Alergia == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Alergia));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int IdPaciente, string Alergia, int Original_IdAlergias, int Original_IdPaciente, string Original_Alergia, int IdAlergias) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IdPaciente));
+            if ((Alergia == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Alergia));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_IdAlergias));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_IdPaciente));
+            if ((Original_Alergia == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Alergia));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(IdAlergias));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int IdPaciente, string Alergia, int Original_IdAlergias, int Original_IdPaciente, string Original_Alergia) {
+            return this.Update(IdPaciente, Alergia, Original_IdAlergias, Original_IdPaciente, Original_Alergia, Original_IdAlergias);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class EnfermedadesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public EnfermedadesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Enfermedades";
+            tableMapping.ColumnMappings.Add("IdAlergias", "IdAlergias");
+            tableMapping.ColumnMappings.Add("IdPaciente", "IdPaciente");
+            tableMapping.ColumnMappings.Add("Enfermedad", "Enfermedad");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Enfermedades] WHERE (([IdAlergias] = @Original_IdAlergias) AND" +
+                " ([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_Enfermedad = 1 AND [Enferme" +
+                "dad] IS NULL) OR ([Enfermedad] = @Original_Enfermedad)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdAlergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAlergias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Enfermedad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Enfermedad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Enfermedad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Enfermedad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Enfermedades] ([IdPaciente], [Enfermedad]) VALUES (@IdPaciente" +
+                ", @Enfermedad);\r\nSELECT IdAlergias, IdPaciente, Enfermedad FROM Enfermedades WHE" +
+                "RE (IdAlergias = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Enfermedad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Enfermedad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Enfermedades] SET [IdPaciente] = @IdPaciente, [Enfermedad] = @Enfermedad WHERE (([IdAlergias] = @Original_IdAlergias) AND ([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_Enfermedad = 1 AND [Enfermedad] IS NULL) OR ([Enfermedad] = @Original_Enfermedad)));
+SELECT IdAlergias, IdPaciente, Enfermedad FROM Enfermedades WHERE (IdAlergias = @IdAlergias)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Enfermedad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Enfermedad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdAlergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAlergias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Enfermedad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Enfermedad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Enfermedad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Enfermedad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAlergias", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdAlergias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::DatosClinica.Properties.Settings.Default.ClinicaConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT IdAlergias, IdPaciente, Enfermedad FROM dbo.Enfermedades";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ClinicaDataSet.EnfermedadesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ClinicaDataSet.EnfermedadesDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ClinicaDataSet.EnfermedadesDataTable dataTable = new ClinicaDataSet.EnfermedadesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ClinicaDataSet.EnfermedadesDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ClinicaDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Enfermedades");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_IdAlergias, int Original_IdPaciente, string Original_Enfermedad) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdAlergias));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_IdPaciente));
+            if ((Original_Enfermedad == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Enfermedad));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int IdPaciente, string Enfermedad) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IdPaciente));
+            if ((Enfermedad == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Enfermedad));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int IdPaciente, string Enfermedad, int Original_IdAlergias, int Original_IdPaciente, string Original_Enfermedad, int IdAlergias) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IdPaciente));
+            if ((Enfermedad == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Enfermedad));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_IdAlergias));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_IdPaciente));
+            if ((Original_Enfermedad == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Enfermedad));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(IdAlergias));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int IdPaciente, string Enfermedad, int Original_IdAlergias, int Original_IdPaciente, string Original_Enfermedad) {
+            return this.Update(IdPaciente, Enfermedad, Original_IdAlergias, Original_IdPaciente, Original_Enfermedad, Original_IdAlergias);
+        }
+    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -6982,10 +8651,12 @@ SELECT IdOdontoPieza, IdPaciente, IdOdontograma, Pieza, Partea, Parteb, Partec, 
             tableMapping.ColumnMappings.Add("Telefono2", "Telefono2");
             tableMapping.ColumnMappings.Add("Correo", "Correo");
             tableMapping.ColumnMappings.Add("FechaCita", "FechaCita");
+            tableMapping.ColumnMappings.Add("Genero", "Genero");
+            tableMapping.ColumnMappings.Add("FotoDePerfil", "FotoDePerfil");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Paciente] WHERE (([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_FechaIngreso = 1 AND [FechaIngreso] IS NULL) OR ([FechaIngreso] = @Original_FechaIngreso)) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Telefono1 = 1 AND [Telefono1] IS NULL) OR ([Telefono1] = @Original_Telefono1)) AND ((@IsNull_Telefono2 = 1 AND [Telefono2] IS NULL) OR ([Telefono2] = @Original_Telefono2)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_FechaCita = 1 AND [FechaCita] IS NULL) OR ([FechaCita] = @Original_FechaCita)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Paciente] WHERE (([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_FechaIngreso = 1 AND [FechaIngreso] IS NULL) OR ([FechaIngreso] = @Original_FechaIngreso)) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Telefono1 = 1 AND [Telefono1] IS NULL) OR ([Telefono1] = @Original_Telefono1)) AND ((@IsNull_Telefono2 = 1 AND [Telefono2] IS NULL) OR ([Telefono2] = @Original_Telefono2)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_FechaCita = 1 AND [FechaCita] IS NULL) OR ([FechaCita] = @Original_FechaCita)) AND ((@IsNull_Genero = 1 AND [Genero] IS NULL) OR ([Genero] = @Original_Genero)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaIngreso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -7006,10 +8677,12 @@ SELECT IdOdontoPieza, IdPaciente, IdOdontograma, Pieza, Partea, Parteb, Partec, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaCita", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaCita", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaCita", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaCita", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Genero", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genero", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Genero", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genero", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Paciente] ([FechaIngreso], [Nombre], [Apellido], [Cedula], [Direccion], [Telefono1], [Telefono2], [Correo], [FechaCita]) VALUES (@FechaIngreso, @Nombre, @Apellido, @Cedula, @Direccion, @Telefono1, @Telefono2, @Correo, @FechaCita);
-SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1, Telefono2, Correo, FechaCita FROM Paciente WHERE (IdPaciente = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Paciente] ([FechaIngreso], [Nombre], [Apellido], [Cedula], [Direccion], [Telefono1], [Telefono2], [Correo], [FechaCita], [Genero], [FotoDePerfil]) VALUES (@FechaIngreso, @Nombre, @Apellido, @Cedula, @Direccion, @Telefono1, @Telefono2, @Correo, @FechaCita, @Genero, @FotoDePerfil);
+SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1, Telefono2, Correo, FechaCita, Genero, FotoDePerfil FROM Paciente WHERE (IdPaciente = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7020,10 +8693,12 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaCita", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaCita", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Genero", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genero", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FotoDePerfil", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FotoDePerfil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Paciente] SET [FechaIngreso] = @FechaIngreso, [Nombre] = @Nombre, [Apellido] = @Apellido, [Cedula] = @Cedula, [Direccion] = @Direccion, [Telefono1] = @Telefono1, [Telefono2] = @Telefono2, [Correo] = @Correo, [FechaCita] = @FechaCita WHERE (([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_FechaIngreso = 1 AND [FechaIngreso] IS NULL) OR ([FechaIngreso] = @Original_FechaIngreso)) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Telefono1 = 1 AND [Telefono1] IS NULL) OR ([Telefono1] = @Original_Telefono1)) AND ((@IsNull_Telefono2 = 1 AND [Telefono2] IS NULL) OR ([Telefono2] = @Original_Telefono2)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_FechaCita = 1 AND [FechaCita] IS NULL) OR ([FechaCita] = @Original_FechaCita)));
-SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1, Telefono2, Correo, FechaCita FROM Paciente WHERE (IdPaciente = @IdPaciente)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Paciente] SET [FechaIngreso] = @FechaIngreso, [Nombre] = @Nombre, [Apellido] = @Apellido, [Cedula] = @Cedula, [Direccion] = @Direccion, [Telefono1] = @Telefono1, [Telefono2] = @Telefono2, [Correo] = @Correo, [FechaCita] = @FechaCita, [Genero] = @Genero, [FotoDePerfil] = @FotoDePerfil WHERE (([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_FechaIngreso = 1 AND [FechaIngreso] IS NULL) OR ([FechaIngreso] = @Original_FechaIngreso)) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Telefono1 = 1 AND [Telefono1] IS NULL) OR ([Telefono1] = @Original_Telefono1)) AND ((@IsNull_Telefono2 = 1 AND [Telefono2] IS NULL) OR ([Telefono2] = @Original_Telefono2)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_FechaCita = 1 AND [FechaCita] IS NULL) OR ([FechaCita] = @Original_FechaCita)) AND ((@IsNull_Genero = 1 AND [Genero] IS NULL) OR ([Genero] = @Original_Genero)));
+SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1, Telefono2, Correo, FechaCita, Genero, FotoDePerfil FROM Paciente WHERE (IdPaciente = @IdPaciente)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7034,6 +8709,8 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaCita", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaCita", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Genero", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genero", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FotoDePerfil", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FotoDePerfil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaIngreso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7053,6 +8730,8 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaCita", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaCita", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaCita", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaCita", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Genero", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genero", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Genero", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genero", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7070,7 +8749,7 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1, " +
-                "Telefono2, Correo, FechaCita FROM dbo.Paciente";
+                "Telefono2, Correo, FechaCita, Genero, FotoDePerfil FROM dbo.Paciente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7131,7 +8810,7 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdPaciente, global::System.Nullable<global::System.DateTime> Original_FechaIngreso, string Original_Nombre, string Original_Apellido, global::System.Nullable<int> Original_Cedula, string Original_Direccion, global::System.Nullable<int> Original_Telefono1, global::System.Nullable<int> Original_Telefono2, string Original_Correo, global::System.Nullable<global::System.DateTime> Original_FechaCita) {
+        public virtual int Delete(int Original_IdPaciente, global::System.Nullable<global::System.DateTime> Original_FechaIngreso, string Original_Nombre, string Original_Apellido, global::System.Nullable<int> Original_Cedula, string Original_Direccion, global::System.Nullable<int> Original_Telefono1, global::System.Nullable<int> Original_Telefono2, string Original_Correo, global::System.Nullable<global::System.DateTime> Original_FechaCita, string Original_Genero) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdPaciente));
             if ((Original_FechaIngreso.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -7205,6 +8884,14 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
+            if ((Original_Genero == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Genero));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7225,7 +8912,7 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> FechaIngreso, string Nombre, string Apellido, global::System.Nullable<int> Cedula, string Direccion, global::System.Nullable<int> Telefono1, global::System.Nullable<int> Telefono2, string Correo, global::System.Nullable<global::System.DateTime> FechaCita) {
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> FechaIngreso, string Nombre, string Apellido, global::System.Nullable<int> Cedula, string Direccion, global::System.Nullable<int> Telefono1, global::System.Nullable<int> Telefono2, string Correo, global::System.Nullable<global::System.DateTime> FechaCita, string Genero, byte[] FotoDePerfil) {
             if ((FechaIngreso.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(FechaIngreso.Value));
             }
@@ -7280,6 +8967,18 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            if ((Genero == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Genero));
+            }
+            if ((FotoDePerfil == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((byte[])(FotoDePerfil));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7310,6 +9009,8 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
                     global::System.Nullable<int> Telefono2, 
                     string Correo, 
                     global::System.Nullable<global::System.DateTime> FechaCita, 
+                    string Genero, 
+                    byte[] FotoDePerfil, 
                     int Original_IdPaciente, 
                     global::System.Nullable<global::System.DateTime> Original_FechaIngreso, 
                     string Original_Nombre, 
@@ -7320,6 +9021,7 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
                     global::System.Nullable<int> Original_Telefono2, 
                     string Original_Correo, 
                     global::System.Nullable<global::System.DateTime> Original_FechaCita, 
+                    string Original_Genero, 
                     int IdPaciente) {
             if ((FechaIngreso.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(FechaIngreso.Value));
@@ -7375,80 +9077,100 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_IdPaciente));
-            if ((Original_FechaIngreso.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_FechaIngreso.Value));
+            if ((Genero == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Genero));
             }
-            if ((Original_Nombre == null)) {
+            if ((FotoDePerfil == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((byte[])(FotoDePerfil));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_IdPaciente));
+            if ((Original_FechaIngreso.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_FechaIngreso.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Nombre));
-            }
-            if ((Original_Apellido == null)) {
+            if ((Original_Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Apellido));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Nombre));
             }
-            if ((Original_Cedula.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Cedula.Value));
-            }
-            else {
+            if ((Original_Apellido == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((Original_Direccion == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Apellido));
+            }
+            if ((Original_Cedula.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Cedula.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Direccion));
-            }
-            if ((Original_Telefono1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_Telefono1.Value));
-            }
-            else {
+            if ((Original_Direccion == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            if ((Original_Telefono2.HasValue == true)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Direccion));
+            }
+            if ((Original_Telefono1.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_Telefono2.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_Telefono1.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((Original_Correo == null)) {
+            if ((Original_Telefono2.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Telefono2.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_Correo));
-            }
-            if ((Original_FechaCita.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((System.DateTime)(Original_FechaCita.Value));
-            }
-            else {
+            if ((Original_Correo == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(IdPaciente));
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Correo));
+            }
+            if ((Original_FechaCita.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((System.DateTime)(Original_FechaCita.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Genero == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Genero));
+            }
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(IdPaciente));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7479,6 +9201,8 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
                     global::System.Nullable<int> Telefono2, 
                     string Correo, 
                     global::System.Nullable<global::System.DateTime> FechaCita, 
+                    string Genero, 
+                    byte[] FotoDePerfil, 
                     int Original_IdPaciente, 
                     global::System.Nullable<global::System.DateTime> Original_FechaIngreso, 
                     string Original_Nombre, 
@@ -7488,8 +9212,9 @@ SELECT IdPaciente, FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1,
                     global::System.Nullable<int> Original_Telefono1, 
                     global::System.Nullable<int> Original_Telefono2, 
                     string Original_Correo, 
-                    global::System.Nullable<global::System.DateTime> Original_FechaCita) {
-            return this.Update(FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1, Telefono2, Correo, FechaCita, Original_IdPaciente, Original_FechaIngreso, Original_Nombre, Original_Apellido, Original_Cedula, Original_Direccion, Original_Telefono1, Original_Telefono2, Original_Correo, Original_FechaCita, Original_IdPaciente);
+                    global::System.Nullable<global::System.DateTime> Original_FechaCita, 
+                    string Original_Genero) {
+            return this.Update(FechaIngreso, Nombre, Apellido, Cedula, Direccion, Telefono1, Telefono2, Correo, FechaCita, Genero, FotoDePerfil, Original_IdPaciente, Original_FechaIngreso, Original_Nombre, Original_Apellido, Original_Cedula, Original_Direccion, Original_Telefono1, Original_Telefono2, Original_Correo, Original_FechaCita, Original_Genero, Original_IdPaciente);
         }
     }
     
@@ -9567,6 +11292,10 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
         
         private UpdateOrderOption _updateOrder;
         
+        private AlergiasTableAdapter _alergiasTableAdapter;
+        
+        private EnfermedadesTableAdapter _enfermedadesTableAdapter;
+        
         private FacturaTableAdapter _facturaTableAdapter;
         
         private MedicamentoTableAdapter _medicamentoTableAdapter;
@@ -9599,6 +11328,34 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public AlergiasTableAdapter AlergiasTableAdapter {
+            get {
+                return this._alergiasTableAdapter;
+            }
+            set {
+                this._alergiasTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public EnfermedadesTableAdapter EnfermedadesTableAdapter {
+            get {
+                return this._enfermedadesTableAdapter;
+            }
+            set {
+                this._enfermedadesTableAdapter = value;
             }
         }
         
@@ -9761,6 +11518,14 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._alergiasTableAdapter != null) 
+                            && (this._alergiasTableAdapter.Connection != null))) {
+                    return this._alergiasTableAdapter.Connection;
+                }
+                if (((this._enfermedadesTableAdapter != null) 
+                            && (this._enfermedadesTableAdapter.Connection != null))) {
+                    return this._enfermedadesTableAdapter.Connection;
+                }
                 if (((this._facturaTableAdapter != null) 
                             && (this._facturaTableAdapter.Connection != null))) {
                     return this._facturaTableAdapter.Connection;
@@ -9814,6 +11579,12 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._alergiasTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._enfermedadesTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 if ((this._facturaTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -9897,6 +11668,24 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tratamientoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._alergiasTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Alergias.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._alergiasTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._enfermedadesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Enfermedades.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._enfermedadesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9995,6 +11784,22 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._alergiasTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Alergias.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._alergiasTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._enfermedadesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Enfermedades.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._enfermedadesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._odontogramaPiezaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.OdontogramaPieza.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -10085,6 +11890,22 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._enfermedadesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Enfermedades.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._enfermedadesTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._alergiasTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Alergias.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._alergiasTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tratamientoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Tratamiento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -10163,6 +11984,16 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._alergiasTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._alergiasTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
+                        "sma cadena de conexión.");
+            }
+            if (((this._enfermedadesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._enfermedadesTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
+                        "sma cadena de conexión.");
             }
             if (((this._facturaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._facturaTableAdapter.Connection) == false))) {
@@ -10246,6 +12077,24 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._alergiasTableAdapter != null)) {
+                    revertConnections.Add(this._alergiasTableAdapter, this._alergiasTableAdapter.Connection);
+                    this._alergiasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._alergiasTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._alergiasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._alergiasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._alergiasTableAdapter.Adapter);
+                    }
+                }
+                if ((this._enfermedadesTableAdapter != null)) {
+                    revertConnections.Add(this._enfermedadesTableAdapter, this._enfermedadesTableAdapter.Connection);
+                    this._enfermedadesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._enfermedadesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._enfermedadesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._enfermedadesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._enfermedadesTableAdapter.Adapter);
+                    }
+                }
                 if ((this._facturaTableAdapter != null)) {
                     revertConnections.Add(this._facturaTableAdapter, this._facturaTableAdapter.Connection);
                     this._facturaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -10393,6 +12242,14 @@ SELECT IdUsuario, Nombre, Apellido, UserName, Clave FROM Usuario WHERE (IdUsuari
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._alergiasTableAdapter != null)) {
+                    this._alergiasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._alergiasTableAdapter]));
+                    this._alergiasTableAdapter.Transaction = null;
+                }
+                if ((this._enfermedadesTableAdapter != null)) {
+                    this._enfermedadesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._enfermedadesTableAdapter]));
+                    this._enfermedadesTableAdapter.Transaction = null;
                 }
                 if ((this._facturaTableAdapter != null)) {
                     this._facturaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._facturaTableAdapter]));

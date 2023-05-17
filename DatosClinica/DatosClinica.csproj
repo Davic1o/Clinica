@@ -42,20 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClinicaDataSet.cs">
-      <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ClinicaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataClinica.designer.cs">
+    <Compile Include="DatosAlergias.cs" />
+    <Compile Include="DatosClinica.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClinica.dbml</DependentUpon>
+      <DependentUpon>DatosClinica.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DatosAlergias.cs" />
     <Compile Include="DatosEnfermedad.cs" />
     <Compile Include="DatosPaciente.cs" />
     <Compile Include="DatosUsuario.cs" />
@@ -79,13 +76,13 @@
     <None Include="ClinicaDataSet.xss">
       <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DataClinica.dbml">
+    <None Include="DatosClinica.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClinica.designer.cs</LastGenOutput>
+      <LastGenOutput>DatosClinica.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataClinica.dbml.layout">
-      <DependentUpon>DataClinica.dbml</DependentUpon>
+    <None Include="DatosClinica.dbml.layout">
+      <DependentUpon>DatosClinica.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -8,7 +8,7 @@ namespace DatosClinica
 {
     public class DatosPaciente
     {
-        DataClasses1DataContext Db = new DataClasses1DataContext();
+        DatosClinicaDataContext Db = new DatosClinicaDataContext();
         public Paciente BuscarPaciente(string Nombre, string Apellido)
         {
             Paciente paciente = Db.Paciente.Single(r=>r.Nombre==Nombre && r.Apellido==Apellido);

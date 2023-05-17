@@ -8,7 +8,7 @@ namespace DatosClinica
 {
     public class DatosEnfermedad
     {
-        DataClasses1DataContext Db = new DataClasses1DataContext();
+        DatosClinicaDataContext Db = new DatosClinicaDataContext();
         public void AgregarEnfermedad(Enfermedades enf)
         {
             Db.Enfermedades.InsertOnSubmit(enf);
