@@ -193,7 +193,7 @@ namespace PresentacionClinica
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pbFotoPerfil = new System.Windows.Forms.PictureBox();
             this.tcPaciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -274,7 +274,7 @@ namespace PresentacionClinica
             this.groupBox41.SuspendLayout();
             this.groupBox42.SuspendLayout();
             this.groupBox43.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // tcPaciente
@@ -2036,15 +2036,16 @@ namespace PresentacionClinica
             this.label1.TabIndex = 45;
             this.label1.Text = "Nombre de Paciente:";
             // 
-            // pictureBox33
+            // pbFotoPerfil
             // 
-            this.pictureBox33.Image = global::PresentacionClinica.Properties.Resources.SinFoto;
-            this.pictureBox33.Location = new System.Drawing.Point(608, 2);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(86, 85);
-            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox33.TabIndex = 46;
-            this.pictureBox33.TabStop = false;
+            this.pbFotoPerfil.Image = global::PresentacionClinica.Properties.Resources.SinFoto;
+            this.pbFotoPerfil.Location = new System.Drawing.Point(606, 5);
+            this.pbFotoPerfil.Name = "pbFotoPerfil";
+            this.pbFotoPerfil.Size = new System.Drawing.Size(86, 85);
+            this.pbFotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoPerfil.TabIndex = 46;
+            this.pbFotoPerfil.TabStop = false;
+            this.pbFotoPerfil.Paint += new System.Windows.Forms.PaintEventHandler(this.pbFotoPerfil_Paint);
             // 
             // PresentacionHistorial
             // 
@@ -2052,7 +2053,7 @@ namespace PresentacionClinica
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1725, 857);
-            this.Controls.Add(this.pictureBox33);
+            this.Controls.Add(this.pbFotoPerfil);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
@@ -2180,7 +2181,7 @@ namespace PresentacionClinica
             this.groupBox42.PerformLayout();
             this.groupBox43.ResumeLayout(false);
             this.groupBox43.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2351,7 +2352,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.ListBox lbAlergias;
         private System.Windows.Forms.TextBox txtAlergias;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.Button button1;
+        protected internal System.Windows.Forms.PictureBox pbFotoPerfil;
     }
 }

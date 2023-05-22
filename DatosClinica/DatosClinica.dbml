@@ -63,7 +63,8 @@
       <Column Name="Correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="FechaCita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Genero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="FotoDePerfil" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FotoDePerfil" Type="System.Data.Linq.Binary" DbType="VarBinary(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FechaDeNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="Paciente_Alergias" Member="Alergias" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Alergias" />
       <Association Name="Paciente_Enfermedades" Member="Enfermedades" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Enfermedades" />
       <Association Name="Paciente_Factura" Member="Factura" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Factura" />

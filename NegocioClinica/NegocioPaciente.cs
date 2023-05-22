@@ -32,8 +32,11 @@ namespace NegocioClinica
         }
         public Paciente CargarPaciente(int Id)
         {
-            return Paciente.CargarPaciente(Id);
-            
+            return Paciente.CargarPaciente(Id);   
+        }
+        public byte[] CargarFotoPaciente(int Id)
+        {
+            return Paciente.CargarFotoPaciente(Id);
         }
         public void ActualizarPaciente(Paciente Pac)
         {

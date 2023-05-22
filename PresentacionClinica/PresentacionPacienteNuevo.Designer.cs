@@ -35,10 +35,10 @@ namespace PresentacionClinica
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbGeneroA = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbFotoperfil2 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.mtxtDocB = new System.Windows.Forms.MaskedTextBox();
             this.txtCorreoB = new System.Windows.Forms.MaskedTextBox();
@@ -94,7 +94,7 @@ namespace PresentacionClinica
             this.tcPaciente = new System.Windows.Forms.TabControl();
             this.tpEditar.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil2)).BeginInit();
             this.groupBox42.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
             this.tpNuevo.SuspendLayout();
@@ -144,10 +144,10 @@ namespace PresentacionClinica
             // 
             this.groupBox8.Controls.Add(this.dateTimePicker1);
             this.groupBox8.Controls.Add(this.label13);
-            this.groupBox8.Controls.Add(this.comboBox1);
+            this.groupBox8.Controls.Add(this.cmbGeneroA);
             this.groupBox8.Controls.Add(this.label16);
             this.groupBox8.Controls.Add(this.button1);
-            this.groupBox8.Controls.Add(this.pictureBox2);
+            this.groupBox8.Controls.Add(this.pbFotoperfil2);
             this.groupBox8.Controls.Add(this.btnActualizar);
             this.groupBox8.Controls.Add(this.mtxtDocB);
             this.groupBox8.Controls.Add(this.txtCorreoB);
@@ -193,17 +193,17 @@ namespace PresentacionClinica
             this.label13.TabIndex = 41;
             this.label13.Text = "Nacimiento";
             // 
-            // comboBox1
+            // cmbGeneroA
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 13.8F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbGeneroA.Font = new System.Drawing.Font("Verdana", 13.8F);
+            this.cmbGeneroA.FormattingEnabled = true;
+            this.cmbGeneroA.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.comboBox1.Location = new System.Drawing.Point(312, 245);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(194, 36);
-            this.comboBox1.TabIndex = 5;
+            this.cmbGeneroA.Location = new System.Drawing.Point(312, 245);
+            this.cmbGeneroA.Name = "cmbGeneroA";
+            this.cmbGeneroA.Size = new System.Drawing.Size(194, 36);
+            this.cmbGeneroA.TabIndex = 5;
             // 
             // label16
             // 
@@ -230,15 +230,16 @@ namespace PresentacionClinica
             this.button1.Text = "Cargar Imagen";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // pbFotoperfil2
             // 
-            this.pictureBox2.Image = global::PresentacionClinica.Properties.Resources.SinFoto;
-            this.pictureBox2.Location = new System.Drawing.Point(774, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(262, 339);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
+            this.pbFotoperfil2.Image = global::PresentacionClinica.Properties.Resources.SinFoto;
+            this.pbFotoperfil2.Location = new System.Drawing.Point(774, 28);
+            this.pbFotoperfil2.Name = "pbFotoperfil2";
+            this.pbFotoperfil2.Size = new System.Drawing.Size(262, 339);
+            this.pbFotoperfil2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoperfil2.TabIndex = 37;
+            this.pbFotoperfil2.TabStop = false;
+            this.pbFotoperfil2.Paint += new System.Windows.Forms.PaintEventHandler(this.pbFotoperfil2_Paint);
             // 
             // btnActualizar
             // 
@@ -594,8 +595,9 @@ namespace PresentacionClinica
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(161, 50);
             this.btnCargar.TabIndex = 13;
-            this.btnCargar.Text = "Cargar Imagen";
+            this.btnCargar.Text = "Buscar Imagen";
             this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // pictureBox1
             // 
@@ -606,6 +608,7 @@ namespace PresentacionClinica
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // btnPaciente
             // 
@@ -845,7 +848,7 @@ namespace PresentacionClinica
             this.tpEditar.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil2)).EndInit();
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
@@ -866,10 +869,10 @@ namespace PresentacionClinica
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbGeneroA;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbFotoperfil2;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.MaskedTextBox mtxtDocB;
         private System.Windows.Forms.MaskedTextBox txtCorreoB;

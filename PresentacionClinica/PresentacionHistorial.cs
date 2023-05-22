@@ -2,8 +2,12 @@
 using System.Windows.Forms;
 using NegocioClinica;
 using DatosClinica;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace PresentacionClinica
+
 {
     public partial class PresentacionHistorial : Form
     {
@@ -65,6 +69,12 @@ namespace PresentacionClinica
                 lbAlergias.DisplayMember = "Alergia";
                 lbEnfermedades.DataSource = enf.ListarEnferemdades(Dato);
                 lbEnfermedades.DisplayMember = "Enfermedad";
+                  byte[] image =Paciente.CargarFotoPaciente(Id);
+                using (MemoryStream ms = new MemoryStream(image))
+                {
+                    Image images = Image.FromStream(ms);
+                    pbFotoPerfil.Image = images;
+                }
             }
             }
 
@@ -72,6 +82,7 @@ namespace PresentacionClinica
         {
 
         }
+
 
         private void btnEnfermedades_Click(object sender, EventArgs e)
         {
@@ -128,6 +139,15 @@ namespace PresentacionClinica
             else
             {
                 MessageBox.Show("No has agregado Enfermedad");
+            }
+        }
+
+        private void pbFotoPerfil_Paint(object sender, PaintEventArgs e)
+        {
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                path.AddEllipse(0, 0, pbFotoPerfil.Width - 1, pbFotoPerfil.Height - 1);
+                pbFotoPerfil.Region = new Region(path);
             }
         }
     }

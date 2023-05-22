@@ -2,15 +2,18 @@
 using NegocioClinica;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
+using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace PresentacionClinica
 {
     public partial class PresentacionPaciente : Form
     {
         NegocioPaciente Paciente = new NegocioPaciente();
-        NegocioAlergias alergia = new NegocioAlergias();
         Paciente pc = new Paciente();
-        Alergias al = new Alergias();
+        string imagePath;
+        byte[] imageData;
         public PresentacionPaciente()
         {
             InitializeComponent();
@@ -30,7 +33,6 @@ namespace PresentacionClinica
             dTNacimiento.Enabled = false;
             btnCargar.Enabled = false;
             txtNombre.Text = "";
-
             //dgBuscar.DataSource = Paciente.verPacientes();
 
         }
@@ -81,16 +83,29 @@ namespace PresentacionClinica
         }
         private void btnPaciente_Click(object sender, EventArgs e)
         {
+            imageData = File.ReadAllBytes(imagePath);
             if (txtNombre.Text != "" && txtApellido.Text != "" && txtApellido.Text != "" && mtxtDoc.Text != "" && txtDireccion.Text != "" && mtxtTelefono.Text != "" && mtxtTelefono2.Text != "" && mtxtCorreo.Text != "")
             {
+         
                 pc.FechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
                 pc.Nombre = txtNombre.Text;
                 pc.Apellido = txtApellido.Text;
                 pc.Direccion = txtDireccion.Text;
+                pc.Genero = cmbGenero.SelectedItem.ToString();
                 pc.Cedula = Convert.ToInt32(mtxtDoc.Text);
                 pc.Telefono1 = Convert.ToInt32(mtxtTelefono.Text);
                 pc.Telefono2 = Convert.ToInt32(mtxtTelefono2.Text);
                 pc.Correo = mtxtCorreo.Text;
+                pc.FechaDeNacimiento = dTNacimiento.Value;
+                pc.FotoDePerfil = imageData;
+                if (cmbGenero.SelectedIndex == 0)
+                {
+                    pc.Genero = "Masculino";
+                }
+                else
+                {
+                    pc.Genero = "Femenino";
+                }
                 Paciente.Insertar(pc);
                 mtxtDoc.Enabled = false;
                 txtFechaIngreso.Enabled = false;
@@ -183,11 +198,25 @@ namespace PresentacionClinica
                 Paciente Pac= Paciente.CargarPaciente(Id);
                 txtNombreB.Text=Pac.Nombre;
                 txtApellidoB.Text = Pac.Apellido;
+                if (Pac.Genero == "Masculino")
+                {
+                    cmbGeneroA.SelectedIndex = 0;
+                    }
+                else
+                {
+                    cmbGeneroA.SelectedIndex = 1;
+                }
                 mtxtDocB.Text = Convert.ToString(Pac.Cedula);
                 txtDireccionB.Text = Convert.ToString(Pac.Direccion);
                 mtxtTelefono1B.Text = Convert.ToString(Pac.Telefono1);
                 mtxtTelefono2B.Text = Convert.ToString(Pac.Telefono2);
                 txtCorreoB.Text = Pac.Correo;
+                byte[] image =Paciente.CargarFotoPaciente(Id);
+                using (MemoryStream ms = new MemoryStream(image))
+                {
+                    Image images = Image.FromStream(ms);
+                    pbFotoperfil2.Image = images;
+                }
             }
         }
 
@@ -201,6 +230,7 @@ namespace PresentacionClinica
             pc.Telefono1 = Convert.ToInt32(mtxtTelefono1B.Text);
             pc.Telefono2 = Convert.ToInt32(mtxtTelefono2B.Text);
             pc.Correo = txtCorreoB.Text;
+            pc.Genero = cmbGeneroA.Text;
             Paciente.ActualizarPaciente(pc);
             MessageBox.Show("Datos Actualizados");
             txtNombreB.Text = "";
@@ -210,6 +240,37 @@ namespace PresentacionClinica
             mtxtTelefono1B.Text = "";
             mtxtTelefono2B.Text = "";
             txtCorreoB.Text = "";
+            cmbGeneroA.Text = "";
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openfile = new OpenFileDialog();
+            openfile.Filter = "Archivos de imagen (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
+            if (openfile.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openfile.FileName;
+                pictureBox1.ImageLocation = imagePath;
+            }
+        }
+
+        private void pbFotoperfil2_Paint(object sender, PaintEventArgs e)
+        {
+                using (GraphicsPath path = new GraphicsPath())
+                {
+                    path.AddEllipse(0, 0, pbFotoperfil2.Width - 1, pbFotoperfil2.Height - 1);
+                    pbFotoperfil2.Region = new Region(path);
+                }
+            
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+                using (GraphicsPath path = new GraphicsPath())
+                {
+                    path.AddEllipse(0, 0, pictureBox1.Width - 1, pictureBox1.Height - 1);
+                    pictureBox1.Region = new Region(path);
+                }
         }
     }
 }

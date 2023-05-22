@@ -9,6 +9,7 @@ namespace DatosClinica
     public class DatosPaciente
     {
         DatosClinicaDataContext Db = new DatosClinicaDataContext();
+       
         public Paciente BuscarPaciente(string Nombre, string Apellido)
         {
             Paciente paciente = Db.Paciente.Single(r=>r.Nombre==Nombre && r.Apellido==Apellido);
@@ -38,6 +39,13 @@ namespace DatosClinica
             Paciente Pac = Db.Paciente.Single(r=>r.IdPaciente==Id);
             return Pac;
         }
+        public byte[] CargarFotoPaciente(int Id)
+        {
+            Paciente Pac = Db.Paciente.Single(r => r.IdPaciente == Id);
+           byte[] foto =  Pac.FotoDePerfil.ToArray();
+            return foto;
+        }
+
 
         public void ActualizarPaciente(Paciente PacNuevo)
         {

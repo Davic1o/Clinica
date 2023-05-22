@@ -1211,6 +1211,8 @@ namespace DatosClinica
 		
 		private System.Data.Linq.Binary _FotoDePerfil;
 		
+		private System.Nullable<System.DateTime> _FechaDeNacimiento;
+		
 		private EntitySet<Alergias> _Alergias;
 		
 		private EntitySet<Enfermedades> _Enfermedades;
@@ -1251,6 +1253,8 @@ namespace DatosClinica
     partial void OnGeneroChanged();
     partial void OnFotoDePerfilChanging(System.Data.Linq.Binary value);
     partial void OnFotoDePerfilChanged();
+    partial void OnFechaDeNacimientoChanging(System.Nullable<System.DateTime> value);
+    partial void OnFechaDeNacimientoChanged();
     #endregion
 		
 		public Paciente()
@@ -1484,7 +1488,7 @@ namespace DatosClinica
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FotoDePerfil", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FotoDePerfil", DbType="VarBinary(50)", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary FotoDePerfil
 		{
 			get
@@ -1500,6 +1504,26 @@ namespace DatosClinica
 					this._FotoDePerfil = value;
 					this.SendPropertyChanged("FotoDePerfil");
 					this.OnFotoDePerfilChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaDeNacimiento", DbType="Date")]
+		public System.Nullable<System.DateTime> FechaDeNacimiento
+		{
+			get
+			{
+				return this._FechaDeNacimiento;
+			}
+			set
+			{
+				if ((this._FechaDeNacimiento != value))
+				{
+					this.OnFechaDeNacimientoChanging(value);
+					this.SendPropertyChanging();
+					this._FechaDeNacimiento = value;
+					this.SendPropertyChanged("FechaDeNacimiento");
+					this.OnFechaDeNacimientoChanged();
 				}
 			}
 		}
