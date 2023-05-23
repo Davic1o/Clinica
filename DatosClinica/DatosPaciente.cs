@@ -41,8 +41,18 @@ namespace DatosClinica
         }
         public byte[] CargarFotoPaciente(int Id)
         {
+            byte[] foto;
             Paciente Pac = Db.Paciente.Single(r => r.IdPaciente == Id);
-           byte[] foto =  Pac.FotoDePerfil.ToArray();
+            if (Pac!=null && Pac.FotoDePerfil!=null)
+            {
+            foto =  Pac.FotoDePerfil.ToArray();
+            }
+            else
+            {
+                foto = new byte[0];
+            }
+
+
             return foto;
         }
 
@@ -53,10 +63,13 @@ namespace DatosClinica
             PacActualiza.Nombre = PacNuevo.Nombre;
             PacActualiza.Apellido = PacNuevo.Apellido;
             PacActualiza.Cedula = PacNuevo.Cedula;
+            PacActualiza.FechaDeNacimiento = PacNuevo.FechaDeNacimiento;
+            PacActualiza.Genero = PacNuevo.Genero;
             PacActualiza.Telefono1 = PacNuevo.Telefono1;
             PacActualiza.Telefono2 = PacNuevo.Telefono2;
             PacActualiza.Direccion = PacNuevo.Direccion;
             PacActualiza.Correo = PacNuevo.Correo;
+            PacActualiza.FotoDePerfil = PacNuevo.FotoDePerfil;
             Db.SubmitChanges();
 
         }

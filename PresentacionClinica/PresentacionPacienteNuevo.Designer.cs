@@ -33,11 +33,11 @@ namespace PresentacionClinica
             this.btnCerrar = new System.Windows.Forms.Button();
             this.tpEditar = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtNacimiento2 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.cmbGeneroA = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFoto2 = new System.Windows.Forms.Button();
             this.pbFotoperfil2 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.mtxtDocB = new System.Windows.Forms.MaskedTextBox();
@@ -142,11 +142,11 @@ namespace PresentacionClinica
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.dateTimePicker1);
+            this.groupBox8.Controls.Add(this.dtNacimiento2);
             this.groupBox8.Controls.Add(this.label13);
             this.groupBox8.Controls.Add(this.cmbGeneroA);
             this.groupBox8.Controls.Add(this.label16);
-            this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(this.btnFoto2);
             this.groupBox8.Controls.Add(this.pbFotoperfil2);
             this.groupBox8.Controls.Add(this.btnActualizar);
             this.groupBox8.Controls.Add(this.mtxtDocB);
@@ -173,13 +173,13 @@ namespace PresentacionClinica
             this.groupBox8.TabIndex = 33;
             this.groupBox8.TabStop = false;
             // 
-            // dateTimePicker1
+            // dtNacimiento2
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(309, 362);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(197, 32);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtNacimiento2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNacimiento2.Location = new System.Drawing.Point(309, 362);
+            this.dtNacimiento2.Name = "dtNacimiento2";
+            this.dtNacimiento2.Size = new System.Drawing.Size(197, 32);
+            this.dtNacimiento2.TabIndex = 8;
             // 
             // label13
             // 
@@ -217,18 +217,19 @@ namespace PresentacionClinica
             this.label16.TabIndex = 39;
             this.label16.Text = "Genero";
             // 
-            // button1
+            // btnFoto2
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(842, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 50);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Cargar Imagen";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnFoto2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFoto2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFoto2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFoto2.ForeColor = System.Drawing.Color.White;
+            this.btnFoto2.Location = new System.Drawing.Point(842, 388);
+            this.btnFoto2.Name = "btnFoto2";
+            this.btnFoto2.Size = new System.Drawing.Size(161, 50);
+            this.btnFoto2.TabIndex = 13;
+            this.btnFoto2.Text = "Cargar Imagen";
+            this.btnFoto2.UseVisualStyleBackColor = false;
+            this.btnFoto2.Click += new System.EventHandler(this.btnFoto2_Click);
             // 
             // pbFotoperfil2
             // 
@@ -493,7 +494,6 @@ namespace PresentacionClinica
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 28);
             this.txtBuscar.TabIndex = 18;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // tpNuevo
@@ -867,11 +867,11 @@ namespace PresentacionClinica
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TabPage tpEditar;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtNacimiento2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cmbGeneroA;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFoto2;
         private System.Windows.Forms.PictureBox pbFotoperfil2;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.MaskedTextBox mtxtDocB;

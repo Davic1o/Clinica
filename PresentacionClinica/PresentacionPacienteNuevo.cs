@@ -83,7 +83,14 @@ namespace PresentacionClinica
         }
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            imageData = File.ReadAllBytes(imagePath);
+            if (imagePath != null)
+            {
+                imageData = File.ReadAllBytes(imagePath);
+            }
+            else
+            {
+                imageData = null;
+            }
             if (txtNombre.Text != "" && txtApellido.Text != "" && txtApellido.Text != "" && mtxtDoc.Text != "" && txtDireccion.Text != "" && mtxtTelefono.Text != "" && mtxtTelefono2.Text != "" && mtxtCorreo.Text != "")
             {
          
@@ -137,17 +144,6 @@ namespace PresentacionClinica
             mtxtTelefono2.Text = "";
             mtxtCorreo.Text = "";
         }
-     
-
-        private void dgBuscar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-            }
-
         private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -206,31 +202,51 @@ namespace PresentacionClinica
                 {
                     cmbGeneroA.SelectedIndex = 1;
                 }
+                dtNacimiento2.Value = (DateTime)Pac.FechaDeNacimiento;
                 mtxtDocB.Text = Convert.ToString(Pac.Cedula);
                 txtDireccionB.Text = Convert.ToString(Pac.Direccion);
                 mtxtTelefono1B.Text = Convert.ToString(Pac.Telefono1);
                 mtxtTelefono2B.Text = Convert.ToString(Pac.Telefono2);
                 txtCorreoB.Text = Pac.Correo;
                 byte[] image =Paciente.CargarFotoPaciente(Id);
-                using (MemoryStream ms = new MemoryStream(image))
+                if (image.Length > 0)
                 {
-                    Image images = Image.FromStream(ms);
-                    pbFotoperfil2.Image = images;
+                    using (MemoryStream ms = new MemoryStream(image))
+                    {
+                        Image images = Image.FromStream(ms);
+                        pbFotoperfil2.Image = images;
+                    }
+                }
+                else
+                {
+                    pbFotoperfil2.Image = null;
                 }
             }
         }
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
+
+            if (imagePath != null)
+            {
+                imageData = File.ReadAllBytes(imagePath);
+            }
+            else
+            {
+                imageData = null;
+            }
             pc.IdPaciente = Convert.ToInt32(txtIdact.Text);
             pc.Nombre = txtNombreB.Text;
             pc.Apellido = txtApellidoB.Text;
             pc.Cedula = Convert.ToInt32(mtxtDocB.Text);
             pc.Direccion = txtDireccionB.Text;
+            pc.FechaDeNacimiento = dtNacimiento2.Value;
             pc.Telefono1 = Convert.ToInt32(mtxtTelefono1B.Text);
             pc.Telefono2 = Convert.ToInt32(mtxtTelefono2B.Text);
             pc.Correo = txtCorreoB.Text;
             pc.Genero = cmbGeneroA.Text;
+            pc.FotoDePerfil = imageData;
+            
             Paciente.ActualizarPaciente(pc);
             MessageBox.Show("Datos Actualizados");
             txtNombreB.Text = "";
@@ -241,6 +257,7 @@ namespace PresentacionClinica
             mtxtTelefono2B.Text = "";
             txtCorreoB.Text = "";
             cmbGeneroA.Text = "";
+            pbFotoperfil2.Image = null;
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -271,6 +288,17 @@ namespace PresentacionClinica
                     path.AddEllipse(0, 0, pictureBox1.Width - 1, pictureBox1.Height - 1);
                     pictureBox1.Region = new Region(path);
                 }
+        }
+
+        private void btnFoto2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openfile = new OpenFileDialog();
+            openfile.Filter = "Archivos de imagen (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
+            if (openfile.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openfile.FileName;
+                pbFotoperfil2.ImageLocation = imagePath;
+            }
         }
     }
 }
