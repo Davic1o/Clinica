@@ -41,7 +41,7 @@ namespace PresentacionClinica
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnTratamiento = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRecetario = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.pnlPadre = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -144,7 +144,7 @@ namespace PresentacionClinica
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.btnTratamiento);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnRecetario);
             this.groupBox2.Controls.Add(this.btnPacientes);
             this.groupBox2.Location = new System.Drawing.Point(17, 90);
             this.groupBox2.Name = "groupBox2";
@@ -197,17 +197,17 @@ namespace PresentacionClinica
             this.btnTratamiento.UseVisualStyleBackColor = false;
             this.btnTratamiento.Click += new System.EventHandler(this.btnTratamiento_Click);
             // 
-            // button1
+            // btnRecetario
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(30, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 82);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Recetario";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRecetario.BackColor = System.Drawing.Color.White;
+            this.btnRecetario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecetario.Location = new System.Drawing.Point(30, 330);
+            this.btnRecetario.Name = "btnRecetario";
+            this.btnRecetario.Size = new System.Drawing.Size(187, 82);
+            this.btnRecetario.TabIndex = 1;
+            this.btnRecetario.Text = "Recetario";
+            this.btnRecetario.UseVisualStyleBackColor = false;
+            this.btnRecetario.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPacientes
             // 
@@ -286,7 +286,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button btnTratamiento;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRecetario;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
