@@ -1195,7 +1195,7 @@ namespace DatosClinica
 		
 		private string _Apellido;
 		
-		private System.Nullable<int> _Cedula;
+		private string _Cedula;
 		
 		private string _Direccion;
 		
@@ -1237,7 +1237,7 @@ namespace DatosClinica
     partial void OnNombreChanged();
     partial void OnApellidoChanging(string value);
     partial void OnApellidoChanged();
-    partial void OnCedulaChanging(System.Nullable<int> value);
+    partial void OnCedulaChanging(string value);
     partial void OnCedulaChanged();
     partial void OnDireccionChanging(string value);
     partial void OnDireccionChanged();
@@ -1348,8 +1348,8 @@ namespace DatosClinica
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", DbType="Int")]
-		public System.Nullable<int> Cedula
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", DbType="VarChar(50)")]
+		public string Cedula
 		{
 			get
 			{
@@ -1488,7 +1488,7 @@ namespace DatosClinica
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FotoDePerfil", DbType="VarBinary(50)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FotoDePerfil", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary FotoDePerfil
 		{
 			get

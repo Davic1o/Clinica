@@ -56,14 +56,14 @@
       <Column Name="FechaIngreso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Apellido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Cedula" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Direccion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
       <Column Name="Telefono1" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Telefono2" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="FechaCita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Genero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="FotoDePerfil" Type="System.Data.Linq.Binary" DbType="VarBinary(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FotoDePerfil" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="FechaDeNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="Paciente_Alergias" Member="Alergias" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Alergias" />
       <Association Name="Paciente_Enfermedades" Member="Enfermedades" ThisKey="IdPaciente" OtherKey="IdPaciente" Type="Enfermedades" />

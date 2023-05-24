@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 
 namespace PresentacionClinica
-
 {
     public partial class PresentacionHistorial : Form
     {
@@ -25,7 +24,6 @@ namespace PresentacionClinica
             btnEnfermedades.Enabled = false;
             lblUsuario.Text = "SIN USUARIO";
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -41,10 +39,6 @@ namespace PresentacionClinica
             if (e.KeyCode == Keys.Enter)
             {
                 dgBuscar.DataSource = Paciente.BuscarPacientes(txtBuscar.Text);
-
-
-            
-
             }
         }
 
@@ -78,32 +72,6 @@ namespace PresentacionClinica
             }
             }
 
-        private void btnHistoria_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void btnEnfermedades_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAlergias_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PresentacionTratamiento_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAlergias_Click_1(object sender, EventArgs e)
         {
 
@@ -112,7 +80,7 @@ namespace PresentacionClinica
             Alergias alergias = new Alergias();
             alergias.IdPaciente = Dato;
             alergias.Alergia= txtAlergias.Text;
-                txtAlergias.Text = "";
+            txtAlergias.Text = "";
             alerg.AgregarAlergias(alergias);
             lbAlergias.DataSource = alerg.listarAlergias(Dato);
             lbAlergias.Refresh();
@@ -149,6 +117,11 @@ namespace PresentacionClinica
                 path.AddEllipse(0, 0, pbFotoPerfil.Width - 1, pbFotoPerfil.Height - 1);
                 pbFotoPerfil.Region = new Region(path);
             }
+        }
+
+        private void btnHistoria_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

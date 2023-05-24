@@ -40,11 +40,10 @@ namespace PresentacionClinica
             this.btnFoto2 = new System.Windows.Forms.Button();
             this.pbFotoperfil2 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.mtxtDocB = new System.Windows.Forms.MaskedTextBox();
             this.txtCorreoB = new System.Windows.Forms.MaskedTextBox();
             this.mtxtTelefono2B = new System.Windows.Forms.MaskedTextBox();
             this.mtxtTelefono1B = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbDocumentob = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@ namespace PresentacionClinica
             this.label39 = new System.Windows.Forms.Label();
             this.txtNombreB = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtfechaIngresob = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.txtIdact = new System.Windows.Forms.TextBox();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
@@ -92,6 +91,7 @@ namespace PresentacionClinica
             this.label9 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.tcPaciente = new System.Windows.Forms.TabControl();
+            this.mtxtDocB = new System.Windows.Forms.MaskedTextBox();
             this.tpEditar.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil2)).BeginInit();
@@ -142,6 +142,7 @@ namespace PresentacionClinica
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.mtxtDocB);
             this.groupBox8.Controls.Add(this.dtNacimiento2);
             this.groupBox8.Controls.Add(this.label13);
             this.groupBox8.Controls.Add(this.cmbGeneroA);
@@ -149,11 +150,10 @@ namespace PresentacionClinica
             this.groupBox8.Controls.Add(this.btnFoto2);
             this.groupBox8.Controls.Add(this.pbFotoperfil2);
             this.groupBox8.Controls.Add(this.btnActualizar);
-            this.groupBox8.Controls.Add(this.mtxtDocB);
             this.groupBox8.Controls.Add(this.txtCorreoB);
             this.groupBox8.Controls.Add(this.mtxtTelefono2B);
             this.groupBox8.Controls.Add(this.mtxtTelefono1B);
-            this.groupBox8.Controls.Add(this.comboBox2);
+            this.groupBox8.Controls.Add(this.cmbDocumentob);
             this.groupBox8.Controls.Add(this.label17);
             this.groupBox8.Controls.Add(this.label18);
             this.groupBox8.Controls.Add(this.label19);
@@ -164,7 +164,7 @@ namespace PresentacionClinica
             this.groupBox8.Controls.Add(this.label39);
             this.groupBox8.Controls.Add(this.txtNombreB);
             this.groupBox8.Controls.Add(this.label40);
-            this.groupBox8.Controls.Add(this.textBox4);
+            this.groupBox8.Controls.Add(this.txtfechaIngresob);
             this.groupBox8.Controls.Add(this.label41);
             this.groupBox8.Controls.Add(this.txtIdact);
             this.groupBox8.Location = new System.Drawing.Point(552, 13);
@@ -256,13 +256,6 @@ namespace PresentacionClinica
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click_1);
             // 
-            // mtxtDocB
-            // 
-            this.mtxtDocB.Location = new System.Drawing.Point(309, 305);
-            this.mtxtDocB.Name = "mtxtDocB";
-            this.mtxtDocB.Size = new System.Drawing.Size(197, 32);
-            this.mtxtDocB.TabIndex = 7;
-            // 
             // txtCorreoB
             // 
             this.txtCorreoB.Location = new System.Drawing.Point(312, 632);
@@ -288,17 +281,18 @@ namespace PresentacionClinica
             this.mtxtTelefono1B.Size = new System.Drawing.Size(211, 32);
             this.mtxtTelefono1B.TabIndex = 10;
             // 
-            // comboBox2
+            // cmbDocumentob
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Verdana", 13.8F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbDocumentob.Font = new System.Drawing.Font("Verdana", 13.8F);
+            this.cmbDocumentob.FormattingEnabled = true;
+            this.cmbDocumentob.Items.AddRange(new object[] {
             "Cedula",
             "Ruc"});
-            this.comboBox2.Location = new System.Drawing.Point(24, 303);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(179, 36);
-            this.comboBox2.TabIndex = 6;
+            this.cmbDocumentob.Location = new System.Drawing.Point(24, 303);
+            this.cmbDocumentob.Name = "cmbDocumentob";
+            this.cmbDocumentob.Size = new System.Drawing.Size(179, 36);
+            this.cmbDocumentob.TabIndex = 6;
+            this.cmbDocumentob.SelectedIndexChanged += new System.EventHandler(this.cmbDocumentob_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -409,13 +403,13 @@ namespace PresentacionClinica
             this.label40.TabIndex = 14;
             this.label40.Text = "Celular";
             // 
-            // textBox4
+            // txtfechaIngresob
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(312, 89);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(341, 28);
-            this.textBox4.TabIndex = 2;
+            this.txtfechaIngresob.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfechaIngresob.Location = new System.Drawing.Point(312, 89);
+            this.txtfechaIngresob.Name = "txtfechaIngresob";
+            this.txtfechaIngresob.Size = new System.Drawing.Size(341, 28);
+            this.txtfechaIngresob.TabIndex = 2;
             // 
             // label41
             // 
@@ -831,6 +825,13 @@ namespace PresentacionClinica
             this.tcPaciente.Size = new System.Drawing.Size(1718, 821);
             this.tcPaciente.TabIndex = 0;
             // 
+            // mtxtDocB
+            // 
+            this.mtxtDocB.Location = new System.Drawing.Point(309, 305);
+            this.mtxtDocB.Name = "mtxtDocB";
+            this.mtxtDocB.Size = new System.Drawing.Size(197, 32);
+            this.mtxtDocB.TabIndex = 42;
+            // 
             // PresentacionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -874,11 +875,10 @@ namespace PresentacionClinica
         private System.Windows.Forms.Button btnFoto2;
         private System.Windows.Forms.PictureBox pbFotoperfil2;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.MaskedTextBox mtxtDocB;
         private System.Windows.Forms.MaskedTextBox txtCorreoB;
         private System.Windows.Forms.MaskedTextBox mtxtTelefono2B;
         private System.Windows.Forms.MaskedTextBox mtxtTelefono1B;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbDocumentob;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -889,7 +889,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox txtNombreB;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtfechaIngresob;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox txtIdact;
         private System.Windows.Forms.GroupBox groupBox42;
@@ -926,5 +926,6 @@ namespace PresentacionClinica
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TabControl tcPaciente;
+        private System.Windows.Forms.MaskedTextBox mtxtDocB;
     }
 }

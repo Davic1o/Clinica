@@ -95,11 +95,12 @@ namespace PresentacionClinica
             {
          
                 pc.FechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+                pc.FechaCita= Convert.ToDateTime(txtFechaIngreso.Text);
                 pc.Nombre = txtNombre.Text;
                 pc.Apellido = txtApellido.Text;
                 pc.Direccion = txtDireccion.Text;
                 pc.Genero = cmbGenero.SelectedItem.ToString();
-                pc.Cedula = Convert.ToInt32(mtxtDoc.Text);
+                pc.Cedula = mtxtDoc.Text;
                 pc.Telefono1 = Convert.ToInt32(mtxtTelefono.Text);
                 pc.Telefono2 = Convert.ToInt32(mtxtTelefono2.Text);
                 pc.Correo = mtxtCorreo.Text;
@@ -194,6 +195,7 @@ namespace PresentacionClinica
                 Paciente Pac= Paciente.CargarPaciente(Id);
                 txtNombreB.Text=Pac.Nombre;
                 txtApellidoB.Text = Pac.Apellido;
+                txtfechaIngresob.Text = Convert.ToString(Pac.FechaIngreso);
                 if (Pac.Genero == "Masculino")
                 {
                     cmbGeneroA.SelectedIndex = 0;
@@ -201,6 +203,14 @@ namespace PresentacionClinica
                 else
                 {
                     cmbGeneroA.SelectedIndex = 1;
+                }
+                if (Convert.ToString(Pac.Cedula).Length==10)
+                {
+                    cmbDocumentob.SelectedIndex = 0;
+                }
+                else
+                {
+                    cmbDocumentob.SelectedIndex = 1;
                 }
                 dtNacimiento2.Value = (DateTime)Pac.FechaDeNacimiento;
                 mtxtDocB.Text = Convert.ToString(Pac.Cedula);
@@ -238,7 +248,7 @@ namespace PresentacionClinica
             pc.IdPaciente = Convert.ToInt32(txtIdact.Text);
             pc.Nombre = txtNombreB.Text;
             pc.Apellido = txtApellidoB.Text;
-            pc.Cedula = Convert.ToInt32(mtxtDocB.Text);
+            pc.Cedula = mtxtDocB.Text;
             pc.Direccion = txtDireccionB.Text;
             pc.FechaDeNacimiento = dtNacimiento2.Value;
             pc.Telefono1 = Convert.ToInt32(mtxtTelefono1B.Text);
@@ -298,6 +308,21 @@ namespace PresentacionClinica
             {
                 imagePath = openfile.FileName;
                 pbFotoperfil2.ImageLocation = imagePath;
+            }
+        }
+
+        private void cmbDocumentob_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbDocumentob.SelectedIndex == 0)
+            {
+                mtxtDocB.Mask = "0000000000";
+                mtxtDocB.Width = 110;
+            }
+            if (cmbDocumentob.SelectedIndex == 1)
+            {
+                mtxtDocB.Enabled = true;
+                mtxtDocB.Mask = "0000000000000";
+                mtxtDocB.Width = 140;
             }
         }
     }

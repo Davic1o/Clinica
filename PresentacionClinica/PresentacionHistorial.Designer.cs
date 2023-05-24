@@ -344,7 +344,6 @@ namespace PresentacionClinica
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 28);
             this.txtBuscar.TabIndex = 41;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // btnBuscar
@@ -1887,6 +1886,7 @@ namespace PresentacionClinica
             this.btnHistoria.TabIndex = 33;
             this.btnHistoria.Text = "Guardar Historia";
             this.btnHistoria.UseVisualStyleBackColor = false;
+            this.btnHistoria.Click += new System.EventHandler(this.btnHistoria_Click_1);
             // 
             // groupBox42
             // 
@@ -2062,7 +2062,6 @@ namespace PresentacionClinica
             this.Name = "PresentacionHistorial";
             this.Text = "Tratamiento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PresentacionTratamiento_Load);
             this.tcPaciente.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
