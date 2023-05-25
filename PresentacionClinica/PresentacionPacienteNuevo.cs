@@ -325,5 +325,23 @@ namespace PresentacionClinica
                 mtxtDocB.Width = 140;
             }
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            dgBuscar.DataSource = Paciente.BuscarPacientes(txtBuscar.Text);
+
+            foreach (DataGridViewColumn col in dgBuscar.Columns)
+            {
+                if (col.DataPropertyName != "Nombre" && col.DataPropertyName != "Apellido" && col.DataPropertyName != "Cedula")
+                {
+                    col.Visible = false;
+                }
+                else
+                {
+                    col.Visible = true;
+                }
+            }
+
+        }
     }
 }

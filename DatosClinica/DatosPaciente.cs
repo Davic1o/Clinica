@@ -39,6 +39,13 @@ namespace DatosClinica
             Paciente Pac = Db.Paciente.Single(r=>r.IdPaciente==Id);
             return Pac;
         }
+
+        public Paciente CargarFechaPaciente(int Id)
+        {
+            Paciente Pac = Db.Paciente.Single(r => r.IdPaciente == Id);
+                       
+            return Pac;
+        }
         public byte[] CargarFotoPaciente(int Id)
         {
             byte[] foto;

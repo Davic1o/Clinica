@@ -33,6 +33,7 @@ namespace PresentacionClinica
             this.btnCerrar = new System.Windows.Forms.Button();
             this.tpEditar = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.mtxtDocB = new System.Windows.Forms.MaskedTextBox();
             this.dtNacimiento2 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.cmbGeneroA = new System.Windows.Forms.ComboBox();
@@ -91,7 +92,6 @@ namespace PresentacionClinica
             this.label9 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.tcPaciente = new System.Windows.Forms.TabControl();
-            this.mtxtDocB = new System.Windows.Forms.MaskedTextBox();
             this.tpEditar.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil2)).BeginInit();
@@ -172,6 +172,13 @@ namespace PresentacionClinica
             this.groupBox8.Size = new System.Drawing.Size(1136, 774);
             this.groupBox8.TabIndex = 33;
             this.groupBox8.TabStop = false;
+            // 
+            // mtxtDocB
+            // 
+            this.mtxtDocB.Location = new System.Drawing.Point(309, 305);
+            this.mtxtDocB.Name = "mtxtDocB";
+            this.mtxtDocB.Size = new System.Drawing.Size(197, 32);
+            this.mtxtDocB.TabIndex = 42;
             // 
             // dtNacimiento2
             // 
@@ -488,6 +495,7 @@ namespace PresentacionClinica
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 28);
             this.txtBuscar.TabIndex = 18;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // tpNuevo
@@ -824,13 +832,6 @@ namespace PresentacionClinica
             this.tcPaciente.SelectedIndex = 0;
             this.tcPaciente.Size = new System.Drawing.Size(1718, 821);
             this.tcPaciente.TabIndex = 0;
-            // 
-            // mtxtDocB
-            // 
-            this.mtxtDocB.Location = new System.Drawing.Point(309, 305);
-            this.mtxtDocB.Name = "mtxtDocB";
-            this.mtxtDocB.Size = new System.Drawing.Size(197, 32);
-            this.mtxtDocB.TabIndex = 42;
             // 
             // PresentacionPaciente
             // 

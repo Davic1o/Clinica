@@ -42,6 +42,14 @@ namespace NegocioClinica
         {
             Paciente.ActualizarPaciente(Pac);
         }
+        public int EdadPaciente(int Id)
+        {
+            Paciente Pac= Paciente.CargarFechaPaciente(Id);
+            DateTime Nacimiento = (DateTime)Pac.FechaDeNacimiento;
+            DateTime Hoy = DateTime.Now;
+            int Edad = Hoy.Year - Nacimiento.Year;
+            return Edad;
+        }
 
     }
 }
