@@ -130,5 +130,11 @@ namespace PresentacionClinica
         {
 
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            dgBuscar.DataSource = Paciente.BuscarPacientes(txtBuscar.Text);
+
+        }
     }
 }

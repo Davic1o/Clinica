@@ -323,6 +323,7 @@ namespace PresentacionClinica
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 28);
             this.txtBuscar.TabIndex = 41;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
@@ -1434,6 +1435,7 @@ namespace PresentacionClinica
             this.btnCerrar.TabIndex = 51;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // PresentacionTratamiento
             // 
