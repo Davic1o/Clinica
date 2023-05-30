@@ -64,10 +64,17 @@ namespace PresentacionClinica
                 lbEnfermedades.DataSource = enf.ListarEnferemdades(Dato);
                 lbEnfermedades.DisplayMember = "Enfermedad";
                   byte[] image =Paciente.CargarFotoPaciente(Id);
-                using (MemoryStream ms = new MemoryStream(image))
+                if (image.Length > 0)
+                {
+                    using (MemoryStream ms = new MemoryStream(image))
                 {
                     Image images = Image.FromStream(ms);
                     pbFotoPerfil.Image = images;
+                }
+                }
+                else
+                {
+                    pbFotoPerfil.Image = null;
                 }
             }
             }
