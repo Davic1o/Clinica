@@ -17,6 +17,7 @@ namespace PresentacionClinica
         PresentacionPaciente PA = new PresentacionPaciente();
         PresentacionHistorial PT = new PresentacionHistorial();
         PresentacionRecetario PR = new PresentacionRecetario();
+        PresentacionTratamiento PTr = new PresentacionTratamiento();
         public PresentacionPrincipal(string Username)
         {
             InitializeComponent();
@@ -96,6 +97,13 @@ namespace PresentacionClinica
             PT.TopLevel = false;
             pnlPadre.Controls.Add(PT);
             PT.Show();
+        }
+
+        private void btnTratamiento_Click_1(object sender, EventArgs e)
+        {
+            PTr.TopLevel = false;
+            pnlPadre.Controls.Add(PTr);
+            PTr.Show();
         }
     }
 }

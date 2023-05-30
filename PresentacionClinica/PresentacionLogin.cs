@@ -52,7 +52,13 @@ namespace PresentacionClinica
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form[] forms = Application.OpenForms.Cast<Form>().ToArray();
+
+            // Cerrar todos los formularios de la lista
+            foreach (Form form in forms)
+            {
+                form.Close();
+            }
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)

@@ -144,6 +144,7 @@ namespace PresentacionClinica
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnHistoria = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoPerfil)).BeginInit();
             this.tcPaciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -225,7 +226,7 @@ namespace PresentacionClinica
             // pbFotoPerfil
             // 
             this.pbFotoPerfil.Image = global::PresentacionClinica.Properties.Resources.SinFoto;
-            this.pbFotoPerfil.Location = new System.Drawing.Point(597, -19);
+            this.pbFotoPerfil.Location = new System.Drawing.Point(599, 24);
             this.pbFotoPerfil.Name = "pbFotoPerfil";
             this.pbFotoPerfil.Size = new System.Drawing.Size(86, 85);
             this.pbFotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +239,7 @@ namespace PresentacionClinica
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(1076, -9);
+            this.lblUsuario.Location = new System.Drawing.Point(1065, 46);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(149, 40);
             this.lblUsuario.TabIndex = 48;
@@ -250,7 +251,7 @@ namespace PresentacionClinica
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(691, -9);
+            this.label1.Location = new System.Drawing.Point(691, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 40);
             this.label1.TabIndex = 49;
@@ -262,10 +263,10 @@ namespace PresentacionClinica
             this.tcPaciente.Controls.Add(this.tabPage2);
             this.tcPaciente.Controls.Add(this.tabPage3);
             this.tcPaciente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcPaciente.Location = new System.Drawing.Point(3, 46);
+            this.tcPaciente.Location = new System.Drawing.Point(12, 135);
             this.tcPaciente.Name = "tcPaciente";
             this.tcPaciente.SelectedIndex = 0;
-            this.tcPaciente.Size = new System.Drawing.Size(1701, 784);
+            this.tcPaciente.Size = new System.Drawing.Size(1701, 710);
             this.tcPaciente.TabIndex = 47;
             // 
             // tabPage1
@@ -273,7 +274,7 @@ namespace PresentacionClinica
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1693, 746);
+            this.tabPage1.Size = new System.Drawing.Size(1693, 672);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Paciente";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -284,9 +285,9 @@ namespace PresentacionClinica
             this.groupBox1.Controls.Add(this.dgBuscar);
             this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Location = new System.Drawing.Point(41, 16);
+            this.groupBox1.Location = new System.Drawing.Point(20, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1606, 686);
+            this.groupBox1.Size = new System.Drawing.Size(1644, 685);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -308,11 +309,11 @@ namespace PresentacionClinica
             this.dgBuscar.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscar.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgBuscar.Location = new System.Drawing.Point(31, 115);
+            this.dgBuscar.Location = new System.Drawing.Point(31, 105);
             this.dgBuscar.Name = "dgBuscar";
             this.dgBuscar.RowHeadersWidth = 51;
             this.dgBuscar.RowTemplate.Height = 24;
-            this.dgBuscar.Size = new System.Drawing.Size(1556, 546);
+            this.dgBuscar.Size = new System.Drawing.Size(1582, 560);
             this.dgBuscar.TabIndex = 43;
             // 
             // txtBuscar
@@ -329,7 +330,7 @@ namespace PresentacionClinica
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(562, 22);
+            this.btnBuscar.Location = new System.Drawing.Point(600, 22);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(110, 50);
             this.btnBuscar.TabIndex = 42;
@@ -347,7 +348,7 @@ namespace PresentacionClinica
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1693, 746);
+            this.tabPage2.Size = new System.Drawing.Size(1693, 672);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "  Odontograma  ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -358,7 +359,7 @@ namespace PresentacionClinica
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(728, 589);
+            this.button1.Location = new System.Drawing.Point(728, 557);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 86);
             this.button1.TabIndex = 34;
@@ -1394,7 +1395,7 @@ namespace PresentacionClinica
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1693, 746);
+            this.tabPage3.Size = new System.Drawing.Size(1693, 672);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Tratamiento";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1421,12 +1422,26 @@ namespace PresentacionClinica
             this.btnHistoria.Text = "Guardar Historia";
             this.btnHistoria.UseVisualStyleBackColor = false;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.Red;
+            this.btnCerrar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(1552, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(161, 43);
+            this.btnCerrar.TabIndex = 51;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
             // PresentacionTratamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1707, 810);
+            this.ClientSize = new System.Drawing.Size(1725, 857);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pbFotoPerfil);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label1);
@@ -1666,5 +1681,6 @@ namespace PresentacionClinica
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnHistoria;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

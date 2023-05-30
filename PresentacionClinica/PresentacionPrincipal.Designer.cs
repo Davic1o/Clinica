@@ -37,6 +37,7 @@ namespace PresentacionClinica
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTratamiento = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@ namespace PresentacionClinica
             this.pnlPadre = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.btnTratamiento = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -154,6 +154,18 @@ namespace PresentacionClinica
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
+            // btnTratamiento
+            // 
+            this.btnTratamiento.BackColor = System.Drawing.Color.White;
+            this.btnTratamiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTratamiento.Location = new System.Drawing.Point(31, 285);
+            this.btnTratamiento.Name = "btnTratamiento";
+            this.btnTratamiento.Size = new System.Drawing.Size(187, 82);
+            this.btnTratamiento.TabIndex = 6;
+            this.btnTratamiento.Text = "Tratamiento";
+            this.btnTratamiento.UseVisualStyleBackColor = false;
+            this.btnTratamiento.Click += new System.EventHandler(this.btnTratamiento_Click_1);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
@@ -249,17 +261,6 @@ namespace PresentacionClinica
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // btnTratamiento
-            // 
-            this.btnTratamiento.BackColor = System.Drawing.Color.White;
-            this.btnTratamiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTratamiento.Location = new System.Drawing.Point(31, 285);
-            this.btnTratamiento.Name = "btnTratamiento";
-            this.btnTratamiento.Size = new System.Drawing.Size(187, 82);
-            this.btnTratamiento.TabIndex = 6;
-            this.btnTratamiento.Text = "Tratamiento";
-            this.btnTratamiento.UseVisualStyleBackColor = false;
             // 
             // PresentacionPrincipal
             // 
