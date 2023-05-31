@@ -33,6 +33,7 @@ namespace PresentacionClinica
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@ namespace PresentacionClinica
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pbFotoperfil = new System.Windows.Forms.PictureBox();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@ namespace PresentacionClinica
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.pbFotoperfil = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
@@ -65,9 +65,9 @@ namespace PresentacionClinica
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -118,6 +118,16 @@ namespace PresentacionClinica
             this.groupBox1.Size = new System.Drawing.Size(1683, 146);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1333, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(213, 25);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Receta Nro 00001";
             // 
             // pictureBox1
             // 
@@ -207,6 +217,16 @@ namespace PresentacionClinica
             this.groupBox4.Size = new System.Drawing.Size(524, 437);
             this.groupBox4.TabIndex = 51;
             this.groupBox4.TabStop = false;
+            // 
+            // pbFotoperfil
+            // 
+            this.pbFotoperfil.Location = new System.Drawing.Point(412, 21);
+            this.pbFotoperfil.Name = "pbFotoperfil";
+            this.pbFotoperfil.Size = new System.Drawing.Size(96, 107);
+            this.pbFotoperfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoperfil.TabIndex = 53;
+            this.pbFotoperfil.TabStop = false;
+            this.pbFotoperfil.Paint += new System.Windows.Forms.PaintEventHandler(this.pbFotoperfil_Paint);
             // 
             // lblEdad
             // 
@@ -307,6 +327,7 @@ namespace PresentacionClinica
             this.button2.TabIndex = 48;
             this.button2.Text = "Imprimir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox3
             // 
@@ -363,26 +384,6 @@ namespace PresentacionClinica
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
-            // pbFotoperfil
-            // 
-            this.pbFotoperfil.Location = new System.Drawing.Point(412, 21);
-            this.pbFotoperfil.Name = "pbFotoperfil";
-            this.pbFotoperfil.Size = new System.Drawing.Size(96, 107);
-            this.pbFotoperfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFotoperfil.TabIndex = 53;
-            this.pbFotoperfil.TabStop = false;
-            this.pbFotoperfil.Paint += new System.Windows.Forms.PaintEventHandler(this.pbFotoperfil_Paint);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1333, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(213, 25);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Receta Nro 00001";
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
@@ -407,10 +408,10 @@ namespace PresentacionClinica
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoperfil)).EndInit();
             this.ResumeLayout(false);
 
         }

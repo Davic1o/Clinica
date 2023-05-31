@@ -6,6 +6,11 @@ using System.IO;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+
+
 namespace PresentacionClinica
 {
     public partial class PresentacionRecetario : Form
@@ -57,7 +62,7 @@ namespace PresentacionClinica
                 {
                     using (MemoryStream ms = new MemoryStream(image))
                     {
-                        Image images = Image.FromStream(ms);
+                        System.Drawing.Image images = System.Drawing.Image.FromStream(ms);
                         pbFotoperfil.Image = images;
                     }
                 }
@@ -77,5 +82,9 @@ namespace PresentacionClinica
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
