@@ -145,6 +145,8 @@ namespace PresentacionClinica
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnHistoria = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoPerfil)).BeginInit();
             this.tcPaciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1403,6 +1405,8 @@ namespace PresentacionClinica
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.listBox2);
+            this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Controls.Add(this.btnHistoria);
             this.groupBox2.Location = new System.Drawing.Point(177, 10);
             this.groupBox2.Name = "groupBox2";
@@ -1436,6 +1440,24 @@ namespace PresentacionClinica
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 25;
+            this.listBox1.Location = new System.Drawing.Point(6, 95);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(309, 554);
+            this.listBox1.TabIndex = 34;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 25;
+            this.listBox2.Location = new System.Drawing.Point(352, 95);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(309, 554);
+            this.listBox2.TabIndex = 35;
             // 
             // PresentacionTratamiento
             // 
@@ -1684,5 +1706,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnHistoria;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
