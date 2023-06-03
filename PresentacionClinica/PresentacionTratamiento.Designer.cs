@@ -143,16 +143,16 @@ namespace PresentacionClinica
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnHistoria = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.txtTratamiento = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtTratamiento = new System.Windows.Forms.TextBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lbdient1 = new System.Windows.Forms.ListBox();
+            this.btnHistoria = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoPerfil)).BeginInit();
             this.tcPaciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -229,8 +229,8 @@ namespace PresentacionClinica
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             this.SuspendLayout();
             // 
             // pbFotoPerfil
@@ -1390,6 +1390,7 @@ namespace PresentacionClinica
             this.chk18.Size = new System.Drawing.Size(18, 17);
             this.chk18.TabIndex = 8;
             this.chk18.UseVisualStyleBackColor = true;
+            this.chk18.CheckedChanged += new System.EventHandler(this.chk18_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -1420,13 +1421,88 @@ namespace PresentacionClinica
             this.groupBox2.Controls.Add(this.txtTratamiento);
             this.groupBox2.Controls.Add(this.pictureBox33);
             this.groupBox2.Controls.Add(this.listBox2);
-            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.lbdient1);
             this.groupBox2.Controls.Add(this.btnHistoria);
             this.groupBox2.Location = new System.Drawing.Point(3, 10);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1667, 733);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 25;
+            this.listBox3.Location = new System.Drawing.Point(357, 345);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(309, 304);
+            this.listBox3.TabIndex = 44;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 25;
+            this.listBox4.Location = new System.Drawing.Point(11, 345);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(309, 304);
+            this.listBox4.TabIndex = 43;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(1490, 292);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(158, 106);
+            this.btnAgregar.TabIndex = 42;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(720, 422);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(928, 227);
+            this.dataGridView1.TabIndex = 38;
+            // 
+            // txtTratamiento
+            // 
+            this.txtTratamiento.Location = new System.Drawing.Point(720, 292);
+            this.txtTratamiento.Multiline = true;
+            this.txtTratamiento.Name = "txtTratamiento";
+            this.txtTratamiento.Size = new System.Drawing.Size(751, 106);
+            this.txtTratamiento.TabIndex = 37;
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Location = new System.Drawing.Point(1102, 52);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(176, 215);
+            this.pictureBox33.TabIndex = 36;
+            this.pictureBox33.TabStop = false;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 25;
+            this.listBox2.Location = new System.Drawing.Point(357, 31);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(309, 304);
+            this.listBox2.TabIndex = 35;
+            // 
+            // lbdient1
+            // 
+            this.lbdient1.FormattingEnabled = true;
+            this.lbdient1.ItemHeight = 25;
+            this.lbdient1.Location = new System.Drawing.Point(11, 31);
+            this.lbdient1.Name = "lbdient1";
+            this.lbdient1.Size = new System.Drawing.Size(309, 304);
+            this.lbdient1.TabIndex = 34;
             // 
             // btnHistoria
             // 
@@ -1454,81 +1530,6 @@ namespace PresentacionClinica
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(11, 31);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(309, 304);
-            this.listBox1.TabIndex = 34;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 25;
-            this.listBox2.Location = new System.Drawing.Point(357, 31);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(309, 304);
-            this.listBox2.TabIndex = 35;
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.Location = new System.Drawing.Point(1102, 52);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(176, 215);
-            this.pictureBox33.TabIndex = 36;
-            this.pictureBox33.TabStop = false;
-            // 
-            // txtTratamiento
-            // 
-            this.txtTratamiento.Location = new System.Drawing.Point(720, 292);
-            this.txtTratamiento.Multiline = true;
-            this.txtTratamiento.Name = "txtTratamiento";
-            this.txtTratamiento.Size = new System.Drawing.Size(751, 106);
-            this.txtTratamiento.TabIndex = 37;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(720, 422);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(928, 227);
-            this.dataGridView1.TabIndex = 38;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(1490, 292);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(158, 106);
-            this.btnAgregar.TabIndex = 42;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 25;
-            this.listBox3.Location = new System.Drawing.Point(357, 345);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(309, 304);
-            this.listBox3.TabIndex = 44;
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 25;
-            this.listBox4.Location = new System.Drawing.Point(11, 345);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(309, 304);
-            this.listBox4.TabIndex = 43;
             // 
             // PresentacionTratamiento
             // 
@@ -1655,8 +1656,8 @@ namespace PresentacionClinica
             this.tabPage3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1781,7 +1782,7 @@ namespace PresentacionClinica
         private System.Windows.Forms.Button btnHistoria;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbdient1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtTratamiento;
         private System.Windows.Forms.PictureBox pictureBox33;

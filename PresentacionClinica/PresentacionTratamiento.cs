@@ -33,5 +33,17 @@ namespace PresentacionClinica
         {
             this.Hide();
         }
+
+        private void chk18_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk18.Checked)
+            {
+                lbdient1.Items.Add("Pieza Nro 18");
+            } else
+            {
+                lbdient1.Items.RemoveAt(1);
+                }
+            
+        }
     }
 }
