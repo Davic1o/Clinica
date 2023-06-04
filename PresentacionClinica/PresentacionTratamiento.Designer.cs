@@ -1330,6 +1330,7 @@ namespace PresentacionClinica
             this.chk17.Size = new System.Drawing.Size(18, 17);
             this.chk17.TabIndex = 8;
             this.chk17.UseVisualStyleBackColor = true;
+            this.chk17.CheckedChanged += new System.EventHandler(this.chk17_CheckedChanged);
             // 
             // pictureBox2
             // 
